@@ -10,6 +10,8 @@
 - 🔍 支持影像检查结构化数据提取
 - 👨‍⚕️ 多学科专家会诊系统（MDT）
 - 🔬 9大专科智能分析
+- ☢️ 医学辐射剂量追踪和管理
+- 👤 用户基础档案管理
 - 💾 本地存储，数据完全私有
 - 🚀 使用 Claude Code 命令操作，无需编程
 
@@ -21,6 +23,8 @@ my-his/
 │   ├── commands/
 │   │   ├── save-report.md    # 保存检查单命令
 │   │   ├── query.md          # 查询记录命令
+│   │   ├── profile.md        # 用户基础参数设置命令
+│   │   ├── radiation.md      # 辐射暴露管理命令
 │   │   ├── consult.md        # 多学科专家会诊命令
 │   │   └── specialist.md     # 单专科咨询命令
 │   └── specialists/
@@ -35,6 +39,8 @@ my-his/
 │       ├── general.md               # 全科专家 Skill
 │       └── consultation-coordinator.md # 会诊协调器
 ├── data/
+│   ├── profile.json          # 用户基础档案
+│   ├── radiation-records.json # 辐射暴露记录
 │   ├── 生化检查/             # 生化检验数据
 │   │   └── YYYY-MM/
 │   │       └── YYYY-MM-DD_检查项目.json
@@ -47,6 +53,31 @@ my-his/
 ```
 
 ## 使用方法
+
+### 0. 设置用户基础参数（首次使用必须）
+
+使用 `/profile` 命令设置基础参数：
+
+```bash
+# 设置完整参数
+/profile set 175 70 1990-01-01
+
+# 或使用参数名
+/profile set height=175 weight=70 birth_date=1990-01-01
+
+# 查看当前参数
+/profile view
+```
+
+**需要设置的信息：**
+- 身高（厘米）- 用于计算体表面积和BMI
+- 体重（公斤）- 用于计算体表面积和BMI
+- 出生日期（YYYY-MM-DD）- 用于计算年龄
+
+**系统会自动计算：**
+- BMI（身体质量指数）
+- 体表面积（用于辐射剂量计算）
+- 年龄
 
 ### 1. 保存检查单
 
@@ -68,7 +99,41 @@ my-his/
 - 结构化保存为 JSON 格式
 - 备份原始图片
 
-### 2. 查询医疗记录
+### 2. 管理医学辐射暴露
+
+使用 `/radiation` 命令记录和追踪医学影像检查的辐射暴露：
+
+```bash
+# 添加辐射检查记录
+/radiation add CT 胸部
+/radiation add CT 腹部 2025-12-30
+/radiation add X光 胸部
+/radiation add PET-CT 全身
+
+# 查看当前累积状态
+/radiation status
+
+# 查看历史记录
+/radiation history
+
+# 清空所有记录
+/radiation clear
+```
+
+**辐射管理系统功能：**
+- 根据检查类型和部位自动计算辐射剂量
+- 根据用户体表面积调整剂量
+- 追踪年度累积辐射剂量
+- 计算往年辐射残留（按50%/年衰减）
+- 安全评估和风险提示
+- 历史记录和统计分析
+
+**支持的检查类型：**
+- CT检查（头部、胸部、腹部、盆腔、脊柱、四肢）
+- X光检查（胸部、腹部、四肢、牙齿）
+- PET-CT、骨扫描、血管造影等
+
+### 3. 查询医疗记录
 
 使用 `/query` 命令查询记录：
 
@@ -93,7 +158,7 @@ my-his/
 /query abnormal
 ```
 
-### 3. 多学科专家会诊（MDT）
+### 4. 多学科专家会诊（MDT）
 
 使用 `/consult` 命令启动多学科专家会诊：
 
@@ -131,7 +196,7 @@ my-his/
 - 肿瘤科 - 肿瘤标志物、肿瘤筛查
 - 全科 - 综合评估、慢病管理
 
-### 4. 单专科咨询
+### 5. 单专科咨询
 
 使用 `/specialist` 命令咨询特定专科：
 
@@ -193,6 +258,43 @@ my-his/
 }
 ```
 
+### 辐射记录数据结构
+
+```json
+{
+  "id": "20251231123456789",
+  "exam_type": "CT",
+  "body_part": "胸部",
+  "exam_date": "2025-12-31",
+  "standard_dose": 7.0,
+  "body_surface_area": 1.85,
+  "adjustment_factor": 1.07,
+  "actual_dose": 7.5,
+  "dose_unit": "mSv"
+}
+```
+
+### 用户档案数据结构
+
+```json
+{
+  "basic_info": {
+    "height": 175,
+    "height_unit": "cm",
+    "weight": 70,
+    "weight_unit": "kg",
+    "birth_date": "1990-01-01"
+  },
+  "calculated": {
+    "age": 35,
+    "bmi": 22.9,
+    "bmi_status": "正常",
+    "body_surface_area": 1.85,
+    "bsa_unit": "m²"
+  }
+}
+```
+
 ## 数据隐私
 
 - 所有数据存储在本地文件系统
@@ -208,21 +310,28 @@ my-his/
 - **会诊协调**: 并行处理 + 意见整合算法
 - **图片识别**: AI 视觉分析
 - **数据提取**: 智能文字识别与结构化
+- **辐射计算**: 体表面积调整 + 指数衰减模型
+- **剂量参考**: 基于医学标准的辐射剂量数据库
 
 ## 快速开始
 
 1. 确保已安装 Claude Code
 2. 在当前目录打开 Claude Code
-3. 使用 `/save-report /path/to/image.jpg` 保存第一张检查单
-4. 使用 `/query all` 查看所有记录
-5. 使用 `/consult` 启动多学科专家会诊
+3. 首次使用先设置基础参数：`/profile set 175 70 1990-01-01`
+4. 使用 `/save-report /path/to/image.jpg` 保存第一张检查单
+5. 使用 `/radiation add CT 胸部` 记录辐射检查
+6. 使用 `/query all` 查看所有记录
+7. 使用 `/consult` 启动多学科专家会诊
 
 ## 注意事项
 
+- 首次使用必须先设置基础参数（身高、体重、出生日期）
 - 确保检查单图片清晰可读
 - 图片格式支持：JPG、PNG
 - 建议定期备份 `data/` 目录
 - 日期格式统一使用 YYYY-MM-DD
+- 辐射剂量仅供参考，具体请咨询医生
+- 建议定期查看 `/radiation status` 了解累积情况
 
 ## 专家会诊系统安全原则
 
