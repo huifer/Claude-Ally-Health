@@ -6,6 +6,7 @@ description: 咨询特定专科专家，获取针对性分析
 
 ## 支持的专科列表
 
+### 内科系统
 | 专科代码 | 专科名称 | Skill 文件 | 擅长领域 |
 |---------|---------|-----------|---------|
 | cardio | 心内科 | cardiology.md | 心脏病、高血压、血脂异常 |
@@ -16,7 +17,20 @@ description: 咨询特定专科专家，获取针对性分析
 | resp | 呼吸科 | respiratory.md | 肺部感染、肺结节 |
 | neuro | 神经内科 | neurology.md | 脑血管病、头痛头晕 |
 | onco | 肿瘤科 | oncology.md | 肿瘤标志物、肿瘤筛查 |
+
+### 外科及专科系统
+| 专科代码 | 专科名称 | Skill 文件 | 擅长领域 |
+|---------|---------|-----------|---------|
+| ortho | 骨科 | orthopedics.md | 骨折、关节炎、骨质疏松 |
+| derma | 皮肤科 | dermatology.md | 湿疹、痤疮、皮肤肿瘤 |
+| pedia | 儿科 | pediatrics.md | 儿童发育、新生儿疾病 |
+| gyne | 妇科 | gynecology.md | 月经疾病、妇科肿瘤 |
+
+### 综合系统
+| 专科代码 | 专科名称 | Skill 文件 | 擅长领域 |
+|---------|---------|-----------|---------|
 | general | 全科 | general.md | 综合评估、慢病管理 |
+| psych | 精神科 | psychiatry.md | 情绪障碍、心理健康 |
 
 ## 使用方法
 
@@ -30,7 +44,10 @@ description: 咨询特定专科专家，获取针对性分析
 # 示例：
 /specialist cardio recent 3
 /specialist endo all
-/specialist onco date 2025-12-31
+/specialist ortho all
+/specialist derma date 2025-12-31
+/specialist pedia recent 5
+/specialist gyne all
 ```
 
 ## 执行流程
@@ -100,6 +117,8 @@ description: 咨询特定专科专家，获取针对性分析
 ❌ 未找到专科 "xyz"
 
 可用的专科列表：
+
+**内科系统**
 - cardio: 心内科
 - endo: 内分泌科
 - gastro: 消化科
@@ -108,7 +127,16 @@ description: 咨询特定专科专家，获取针对性分析
 - resp: 呼吸科
 - neuro: 神经内科
 - onco: 肿瘤科
+
+**外科及专科系统**
+- ortho: 骨科
+- derma: 皮肤科
+- pedia: 儿科
+- gyne: 妇科
+
+**综合系统**
 - general: 全科
+- psych: 精神科
 
 使用 /specialist list 查看详细信息
 ```
@@ -118,6 +146,46 @@ description: 咨询特定专科专家，获取针对性分析
 ⚠️ 当前系统中没有医疗数据
 
 请先使用 /save-report 保存医疗检查单，然后再进行专科咨询。
+```
+
+## 使用建议和最佳实践
+
+### 1. 专科选择建议
+
+#### 按症状选择专科
+- **胸痛、心悸** → cardio（心内科）
+- **关节痛、骨折** → ortho（骨科）
+- **皮疹、瘙痒** → derma（皮肤科）
+- **月经不调** → gyne（妇科）
+- **儿童疾病** → pedia（儿科）
+
+#### 按检查结果选择专科
+- **血脂异常** → cardio（心内科）
+- **骨密度异常** → ortho（骨科）
+- **性激素异常** → gyne（妇科）
+
+### 2. 参数选择建议
+- **初次就诊/全面检查**：使用 `all` 参数
+- **复查对比**：使用 `recent N`（N=5-10）
+- **特定日期**：使用 `date YYYY-MM-DD`
+
+### 3. 常见使用场景
+
+#### 场景1：体检后综合评估
+```bash
+/consult all
+/specialist cardio all
+/specialist ortho all
+```
+
+#### 场景2：儿童保健
+```bash
+/specialist pedia all
+```
+
+#### 场景3：女性健康
+```bash
+/specialist gyne all
 ```
 
 ## 开始执行
