@@ -1,0 +1,115 @@
+{
+  "created_at": "2025-01-01T00:00:00.000Z",
+  "last_updated": "2025-06-20T10:00:00.000Z",
+
+  "prostate_health": {
+    "user_id": "male_20250101",
+    "age": 55,
+    "family_history": {
+      "father": true,
+      "brother": false,
+      "age_at_diagnosis": 62
+    },
+
+    "psa_history": [
+      {
+        "date": "2025-06-15",
+        "total_psa": 2.5,
+        "free_psa": 0.8,
+        "ratio": 0.32,
+        "reference": "<4.0",
+        "unit": "ng/mL",
+        "trend": "stable",
+        "risk_level": "low",
+        "interpretation": "正常"
+      },
+      {
+        "date": "2024-06-15",
+        "total_psa": 2.4,
+        "free_psa": 0.75,
+        "ratio": 0.31,
+        "reference": "<4.0",
+        "unit": "ng/mL"
+      },
+      {
+        "date": "2023-06-15",
+        "total_psa": 2.3,
+        "free_psa": null,
+        "ratio": null,
+        "reference": "<4.0",
+        "unit": "ng/mL"
+      }
+    ],
+
+    "psa_velocity": {
+      "change_per_year": 0.1,
+      "threshold": 0.75,
+      "interpretation": "normal",
+      "calculation_period": "2_years"
+    },
+
+    "ipss_score": {
+      "date": "2025-06-20",
+      "incomplete_emptying": 1,
+      "frequency": 2,
+      "intermittency": 1,
+      "urgency": 2,
+      "weak_stream": 1,
+      "straining": 0,
+      "nocturia": 2,
+      "total_score": 9,
+      "severity": "moderate",
+      "quality_of_life_score": 2
+    },
+
+    "prostate_volume": {
+      "date": "2025-03-15",
+      "volume_ml": 32,
+      "weight_g": 33.6,
+      "inner_gland_cm": 2.5,
+      "residual_urine_ml": 20,
+      "nodule": false,
+      "calcification": false,
+      "interpretation": "mild_enlargement"
+    },
+
+    "dre": {
+      "last_exam": "2025-06-15",
+      "findings": "enlarged_firm",
+      "size": "enlarged",
+      "texture": "firm",
+      "nodule": false,
+      "tenderness": false,
+      "mobility": "normal",
+      "notes": "前列腺增大,质地均匀,无结节"
+    },
+
+    "screening_plan": {
+      "psa_frequency": "annual",
+      "dre_frequency": "annual",
+      "next_psa": "2026-06-15",
+      "next_dre": "2026-06-15",
+      "risk_category": "high"
+    },
+
+    "urinary_symptoms": {
+      "stream_weakness": "mild",
+      "frequency": "3-4_times_per_day",
+      "nocturia": 2,
+      "urgency": "occasional"
+    }
+  },
+
+  "statistics": {
+    "total_psa_tests": 3,
+    "last_psa_date": "2025-06-15",
+    "psa_trend": "stable",
+    "ipss_severity": "moderate",
+    "tracking_duration_months": 24
+  },
+
+  "settings": {
+    "reminder_frequency": "annual",
+    "screening_reminder": true
+  }
+}

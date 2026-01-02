@@ -1,0 +1,130 @@
+{
+  "created_at": "2020-01-01T00:00:00.000Z",
+  "last_updated": "2025-06-20T10:00:00.000Z",
+
+  "child_profile": {
+    "child_id": "child_20200101",
+    "name": "小明",
+    "birth_date": "2020-01-01"
+  },
+
+  "scheduled_vaccines": [
+    {
+      "vaccine_id": "hepb_b1",
+      "vaccine_name": "乙肝疫苗",
+      "category": "class_1",
+      "dose": "第1针",
+      "scheduled_age": "birth",
+      "scheduled_date": "2020-01-01",
+      "status": "completed",
+      "actual_date": "2020-01-01",
+      "batch_number": "202001001",
+      "manufacturer": "康泰生物",
+      "site": "left_thigh",
+      "adverse_reaction": null
+    },
+    {
+      "vaccine_id": "bcg",
+      "vaccine_name": "卡介苗",
+      "category": "class_1",
+      "dose": "第1针",
+      "scheduled_age": "birth",
+      "scheduled_date": "2020-01-01",
+      "status": "completed",
+      "actual_date": "2020-01-01",
+      "batch_number": "202001002",
+      "manufacturer": "上海生物",
+      "site": "left_arm",
+      "adverse_reaction": null
+    },
+    {
+      "vaccine_id": "hepb_b2",
+      "vaccine_name": "乙肝疫苗",
+      "category": "class_1",
+      "dose": "第2针",
+      "scheduled_age": "1_month",
+      "scheduled_date": "2020-02-01",
+      "status": "completed",
+      "actual_date": "2020-02-01",
+      "batch_number": "202002001",
+      "manufacturer": "康泰生物",
+      "site": "right_thigh",
+      "adverse_reaction": null
+    },
+    {
+      "vaccine_id": "polio_ipv1",
+      "vaccine_name": "脊灰疫苗",
+      "category": "class_1",
+      "dose": "第1针",
+      "scheduled_age": "2_months",
+      "scheduled_date": "2020-03-01",
+      "status": "completed",
+      "actual_date": "2020-03-05",
+      "batch_number": "202003001",
+      "manufacturer": "北京生物",
+      "site": "left_thigh",
+      "adverse_reaction": null
+    }
+  ],
+
+  "upcoming": [
+    {
+      "vaccine": "流脑A群",
+      "dose": "第1针",
+      "scheduled_date": "2025-08-01",
+      "days_until": 42,
+      "status": "scheduled"
+    }
+  ],
+
+  "overdue": [],
+
+  "completed": [
+    {
+      "vaccine": "乙肝疫苗",
+      "doses_completed": 2,
+      "doses_total": 3,
+      "completion_date": "2020-02-01"
+    },
+    {
+      "vaccine": "卡介苗",
+      "doses_completed": 1,
+      "doses_total": 1,
+      "completion_date": "2020-01-01"
+    },
+    {
+      "vaccine": "脊灰疫苗",
+      "doses_completed": 1,
+      "doses_total": 4,
+      "completion_date": "2020-03-05"
+    }
+  ],
+
+  "adverse_reactions": [
+    {
+      "vaccine": "百白破",
+      "date": "2020-09-15",
+      "reaction": "low_grade_fever",
+      "severity": "mild",
+      "duration": "24_hours",
+      "treatment": "physical_cooling"
+    }
+  ],
+
+  "next_checkup": "2025-08-01",
+  "last_updated": "2025-06-20T10:00:00.000Z",
+
+  "statistics": {
+    "total_vaccines": 4,
+    "class_1_completed": 4,
+    "class_2_completed": 0,
+    "overdue_count": 0,
+    "upcoming_30_days": 0
+  },
+
+  "settings": {
+    "reminder_days_before": 7,
+    "include_class_2": true,
+    "auto_generate_schedule": true
+  }
+}

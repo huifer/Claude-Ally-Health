@@ -405,7 +405,8 @@
 - 多胎新生儿支持 (A, B, C, D)
 - 21个原生测试用例全部通过
 - 原生测试框架（Shell + Python）
-- 完整用户文档：[docs/postpartum-care-guide.md](../docs/postpartum-care-guide.md)（中文）
+- 完整用户文档：[docs/postpartum-care-guide.md](../docs/postpartum-care-guide.md)
+- 测试文档：[docs/testing.md](../docs/testing.md)
 
 ---
 

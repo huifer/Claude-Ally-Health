@@ -1,0 +1,155 @@
+{
+  "created_at": "2025-01-01T00:00:00.000Z",
+  "last_updated": "2025-06-20T10:00:00.000Z",
+
+  "fertility_assessment": {
+    "user_id": "male_20250101",
+    "age": 35,
+    "infertility_type": "primary",
+    "partner_age": 32,
+    "trying_to_conceive_months": 18,
+
+    "semen_analysis": {
+      "date": "2025-06-20",
+      "abstinence_period": "3_days",
+
+      "volume": {
+        "value": 2.5,
+        "unit": "mL",
+        "reference": "≥1.5",
+        "result": "normal"
+      },
+
+      "concentration": {
+        "value": 45,
+        "unit": "10⁶/mL",
+        "reference": "≥15",
+        "result": "normal"
+      },
+
+      "total_count": {
+        "value": 112.5,
+        "unit": "10⁶",
+        "reference": "≥39",
+        "result": "normal"
+      },
+
+      "motility": {
+        "pr": {
+          "value": 35,
+          "reference": "≥32",
+          "result": "normal"
+        },
+        "np": {
+          "value": 20,
+          "reference": "≥40",
+          "result": "normal"
+        },
+        "im": {
+          "value": 45,
+          "result": "normal"
+        }
+      },
+
+      "morphology": {
+        "value": 4,
+        "unit": "%",
+        "reference": "≥4",
+        "result": "normal"
+      },
+
+      "ph": {
+        "value": 7.5,
+        "reference": "7.2-8.0",
+        "result": "normal"
+      },
+
+      "liquefaction": {
+        "value": 30,
+        "unit": "minutes",
+        "reference": "≤60",
+        "result": "normal"
+      },
+
+      "diagnosis": "normospermia"
+    },
+
+    "hormones": {
+      "date": "2025-06-15",
+      "testosterone": {
+        "total": 15.5,
+        "reference": "10-35",
+        "unit": "nmol/L",
+        "result": "normal"
+      },
+      "lh": {
+        "value": 5.2,
+        "reference": "1.7-8.6",
+        "unit": "IU/L",
+        "result": "normal"
+      },
+      "fsh": {
+        "value": 8.1,
+        "reference": "1.5-12.4",
+        "unit": "IU/L",
+        "result": "normal"
+      },
+      "prl": {
+        "value": 12.5,
+        "reference": "<15",
+        "unit": "ng/mL",
+        "result": "normal"
+      },
+      "e2": {
+        "value": 35,
+        "reference": "<70",
+        "unit": "pg/mL",
+        "result": "normal"
+      }
+    },
+
+    "varicocele": {
+      "present": false,
+      "side": null,
+      "grade": null,
+      "confirmed_by": null,
+      "surgery": false,
+      "surgery_date": null,
+      "notes": "超声检查未发现精索静脉曲张"
+    },
+
+    "infections": {
+      "chlamydia": "negative",
+      "gonorrhea": "negative",
+      "mycoplasma": "not_tested",
+      "ureaplasma": "not_tested",
+      "date": "2025-06-10",
+      "treated": false
+    },
+
+    "genetic_testing": {
+      "karyotype": "46,XY",
+      "y_chromosome_microdeletion": "not_detected",
+      "cftr_mutation": "not_tested"
+    },
+
+    "recommendations": [
+      "continue_trying",
+      "healthy_lifestyle",
+      "repeat_semen_analysis_in_3_months",
+      "partner_gynecological_evaluation"
+    ]
+  },
+
+  "statistics": {
+    "total_semen_analyses": 2,
+    "last_analysis_date": "2025-06-20",
+    "diagnosis": "normospermia",
+    "tracking_duration_months": 18
+  },
+
+  "settings": {
+    "reminder_frequency": "quarterly",
+    "follow_up_reminder": true
+  }
+}

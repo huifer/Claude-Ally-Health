@@ -1,0 +1,188 @@
+{
+  "created_at": "2025-01-01T00:00:00.000Z",
+  "last_updated": "2025-12-20T10:00:00.000Z",
+
+  "andropause": {
+    "user_id": "male_20250101",
+    "age": 52,
+    "assessment_date": "2025-12-20",
+
+    "symptoms": {
+      "sexual": {
+        "libido": {
+          "present": true,
+          "severity": "moderate",
+          "impact": "noticeable",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "erectile_function": {
+          "present": true,
+          "severity": "mild",
+          "morning_erection": "reduced",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        }
+      },
+      "physical": {
+        "fatigue": {
+          "present": true,
+          "severity": "moderate",
+          "impact_on_activities": "some",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "muscle_mass": {
+          "present": true,
+          "severity": "mild",
+          "changes": "slight_decrease",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "body_fat": {
+          "present": true,
+          "severity": "moderate",
+          "distribution": "abdominal",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "hot_flashes": {
+          "present": false,
+          "frequency": null,
+          "severity": null
+        }
+      },
+      "psychological": {
+        "mood": {
+          "present": true,
+          "symptoms": ["depressed", "irritability"],
+          "severity": "mild",
+          "impact": "minimal",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "memory": {
+          "present": true,
+          "severity": "mild",
+          "complaints": "occasional_forgetfulness",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        },
+        "concentration": {
+          "present": true,
+          "severity": "moderate",
+          "impact": "noticeable",
+          "last_updated": "2025-12-01T10:00:00.000Z"
+        }
+      }
+    },
+
+    "symptom_history": [],
+
+    "testosterone_levels": {
+      "total_testosterone": {
+        "date": "2025-06-15",
+        "time": "09:00",
+        "value": 7.5,
+        "reference": "10-35",
+        "unit": "nmol/L",
+        "result": "low",
+        "confirmed": true,
+        "repeat_count": 2
+      },
+      "free_testosterone": {
+        "date": "2025-06-15",
+        "value": 0.18,
+        "reference": "0.22-0.65",
+        "unit": "nmol/L",
+        "result": "low"
+      },
+      "shbg": {
+        "date": "2025-06-15",
+        "value": 45,
+        "reference": "20-50",
+        "unit": "nmol/L",
+        "result": "normal"
+      }
+    },
+
+    "questionnaire_scores": {
+      "adam": {
+        "date": "2025-06-20",
+        "questions": [
+          {"q1": "有性欲减退吗？", "answer": true, "score": 1},
+          {"q2": "感到体力下降吗？", "answer": true, "score": 1},
+          {"q3": "体力减退了吗？", "answer": true, "score": 1},
+          {"q4": "身高变矮了吗？", "answer": false, "score": 0},
+          {"q5": "生活乐趣减少了吗？", "answer": true, "score": 1},
+          {"q6": "感到悲伤或脾气暴躁吗？", "answer": true, "score": 1},
+          {"q7": "勃起能力下降了吗？", "answer": true, "score": 1},
+          {"q8": "最近运动能力下降了吗？", "answer": false, "score": 0},
+          {"q9": "饭后容易犯困吗？", "answer": false, "score": 0},
+          {"q10": "最近工作表现下降了吗？", "answer": false, "score": 0}
+        ],
+        "total_score": 7,
+        "positive": true,
+        "interpretation": "提示可能存在男性更年期"
+      },
+      "ams": {
+        "date": "2025-06-20",
+        "score": 27,
+        "severity": "moderate"
+      }
+    },
+
+    "trt": {
+      "on_treatment": true,
+      "medication": "睾酮凝胶",
+      "type": "gel",
+      "dose": "50mg",
+      "frequency": "daily",
+      "route": "transdermal",
+      "start_date": "2025-12-01",
+      "duration_months": 1,
+      "effectiveness": "good",
+      "effectiveness_rating": 8,
+      "effectiveness_notes": "性欲明显改善,体力好转",
+      "side_effects": ["乳房胀痛"],
+      "side_effects_severity": "mild",
+      "quality_of_life_improvement": "significant",
+      "notes": ""
+    },
+
+    "monitoring": {
+      "psa": {
+        "baseline": 2.0,
+        "current": 2.1,
+        "change": 0.1,
+        "date": "2025-06-15",
+        "interpretation": "stable"
+      },
+      "hematocrit": {
+        "baseline": 45,
+        "current": 46,
+        "date": "2025-06-15",
+        "threshold": 54,
+        "status": "normal"
+      },
+      "prostate_volume": {
+        "baseline": 28,
+        "current": 29,
+        "date": "2025-06-15",
+        "change": "stable"
+      }
+    },
+
+    "recommendations": [
+      "continue_trt",
+      "regular_monitoring",
+      "lifestyle_modifications",
+      "monitor_bone_density"
+    ]
+  },
+
+  "statistics": {
+    "tracking_duration_months": 12,
+    "total_symptom_records": 5,
+    "trt_use": true,
+    "total_testosterone_tests": 2
+  },
+
+  "settings": {
+    "reminder_frequency": "monthly",
+    "monitoring_reminder": true
+  }
+}

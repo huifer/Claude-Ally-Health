@@ -1,0 +1,132 @@
+{
+  "created_at": "2020-01-01T00:00:00.000Z",
+  "last_updated": "2025-06-20T10:00:00.000Z",
+
+  "child_profile": {
+    "child_id": "child_20200101",
+    "name": "小明",
+    "birth_date": "2020-01-01",
+    "gender": "male",
+    "gestational_age": "39_weeks",
+    "birth_weight": 3.4,
+    "birth_length": 50,
+    "birth_head_circumference": 34
+  },
+
+  "growth_tracking": {
+    "measurements": [
+      {
+        "date": "2025-06-20",
+        "age": "5y5m",
+        "age_months": 65,
+
+        "height": {
+          "value": 112.5,
+          "percentile": 50,
+          "standard_deviation": 0.0,
+          "z_score": 0.0,
+          "velocity": 6.5,
+          "velocity_period": "12_months",
+          "velocity_percentile": 50
+        },
+
+        "weight": {
+          "value": 20.5,
+          "percentile": 55,
+          "standard_deviation": 0.1,
+          "z_score": 0.13,
+          "velocity": 2.8,
+          "velocity_period": "12_months",
+          "velocity_percentile": 60
+        },
+
+        "bmi": {
+          "value": 16.2,
+          "percentile": 60,
+          "standard_deviation": 0.25,
+          "z_score": 0.25
+        },
+
+        "head_circumference": null,
+
+        "comments": ""
+      }
+    ],
+
+    "growth_assessment": {
+      "overall": "normal",
+      "height_status": "normal",
+      "weight_status": "normal",
+      "bmi_status": "normal",
+      "growth_velocity": "normal",
+      "proportionality": "proportional"
+    },
+
+    "alerts": []
+  },
+
+  "puberty_tracking": {
+    "female_development": {
+      "breast_stage": null,
+      "breast_development": {
+        "stage": null,
+        "onset_age": null,
+        "comments": ""
+      },
+      "pubic_hair_stage": null,
+      "pubic_hair_development": {
+        "stage": null,
+        "onset_age": null,
+        "comments": ""
+      },
+      "menarche": {
+        "occurred": null,
+        "age_at_menarche": null,
+        "cycle_regularity": null
+      }
+    },
+
+    "male_development": {
+      "testicular_volume": {
+        "left": null,
+        "right": null,
+        "unit": "ml",
+        "stage": null
+      },
+      "penis_development": {
+        "length": null,
+        "stage": null
+      },
+      "pubic_hair_stage": null,
+      "voice_break": null,
+      "facial_hair": null
+    },
+
+    "bone_age": {
+      "chronological_age": null,
+      "bone_age": null,
+      "difference": null,
+      "interpretation": null
+    },
+
+    "growth_velocity": {
+      "height_velocity": null,
+      "peak_height_velocity": null
+    },
+
+    "assessment": null,
+    "alerts": []
+  },
+
+  "statistics": {
+    "total_measurements": 1,
+    "tracking_duration_months": 65,
+    "last_measurement_date": "2025-06-20",
+    "growth_velocity_status": "normal"
+  },
+
+  "settings": {
+    "who_standards": true,
+    "reminder_frequency": "monthly"
+  }
+}
