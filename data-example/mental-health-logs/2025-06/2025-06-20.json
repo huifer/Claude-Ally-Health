@@ -1,0 +1,78 @@
+{
+  "date": "2025-06-20",
+  "daily_summary": {
+    "avg_mood_intensity": 6.3,
+    "mood_entries": 3,
+    "primary_mood": "calm",
+    "crisis_event": false,
+    "notes": "整体情绪中等，早晨和晚上较好，下午工作压力大"
+  },
+  "mood_entries": [
+    {
+      "time": "08:00",
+      "mood": "calm",
+      "intensity": 7,
+      "triggers": ["morning_exercise"],
+      "notes": "晨跑后感觉平静，精神好"
+    },
+    {
+      "time": "14:00",
+      "mood": "anxious",
+      "intensity": 7,
+      "triggers": ["work_deadline", "lack_of_sleep"],
+      "notes": "项目明天到期，感觉压力很大"
+    },
+    {
+      "time": "20:00",
+      "mood": "tired",
+      "intensity": 6,
+      "triggers": [],
+      "notes": "晚上疲劳，但情绪平静"
+    }
+  ],
+  "coping_used": [
+    {
+      "strategy": "deep_breathing",
+      "count": 1,
+      "avg_effectiveness": "somewhat_helpful"
+    },
+    {
+      "strategy": "exercise",
+      "count": 1,
+      "avg_effectiveness": "very_helpful"
+    },
+    {
+      "strategy": "relaxation",
+      "count": 1,
+      "avg_effectiveness": "helpful"
+    }
+  ],
+  "physical_symptoms": ["headache", "muscle_tension", "fatigue"],
+  "cognitive_symptoms": ["racing_thoughts", "difficulty_concentrating"],
+  "social_activities": [
+    {
+      "activity": "exercise",
+      "duration_minutes": 30,
+      "social_interaction": "friend",
+      "mood_impact": "positive"
+    },
+    {
+      "activity": "work",
+      "duration_hours": 8,
+      "social_interaction": "colleagues",
+      "mood_impact": "negative"
+    },
+    {
+      "activity": "family_time",
+      "duration_hours": 2,
+      "social_interaction": "spouse",
+      "mood_impact": "positive"
+    }
+  ],
+  "next_day_plan": {
+    "priorities": ["complete_work_project", "practice_relaxation"],
+    "scheduled_therapy": false,
+    "crisis_plan_review": false
+  },
+  "created_at": "2025-06-20T23:59:59.000Z"
+}

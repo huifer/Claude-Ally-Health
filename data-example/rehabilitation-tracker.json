@@ -1,0 +1,303 @@
+{
+  "rehabilitation_management": {
+    "user_profile": {
+      "condition": "acl_reconstruction",
+      "injury_date": "2025-05-01",
+      "surgery_date": "2025-05-15",
+      "surgeon": "张医生",
+      "therapist": "李康复师",
+      "current_phase": "3",
+      "phase_start_date": "2025-06-27",
+      "injury_details": "左膝ACL断裂，伴半月板部分损伤"
+    },
+    "rehabilitation_goals": [
+      {
+        "goal_id": "goal_001",
+        "category": "rom",
+        "description": "full_knee_extension",
+        "baseline": -10,
+        "current": 0,
+        "target": 0,
+        "unit": "degrees",
+        "status": "achieved",
+        "target_date": "2025-06-15",
+        "achieved_date": "2025-06-10"
+      },
+      {
+        "goal_id": "goal_002",
+        "category": "rom",
+        "description": "knee_flexion",
+        "baseline": 30,
+        "current": 120,
+        "target": 135,
+        "unit": "degrees",
+        "status": "on_track",
+        "target_date": "2025-08-01",
+        "progress_percentage": 80
+      },
+      {
+        "goal_id": "goal_003",
+        "category": "strength",
+        "description": "quadriceps_strength",
+        "baseline": "3/5",
+        "current": "4/5",
+        "target": "5/5",
+        "unit": "mmt_grade",
+        "status": "on_track",
+        "target_date": "2025-08-01",
+        "progress_percentage": 50
+      },
+      {
+        "goal_id": "goal_004",
+        "category": "function",
+        "description": "normal_gait",
+        "baseline": "with_crutches",
+        "current": "independent",
+        "target": "normal",
+        "unit": "description",
+        "status": "on_track",
+        "target_date": "2025-07-15",
+        "progress_percentage": 75
+      },
+      {
+        "goal_id": "goal_005",
+        "category": "pain",
+        "description": "pain_control",
+        "baseline": 5,
+        "current": 2,
+        "target": 0,
+        "unit": "vas_score",
+        "status": "on_track",
+        "target_date": "2025-07-01",
+        "progress_percentage": 60
+      }
+    ],
+    "exercise_log": [
+      {
+        "id": "exercise_001",
+        "date": "2025-06-20",
+        "time": "08:00",
+        "exercise_name": "straight_leg_raise",
+        "sets": 3,
+        "reps": 15,
+        "duration_minutes": 10,
+        "resistance": "bodyweight",
+        "pain_level": 2,
+        "rpe": 10,
+        "notes": "完成良好，无明显疼痛"
+      },
+      {
+        "id": "exercise_002",
+        "date": "2025-06-20",
+        "time": "08:15",
+        "exercise_name": "quadriceps_sets",
+        "sets": 3,
+        "reps": 12,
+        "duration_minutes": 8,
+        "resistance": "bodyweight",
+        "pain_level": 1,
+        "rpe": 9,
+        "notes": "股四头肌收缩良好"
+      },
+      {
+        "id": "exercise_003",
+        "date": "2025-06-20",
+        "time": "08:30",
+        "exercise_name": "hamstring_curls",
+        "sets": 3,
+        "reps": 15,
+        "duration_minutes": 10,
+        "resistance": "2kg",
+        "pain_level": 2,
+        "rpe": 11,
+        "notes": "使用弹力带，感觉良好"
+      },
+      {
+        "id": "exercise_004",
+        "date": "2025-06-20",
+        "time": "08:45",
+        "exercise_name": "heel_raises",
+        "sets": 3,
+        "reps": 20,
+        "duration_minutes": 8,
+        "resistance": "bodyweight",
+        "pain_level": 1,
+        "rpe": 10,
+        "notes": "双侧提踵，稳定性良好"
+      },
+      {
+        "id": "exercise_005",
+        "date": "2025-06-20",
+        "time": "09:00",
+        "exercise_name": "single_leg_stance",
+        "sets": 3,
+        "reps": 1,
+        "duration_minutes": 5,
+        "resistance": "none",
+        "pain_level": 0,
+        "rpe": 8,
+        "notes": "单腿站立30秒x3，平衡良好"
+      }
+    ],
+    "functional_assessments": [
+      {
+        "assessment_id": "assess_001",
+        "assessment_date": "2025-06-20",
+        "rom": {
+          "knee_flexion": 120,
+          "knee_extension": 0,
+          "target_range": "0-135",
+          "improvement": "+90 degrees from baseline"
+        },
+        "muscle_strength": {
+          "quadriceps": "4/5",
+          "hamstrings": "4+/5",
+          "gluteus_medius": "4/5",
+          "gastrocnemius": "4/5"
+        },
+        "pain_assessment": {
+          "vas_at_rest": 0,
+          "vas_with_activity": 2,
+          "location": "anterior_knee",
+          "character": "aching"
+        },
+        "balance": {
+          "test_type": "single_leg_stance",
+          "affected_side": "30 seconds",
+          "unaffected_side": "45 seconds",
+          "notes": "平衡良好，稳定性改善"
+        },
+        "functional_tests": {
+          "timed_up_and_go": "8 seconds",
+          "walk_distance_m": 100,
+          "stairs_assessment": "up_down_normal",
+          "squat_ability": "partial_squat_45_degrees"
+        },
+        "swelling": {
+          "level": "minimal",
+          "circumference_cm": 38,
+          "baseline_cm": 36,
+          "location": "knee_joint"
+        }
+      }
+    ],
+    "phase_progression": {
+      "phase_1": {
+        "name": "保护期",
+        "phase_number": 1,
+        "duration_weeks": 2,
+        "start_date": "2025-05-15",
+        "end_date": "2025-05-29",
+        "goals": [
+          "控制肿胀和疼痛",
+          "恢复伸膝至0°",
+          "激活股四头肌"
+        ],
+        "goals_achieved": 3,
+        "goals_total": 3,
+        "status": "completed",
+        "completion_date": "2025-05-29"
+      },
+      "phase_2": {
+        "name": "活动期",
+        "phase_number": 2,
+        "duration_weeks": 4,
+        "start_date": "2025-05-30",
+        "end_date": "2025-06-26",
+        "goals": [
+          "恢复ROM至0-120°",
+          "部分负重",
+          "闭链运动训练",
+          "平衡训练",
+          "步态训练至脱拐",
+          "日常生活能力恢复"
+        ],
+        "goals_achieved": 5,
+        "goals_total": 6,
+        "status": "completed",
+        "completion_date": "2025-06-26"
+      },
+      "phase_3": {
+        "name": "强化期",
+        "phase_number": 3,
+        "duration_weeks": 6,
+        "start_date": "2025-06-27",
+        "end_date": "2025-08-07",
+        "goals": [
+          "恢复肌力至5/5",
+          "完全负重",
+          "开链运动训练",
+          "敏捷性训练",
+          "功能性活动恢复"
+        ],
+        "goals_achieved": 2,
+        "goals_total": 5,
+        "status": "in_progress"
+      },
+      "phase_4": {
+        "name": "功能期",
+        "phase_number": 4,
+        "duration_weeks": 4,
+        "start_date": "2025-08-08",
+        "end_date": "2025-09-05",
+        "goals": [
+          "运动功能恢复",
+          "专项训练",
+          "重返运动准备"
+        ],
+        "goals_achieved": 0,
+        "goals_total": 3,
+        "status": "pending"
+      }
+    },
+    "pain_diary": [
+      {
+        "date": "2025-06-20",
+        "morning_pain": 1,
+        "evening_pain": 2,
+        "activity_pain": 3,
+        "pain_location": "anterior_knee",
+        "pain_character": "aching",
+        "aggravating_factors": ["prolonged_sitting", "stairs"],
+        "relieving_factors": ["rest", "ice", "elevation"],
+        "medication_taken": "none",
+        "notes": "疼痛控制良好，训练后短暂疼痛"
+      },
+      {
+        "date": "2025-06-19",
+        "morning_pain": 1,
+        "evening_pain": 2,
+        "activity_pain": 2,
+        "pain_location": "anterior_knee",
+        "pain_character": "aching",
+        "medication_taken": "none",
+        "notes": "无明显变化"
+      }
+    ],
+    "statistics": {
+      "rehabilitation_duration_days": 36,
+      "total_exercise_sessions": 45,
+      "total_exercises_completed": 225,
+      "exercise_adherence_rate": 0.92,
+      "average_pain_level": 1.5,
+      "rom_improvement": {
+        "knee_flexion": 90,
+        "knee_extension": 10
+      },
+      "strength_improvement": "1 grade (3/5 to 4/5)",
+      "balance_improvement": "+25 seconds single_leg_stance",
+      "goals_achieved": 8,
+      "goals_total": 14,
+      "goal_completion_rate": 0.57,
+      "phases_completed": 2,
+      "current_phase_progress": "40% (2/5 goals achieved)",
+      "next_assessment_date": "2025-07-01"
+    },
+    "metadata": {
+      "created_at": "2025-05-15T00:00:00.000Z",
+      "last_updated": "2025-06-20T20:00:00.000Z",
+      "last_assessment": "2025-06-20",
+      "version": "1.0"
+    }
+  }
+}

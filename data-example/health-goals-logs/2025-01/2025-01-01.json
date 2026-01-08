@@ -1,0 +1,93 @@
+{
+  "date": "2025-01-01",
+  "goal_updates": [
+    {
+      "goal_id": "goal_20250101",
+      "goal_title": "减重5公斤",
+      "current_value": 0.0,
+      "progress": 0,
+      "motivation": 10,
+      "notes": "目标开始,当前体重75.0公斤",
+      "status_update": "started"
+    },
+    {
+      "goal_id": "goal_20250102",
+      "goal_title": "每周运动4次",
+      "current_value": 0,
+      "progress": 0,
+      "motivation": 10,
+      "notes": "目标开始,制定运动计划",
+      "status_update": "started"
+    },
+    {
+      "goal_id": "goal_20250103",
+      "goal_title": "每天吃5份蔬果",
+      "current_value": 4,
+      "progress": 80,
+      "motivation": 9,
+      "notes": "今天吃了4份蔬果,不错的开始",
+      "status_update": "on_track"
+    },
+    {
+      "goal_id": "goal_20250104",
+      "goal_title": "每晚睡眠8小时",
+      "current_value": 7.5,
+      "progress": 93.75,
+      "motivation": 9,
+      "notes": "昨晚睡了7.5小时,接近目标",
+      "status_update": "on_track"
+    },
+    {
+      "goal_id": "goal_20250105",
+      "goal_title": "血压控制在120/80以下",
+      "current_value": "135/88",
+      "progress": 0,
+      "motivation": 10,
+      "notes": "目标开始,基线血压135/88",
+      "status_update": "started"
+    }
+  ],
+  "habit_log": [
+    {
+      "habit_id": "habit_20250101",
+      "habit_name": "morning_stretch",
+      "completed": true,
+      "duration_minutes": 10,
+      "streak": 1,
+      "trigger": "wake_up",
+      "reward_received": true,
+      "notes": "第一次晨练,感觉很好"
+    },
+    {
+      "habit_id": "habit_20250102",
+      "habit_name": "drink_water_on_waking",
+      "completed": true,
+      "streak": 1,
+      "trigger": "wake_up",
+      "reward_received": true,
+      "notes": "起床后喝了一杯温水"
+    },
+    {
+      "habit_id": "habit_20250103",
+      "habit_name": "evening_walk",
+      "completed": true,
+      "duration_minutes": 20,
+      "streak": 1,
+      "trigger": "after_dinner",
+      "reward_received": true,
+      "notes": "晚餐后散步,天气不错"
+    },
+    {
+      "habit_id": "habit_20250105",
+      "habit_name": "weekly_meal_prep",
+      "completed": true,
+      "duration_minutes": 90,
+      "streak": 1,
+      "trigger": "sunday_morning",
+      "reward_received": true,
+      "notes": "准备了一周的健康餐食"
+    }
+  ],
+  "achievements_unlocked": [],
+  "reflections": "新年新开始,动力十足!今天所有计划都完成了,希望继续保持。"
+}

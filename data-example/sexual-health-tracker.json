@@ -1,0 +1,420 @@
+{
+  "sexual_health_management": {
+    "user_profile": {
+      "gender": "male",
+      "age": 45,
+      "sexual_orientation": "heterosexual",
+      "last_checkup": "2025-01-06",
+      "next_checkup": "2025-07-06",
+      "risk_factors": [
+        "diabetes",
+        "hypertension",
+        "smoking",
+        "obesity"
+      ],
+      "chronic_conditions": [
+        "type_2_diabetes",
+        "hypertension"
+      ],
+      "medications_affecting_sexual_health": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "family_history": []
+    },
+
+    "male_sexual_health": {
+      "iief5_history": [
+        {
+          "id": "iief5_20250106",
+          "date": "2025-01-06",
+          "q1_score": 4,
+          "q2_score": 3,
+          "q3_score": 4,
+          "q4_score": 3,
+          "q5_score": 4,
+          "total_score": 18,
+          "severity": "mild_ed",
+          "notes": "轻度勃起功能不全,可能与糖尿病控制不佳相关",
+          "doctor_consultation": false
+        },
+        {
+          "id": "iief5_20241001",
+          "date": "2024-10-01",
+          "q1_score": 3,
+          "q2_score": 3,
+          "q3_score": 3,
+          "q4_score": 2,
+          "q5_score": 3,
+          "total_score": 14,
+          "severity": "mild_to_moderate_ed",
+          "notes": "轻中度ED,开始控制血糖和运动",
+          "doctor_consultation": true
+        },
+        {
+          "id": "iief5_20240701",
+          "date": "2024-07-01",
+          "q1_score": 2,
+          "q2_score": 2,
+          "q3_score": 2,
+          "q4_score": 2,
+          "q5_score": 2,
+          "total_score": 10,
+          "severity": "moderate_ed",
+          "notes": "中度ED,开始就医评估",
+          "doctor_consultation": true
+        }
+      ],
+      "libido_assessment": "slightly_decreased",
+      "libido_notes": "轻度下降,可能与压力和糖尿病相关",
+      "ejaculation_function": "normal",
+      "testosterone_level": null,
+      "last_psa_test": "2024-06-01",
+      "prostate_health": "normal",
+      "morning_erections": "occasional"
+    },
+
+    "female_sexual_health": {
+      "fsfi_scores": [],
+      "fsfi_history": [],
+      "libido_assessment": null,
+      "libido_notes": null,
+      "arousal_assessment": null,
+      "lubrication": null,
+      "orgasm_function": null,
+      "satisfaction": null,
+      "pain_assessment": null,
+      "dyspareunia": null,
+      "menstrual_cycle": null,
+      "last_pap_smear": null,
+      "last_hpv_test": null,
+      "pelvic_exam": null
+    },
+
+    "std_screening": {
+      "last_screening": "2025-01-06",
+      "next_screening": "2025-07-06",
+      "screening_frequency": "annually",
+      "risk_level": "low",
+      "screening_history": [
+        {
+          "id": "std_20250106",
+          "date": "2025-01-06",
+          "clinic": "疾控中心",
+          "hiv": "negative",
+          "syphilis": "negative",
+          "chlamydia": "negative",
+          "gonorrhea": "negative",
+          "hpv": "negative",
+          "hepatitis_b": "immune",
+          "herpes": "negative",
+          "notes": "年度常规筛查,全部阴性",
+          "cost": 500,
+          "fasting_required": false
+        },
+        {
+          "id": "std_20240106",
+          "date": "2024-01-06",
+          "clinic": "疾控中心",
+          "hiv": "negative",
+          "syphilis": "negative",
+          "chlamydia": "negative",
+          "gonorrhea": "negative",
+          "hpv": "not_tested",
+          "hepatitis_b": "immune",
+          "herpes": "not_tested",
+          "notes": "年度筛查",
+          "cost": 400,
+          "fasting_required": false
+        }
+      ],
+      "positive_results": [],
+      "treatments": [],
+      "vaccinations": {
+        "hpv": "not_vaccinated",
+        "hepatitis_b": "vaccinated",
+        "hepatitis_b_date": "2010-05-15"
+      }
+    },
+
+    "contraception": {
+      "current_method": "condom",
+      "start_date": "2024-01-01",
+      "method_details": "male_condom",
+      "effectiveness": "high",
+      "typical_use_effectiveness": 85,
+      "perfect_use_effectiveness": 98,
+      "std_protection": true,
+      "side_effects": "none",
+      "satisfaction": 8,
+      "notes": "伴侣都满意,偶尔使用",
+      "history": [
+        {
+          "method": "oral_contraceptives",
+          "start_date": "2020-01-01",
+          "end_date": "2023-12-31",
+          "reason_for_change": "伴侣绝育",
+          "satisfaction": 7,
+          "side_effects": "mood_changes",
+          "effectiveness": "high"
+        },
+        {
+          "method": "condom",
+          "start_date": "2018-01-01",
+          "end_date": "2019-12-31",
+          "reason_for_change": "计划怀孕",
+          "satisfaction": 6,
+          "side_effects": "none",
+          "effectiveness": "medium"
+        }
+      ],
+      "usage_frequency": "occasional",
+      "consistency": "usually",
+      "failures": 0,
+      "last_purchase": "2024-12-01",
+      "brand_preference": "durex"
+    },
+
+    "sexual_activity_log": [
+      {
+        "id": "activity_20250105_001",
+        "date": "2025-01-05",
+        "time": "22:00",
+        "activity_type": "intercourse",
+        "duration_minutes": 15,
+        "protection_used": true,
+        "protection_method": "condom",
+        "protection_effective": true,
+        "satisfaction": 8,
+        "libido_level": 7,
+        "orgasm_achieved": true,
+        "partner_type": "regular_partner",
+        "pain_or_discomfort": "none",
+        "notes": "满意度良好",
+        "privacy_flag": true
+      },
+      {
+        "id": "activity_20241228_001",
+        "date": "2024-12-28",
+        "time": "23:00",
+        "activity_type": "intercourse",
+        "duration_minutes": 20,
+        "protection_used": true,
+        "protection_method": "condom",
+        "protection_effective": true,
+        "satisfaction": 7,
+        "libido_level": 6,
+        "orgasm_achieved": true,
+        "partner_type": "regular_partner",
+        "pain_or_discomfort": "none",
+        "notes": "",
+        "privacy_flag": true
+      },
+      {
+        "id": "activity_20241215_001",
+        "date": "2024-12-15",
+        "time": "21:30",
+        "activity_type": "intercourse",
+        "duration_minutes": 12,
+        "protection_used": true,
+        "protection_method": "condom",
+        "protection_effective": true,
+        "satisfaction": 6,
+        "libido_level": 5,
+        "orgasm_achieved": true,
+        "partner_type": "regular_partner",
+        "pain_or_discomfort": "mild_discomfort",
+        "notes": "轻度不适,可能与疲劳有关",
+        "privacy_flag": true
+      }
+    ],
+    "activity_statistics": {
+      "frequency_last_month": 3,
+      "frequency_last_3_months": 8,
+      "frequency_last_6_months": 15,
+      "average_satisfaction": 7.0,
+      "average_duration": 15.7,
+      "protection_usage_rate": 100,
+      "frequency_pattern": "1-2_times_week"
+    },
+
+    "medications": [
+      {
+        "id": "med_20240601",
+        "name": "sildenafil",
+        "brand_name": "万艾可",
+        "dosage": "50mg",
+        "frequency": "as_needed",
+        "start_date": "2024-06-01",
+        "end_date": null,
+        "currently_using": true,
+        "prescribing_doctor": "张医生",
+        "effectiveness": 7,
+        "effectiveness_notes": "效果良好,按需服用",
+        "side_effects": "mild_headache",
+        "side_effects_severity": "mild",
+        "cost_per_dose": 80,
+        "usage_frequency": "2-3_times_month",
+        "notes": "性生活前30-60分钟服用",
+        "interactions": [
+          "nitrate_medications_contraindicated"
+        ]
+      },
+      {
+        "id": "med_20240101",
+        "name": "testosterone_supplement",
+        "brand_name": null,
+        "dosage": "unknown",
+        "frequency": "unknown",
+        "start_date": null,
+        "end_date": null,
+        "currently_using": false,
+        "prescribing_doctor": null,
+        "effectiveness": null,
+        "effectiveness_notes": "医生评估后考虑使用",
+        "side_effects": null,
+        "side_effects_severity": null,
+        "cost_per_dose": null,
+        "usage_frequency": null,
+        "notes": "待评估睾酮水平后决定",
+        "interactions": []
+      }
+    ],
+
+    "goals": {
+      "improve_iief5_score": {
+        "target_score": 22,
+        "current_score": 18,
+        "start_date": "2025-01-06",
+        "deadline": "2025-06-06",
+        "status": "in_progress",
+        "priority": "high",
+        "action_plan": [
+          "严格控制血糖(HbA1c<7%)",
+          "规律运动:每周150分钟有氧运动",
+          "戒烟计划:6个月内完全戒烟",
+          "减重:BMI从29降至25",
+          "压力管理:每日冥想15分钟",
+          "盆底肌训练:每日3组"
+        ],
+        "milestones": [
+          {
+            "date": "2025-02-01",
+            "target": "iief5_score_19",
+            "achieved": false
+          },
+          {
+            "date": "2025-04-01",
+            "target": "iief5_score_20",
+            "achieved": false
+          }
+        ],
+        "progress_notes": "已开始规律运动,血糖控制改善中"
+      },
+      "reduce_smoking": {
+        "target": "quit_completely",
+        "current": "5_cigarettes_day",
+        "start_date": "2025-01-01",
+        "deadline": "2025-06-01",
+        "status": "in_progress",
+        "priority": "high",
+        "action_plan": [
+          "使用尼古丁替代疗法",
+          "参加戒烟支持小组",
+          "避免吸烟诱因"
+        ],
+        "milestones": [
+          {
+            "date": "2025-02-01",
+            "target": "3_cigarettes_day",
+            "achieved": false
+          },
+          {
+            "date": "2025-04-01",
+            "target": "1_cigarette_day",
+            "achieved": false
+          }
+        ]
+      }
+    },
+
+    "reminders": {
+      "std_screening": {
+        "next_date": "2025-07-06",
+        "frequency": "6_months",
+        "advance_notice_days": 14,
+        "enabled": true
+      },
+      "sexual_health_checkup": {
+        "next_date": "2025-07-06",
+        "frequency": "6_months",
+        "advance_notice_days": 30,
+        "enabled": true
+      },
+      "medication_refill": {
+        "medication_id": "med_20240601",
+        "next_date": "2025-02-01",
+        "advance_notice_days": 7,
+        "enabled": true
+      },
+      "psa_test": {
+        "next_date": "2025-06-01",
+        "frequency": "annually",
+        "advance_notice_days": 30,
+        "enabled": true
+      }
+    },
+
+    "risk_assessment": {
+      "ed_risk_score": 52,
+      "ed_risk_level": "high",
+      "std_risk_score": 8,
+      "std_risk_level": "low",
+      "last_assessment": "2025-01-06",
+      "primary_ed_risk_factors": [
+        "diabetes",
+        "hypertension",
+        "age_over_40",
+        "smoking",
+        "obesity"
+      ],
+      "modifiable_risk_factors": [
+        "smoking",
+        "obesity",
+        "lack_of_exercise",
+        "poor_diabetes_control"
+      ],
+      "non_modifiable_risk_factors": [
+        "age",
+        "diabetes_duration"
+      ]
+    },
+
+    "statistics": {
+      "avg_iief5_score": 14.0,
+      "iief5_trend": "improving",
+      "iief5_change_6months": "+4",
+      "std_screening_frequency": "annually",
+      "std_last_screening_date": "2025-01-06",
+      "sexual_activity_frequency": "1-2_times_week",
+      "avg_satisfaction_score": 7.0,
+      "satisfaction_trend": "stable",
+      "contraception_effectiveness": 85,
+      "contraception_satisfaction": 8,
+      "medication_effectiveness_avg": 7.0,
+      "overall_sexual_health_score": 68,
+      "last_updated": "2025-01-06"
+    },
+
+    "metadata": {
+      "created_at": "2024-07-01",
+      "last_updated": "2025-01-06",
+      "version": "1.0.0",
+      "data_quality": "good",
+      "privacy_level": "standard",
+      "backup_date": "2025-01-06",
+      "next_review_date": "2025-07-06"
+    }
+  }
+}

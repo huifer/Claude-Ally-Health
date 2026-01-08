@@ -1,0 +1,27 @@
+{
+  "months": [
+    {
+      "month": "2025-06",
+      "entries_count": 20,
+      "first_entry": "2025-06-01",
+      "last_entry": "2025-06-20",
+      "avg_mood_intensity": 5.8,
+      "crisis_events": 0,
+      "most_common_mood": "anxious",
+      "most_common_trigger": "work_pressure"
+    }
+  ],
+  "total_entries": 45,
+  "date_range": {
+    "start": "2025-05-01",
+    "end": "2025-06-20"
+  },
+  "statistics": {
+    "avg_mood_intensity": 5.8,
+    "crisis_events_total": 0,
+    "total_days": 51,
+    "entry_frequency": "daily"
+  },
+  "last_updated": "2025-06-20",
+  "version": "1.0"
+}

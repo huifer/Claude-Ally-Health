@@ -1,0 +1,100 @@
+{
+  "date": "2025-03-20",
+  "goal_updates": [
+    {
+      "goal_id": "goal_20250101",
+      "goal_title": "减重5公斤",
+      "current_value": 3.5,
+      "progress": 70,
+      "motivation": 8,
+      "notes": "这周减了0.3公斤,进展顺利。继续保持!",
+      "status_update": "ahead_of_schedule"
+    },
+    {
+      "goal_id": "goal_20250102",
+      "goal_title": "每周运动4次",
+      "current_value": 4.2,
+      "progress": 105,
+      "motivation": 9,
+      "notes": "本周运动5次,超额完成目标",
+      "status_update": "exceeding"
+    },
+    {
+      "goal_id": "goal_20250103",
+      "goal_title": "每天吃5份蔬果",
+      "current_value": 4.2,
+      "progress": 84,
+      "motivation": 7,
+      "notes": "今天吃了4份蔬果,还差一点。明天要多吃一份",
+      "status_update": "on_track"
+    },
+    {
+      "goal_id": "goal_20250104",
+      "goal_title": "每晚睡眠8小时",
+      "current_value": 7.4,
+      "progress": 92.5,
+      "motivation": 8,
+      "notes": "昨晚睡了7.4小时,质量不错",
+      "status_update": "on_track"
+    },
+    {
+      "goal_id": "goal_20250105",
+      "goal_title": "血压控制在120/80以下",
+      "current_value": "125/82",
+      "progress": 60,
+      "motivation": 9,
+      "notes": "血压继续改善,接近目标值",
+      "status_update": "improving"
+    }
+  ],
+  "habit_log": [
+    {
+      "habit_id": "habit_20250101",
+      "habit_name": "morning_stretch",
+      "completed": true,
+      "duration_minutes": 12,
+      "streak": 21,
+      "trigger": "wake_up",
+      "reward_received": true,
+      "notes": "连续21天完成早操!习惯正在养成"
+    },
+    {
+      "habit_id": "habit_20250102",
+      "habit_name": "drink_water_on_waking",
+      "completed": true,
+      "streak": 45,
+      "trigger": "wake_up",
+      "reward_received": true,
+      "notes": "连续45天,已经完全自动化了"
+    },
+    {
+      "habit_id": "habit_20250103",
+      "habit_name": "evening_walk",
+      "completed": true,
+      "duration_minutes": 25,
+      "streak": 15,
+      "trigger": "after_dinner",
+      "reward_received": true,
+      "notes": "今晚散步25分钟,天气很好"
+    },
+    {
+      "habit_id": "habit_20250104",
+      "habit_name": "no_phone_in_bed",
+      "completed": true,
+      "streak": 8,
+      "trigger": "bedtime",
+      "reward_received": true,
+      "notes": "睡前30分钟没用手机,睡眠质量提升"
+    }
+  ],
+  "achievements_unlocked": [
+    {
+      "achievement_id": "achieve_003",
+      "name": "连续21天",
+      "unlocked_at": "2025-03-20T07:30:00Z",
+      "related_habit": "habit_20250101",
+      "notes": "早上拉伸习惯连续21天!"
+    }
+  ],
+  "reflections": "连续21天完成早操习惯,感觉身体状态很好。所有目标进度都不错,尤其是运动目标超额完成。需要继续关注蔬果摄入量,争取达到每天5份的目标。"
+}

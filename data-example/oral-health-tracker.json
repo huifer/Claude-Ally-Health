@@ -1,0 +1,138 @@
+{
+  "oral_health_tracking": {
+    "user_profile": {
+      "age": 35,
+      "dental_anxiety_level": "low",
+      "last_checkup": "2025-06-10",
+      "next_checkup": "2025-12-10",
+      "risk_factors": [],
+      "medications_affecting_oral_health": [],
+      "family_history": []
+    },
+
+    "oral_examination": {
+      "teeth_status": {
+        "missing": [],
+        "filled": ["16", "26", "36"],
+        "caries": [],
+        "crown": [],
+        "implant": [],
+        "bridge": [],
+        "denture": false,
+        "orthodontic": false
+      },
+      "periodontal_status": {
+        "bleeding_on_probing": "none",
+        "probing_depth": "2-3mm",
+        "plaque_index": "low",
+        "gingival_recession": "none",
+        "calculus": "none",
+        "attachment_level": "normal"
+      },
+      "oral_mucosa": "normal",
+      "occlusion": "normal",
+      "temporomandibular_joint": "normal",
+      "salivary_flow": "normal"
+    },
+
+    "treatment_history": [
+      {
+        "id": "tx_20250610_001",
+        "date": "2025-06-10",
+        "type": "filling",
+        "tooth": "26",
+        "material": "composite",
+        "dentist": "张医生",
+        "clinic": "阳光牙科",
+        "cost": 300,
+        "duration_minutes": 30,
+        "anesthesia": "local",
+        "notes": "龋齿充填，术后无不适",
+        "follow_up_needed": false
+      },
+      {
+        "id": "tx_20241210_002",
+        "date": "2024-12-10",
+        "type": "scaling",
+        "teeth": "all",
+        "dentist": "李医生",
+        "clinic": "阳光牙科",
+        "cost": 200,
+        "duration_minutes": 45,
+        "anesthesia": "none",
+        "notes": "定期洁牙，牙龈健康",
+        "follow_up_needed": false
+      }
+    ],
+
+    "hygiene_habits": {
+      "brushing_frequency": "twice_daily",
+      "brushing_duration": "2_minutes",
+      "brushing_technique": "bass_method",
+      "flossing": "weekly",
+      "interdental_brush": "never",
+      "mouthwash": "sometimes",
+      "tongue_cleaning": "sometimes",
+      "cleaning_frequency": "every_6_months",
+      "last_cleaning": "2025-06-10",
+      "next_cleaning": "2025-12-10"
+    },
+
+    "oral_problems": [],
+
+    "screenings": {
+      "caries_risk": {
+        "assessment_date": "2025-06-10",
+        "risk_level": "low",
+        "factors": ["low_sugar_intake", "good_hygiene", "fluoride_use"],
+        "next_assessment": "2025-12-10"
+      },
+      "periodontal_disease": {
+        "assessment_date": "2025-06-10",
+        "stage": "health",
+        "risk_factors": [],
+        "next_assessment": "2025-12-10"
+      },
+      "oral_cancer": {
+        "last_screening": "2025-06-10",
+        "result": "negative",
+        "risk_factors": ["no_smoking", "no_alcohol"],
+        "next_screening": "2026-06-10"
+      },
+      "malocclusion": {
+        "assessment": "none",
+        "treatment_needed": false
+      }
+    },
+
+    "goals": {
+      "improve_flossing_frequency": {
+        "target": "daily",
+        "current": "weekly",
+        "start_date": "2025-06-10",
+        "deadline": "2025-09-10",
+        "status": "in_progress",
+        "milestones": [
+          {"date": "2025-07-01", "achievement": "3_times_weekly"},
+          {"date": "2025-08-01", "achievement": "5_times_weekly"}
+        ]
+      }
+    },
+
+    "statistics": {
+      "total_treatments": 2,
+      "total_problems": 0,
+      "avg_time_between_checkups": "6_months",
+      "hygiene_score": 7,
+      "oral_health_age": 33,
+      "last_updated": "2025-06-10"
+    },
+
+    "metadata": {
+      "created_at": "2025-01-06",
+      "last_updated": "2025-06-10",
+      "version": "1.0.0",
+      "data_quality": "good"
+    }
+  }
+}

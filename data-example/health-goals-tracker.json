@@ -1,0 +1,551 @@
+{
+  "health_goals": {
+    "user_profile": {
+      "name": "用户",
+      "preferences": {
+        "reminder_enabled": true,
+        "achievement_system": true,
+        "theme": "light"
+      },
+      "created_date": "2025-01-01"
+    },
+    "active_goals": [
+      {
+        "id": "goal_20250101",
+        "category": "weight_loss",
+        "title": "减重5公斤",
+        "description": "在6个月内通过健康饮食和规律运动减重5公斤",
+        "start_date": "2025-01-01",
+        "target_date": "2025-06-30",
+        "current_status": "in_progress",
+        "progress": 70,
+        "current_value": 3.5,
+        "target_value": 5.0,
+        "unit": "kg",
+        "baseline_value": 75.0,
+        "smart_scores": {
+          "specific": 5,
+          "measurable": 5,
+          "achievable": 4,
+          "relevant": 5,
+          "time_bound": 5
+        },
+        "smart_grade": "A",
+        "action_plan": [
+          "exercise_4x_weekly",
+          "reduce_calories_500",
+          "track_food_daily",
+          "sleep_8_hours"
+        ],
+        "obstacles": [
+          "social_events",
+          "work_stress"
+        ],
+        "motivation": 8,
+        "priority": "high",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-20"
+      },
+      {
+        "id": "goal_20250102",
+        "category": "exercise",
+        "title": "每周运动4次",
+        "description": "建立每周至少运动4次的习惯,每次30-60分钟",
+        "start_date": "2025-01-01",
+        "target_date": "2025-12-31",
+        "current_status": "in_progress",
+        "progress": 85,
+        "current_value": 4.2,
+        "target_value": 4.0,
+        "unit": "times/week",
+        "smart_scores": {
+          "specific": 5,
+          "measurable": 5,
+          "achievable": 5,
+          "relevant": 5,
+          "time_bound": 5
+        },
+        "smart_grade": "A",
+        "action_plan": [
+          "schedule_workouts",
+          "mix_cardio_strength",
+          "find_workout_buddy"
+        ],
+        "obstacles": [],
+        "motivation": 9,
+        "priority": "high",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-20"
+      },
+      {
+        "id": "goal_20250103",
+        "category": "diet",
+        "title": "每天吃5份蔬果",
+        "description": "每天摄入至少5份蔬菜和水果,改善营养状况",
+        "start_date": "2025-01-01",
+        "target_date": "2025-12-31",
+        "current_status": "in_progress",
+        "progress": 65,
+        "current_value": 4.2,
+        "target_value": 5.0,
+        "unit": "servings/day",
+        "smart_scores": {
+          "specific": 4,
+          "measurable": 5,
+          "achievable": 5,
+          "relevant": 5,
+          "time_bound": 5
+        },
+        "smart_grade": "A",
+        "action_plan": [
+          "plan_meals_ahead",
+          "keep_fruits_visible",
+          "try_new_recipes"
+        ],
+        "obstacles": [
+          "busy_schedule",
+          "limited_access"
+        ],
+        "motivation": 7,
+        "priority": "medium",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-20"
+      },
+      {
+        "id": "goal_20250104",
+        "category": "sleep",
+        "title": "每晚睡眠8小时",
+        "description": "改善睡眠习惯,每晚保证8小时优质睡眠",
+        "start_date": "2025-01-01",
+        "target_date": "2025-12-31",
+        "current_status": "in_progress",
+        "progress": 72,
+        "current_value": 7.4,
+        "target_value": 8.0,
+        "unit": "hours/night",
+        "smart_scores": {
+          "specific": 5,
+          "measurable": 5,
+          "achievable": 4,
+          "relevant": 5,
+          "time_bound": 5
+        },
+        "smart_grade": "A",
+        "action_plan": [
+          "set_bedtime_reminder",
+          "no_screens_1h_before_bed",
+          "dark_room",
+          "cool_temperature"
+        ],
+        "obstacles": [
+          "late_work",
+          "screen_time"
+        ],
+        "motivation": 8,
+        "priority": "high",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-20"
+      },
+      {
+        "id": "goal_20250105",
+        "category": "health_metric",
+        "title": "血压控制在120/80以下",
+        "description": "通过饮食和运动控制血压在健康范围内",
+        "start_date": "2025-01-01",
+        "target_date": "2025-06-30",
+        "current_status": "in_progress",
+        "progress": 60,
+        "current_value": "125/82",
+        "target_value": "120/80",
+        "unit": "mmHg",
+        "baseline_value": "135/88",
+        "smart_scores": {
+          "specific": 5,
+          "measurable": 5,
+          "achievable": 4,
+          "relevant": 5,
+          "time_bound": 5
+        },
+        "smart_grade": "A",
+        "action_plan": [
+          "reduce_sodium",
+          "increase_potassium",
+          "regular_exercise",
+          "manage_stress",
+          "limit_alcohol"
+        ],
+        "obstacles": [
+          "stress",
+          "diet_preferences"
+        ],
+        "motivation": 9,
+        "priority": "high",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-20"
+      }
+    ],
+    "completed_goals": [],
+    "habits": [
+      {
+        "id": "habit_20250101",
+        "name": "morning_stretch",
+        "title": "早上拉伸",
+        "description": "每天早上起床后做10分钟拉伸运动",
+        "frequency": "daily",
+        "trigger": "wake_up",
+        "reward": "feel_energized",
+        "current_streak": 21,
+        "longest_streak": 21,
+        "total_days": 79,
+        "completed_days": 75,
+        "completion_rate": 94.9,
+        "strength_score": 7.5,
+        "stage": "consolidating",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-21"
+      },
+      {
+        "id": "habit_20250102",
+        "name": "drink_water_on_waking",
+        "title": "起床喝水",
+        "description": "每天起床后立即喝一杯温水",
+        "frequency": "daily",
+        "trigger": "wake_up",
+        "reward": "hydration",
+        "current_streak": 45,
+        "longest_streak": 45,
+        "total_days": 79,
+        "completed_days": 72,
+        "completion_rate": 91.1,
+        "strength_score": 8.2,
+        "stage": "habit_formed",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-21"
+      },
+      {
+        "id": "habit_20250103",
+        "name": "evening_walk",
+        "title": "饭后散步",
+        "description": "晚餐后散步20分钟",
+        "frequency": "daily",
+        "trigger": "after_dinner",
+        "reward": "better_digestion",
+        "current_streak": 15,
+        "longest_streak": 28,
+        "total_days": 79,
+        "completed_days": 62,
+        "completion_rate": 78.5,
+        "strength_score": 6.8,
+        "stage": "forming",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-21"
+      },
+      {
+        "id": "habit_20250104",
+        "name": "no_phone_in_bed",
+        "title": "睡前不看手机",
+        "description": "睡前30分钟不使用手机",
+        "frequency": "daily",
+        "trigger": "bedtime",
+        "reward": "better_sleep",
+        "current_streak": 8,
+        "longest_streak": 18,
+        "total_days": 60,
+        "completed_days": 48,
+        "completion_rate": 80.0,
+        "strength_score": 6.2,
+        "stage": "forming",
+        "created_date": "2025-01-20",
+        "last_updated": "2025-03-21"
+      },
+      {
+        "id": "habit_20250105",
+        "name": "weekly_meal_prep",
+        "title": "每周备餐",
+        "description": "每周日准备下周的健康餐食",
+        "frequency": "weekly",
+        "trigger": "sunday_morning",
+        "reward": "healthy_meals",
+        "current_streak": 3,
+        "longest_streak": 8,
+        "total_weeks": 12,
+        "completed_weeks": 10,
+        "completion_rate": 83.3,
+        "strength_score": 7.0,
+        "stage": "forming",
+        "created_date": "2025-01-01",
+        "last_updated": "2025-03-21"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "achieve_001",
+        "name": "first_goal",
+        "title": "首次目标",
+        "description": "完成第一个健康目标",
+        "category": "goal",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 0
+      },
+      {
+        "id": "achieve_002",
+        "name": "streak_7",
+        "title": "连续7天",
+        "description": "任意习惯连续7天打卡",
+        "category": "habit",
+        "unlocked": true,
+        "unlocked_date": "2025-01-07",
+        "progress": 100,
+        "related_habit": "habit_20250102"
+      },
+      {
+        "id": "achieve_003",
+        "name": "streak_21",
+        "title": "连续21天",
+        "description": "任意习惯连续21天打卡",
+        "category": "habit",
+        "unlocked": true,
+        "unlocked_date": "2025-01-21",
+        "progress": 100,
+        "related_habit": "habit_20250102"
+      },
+      {
+        "id": "achieve_004",
+        "name": "streak_30",
+        "title": "连续30天",
+        "description": "任意习惯连续30天打卡",
+        "category": "habit",
+        "unlocked": true,
+        "unlocked_date": "2025-02-15",
+        "progress": 100,
+        "related_habit": "habit_20250102"
+      },
+      {
+        "id": "achieve_005",
+        "name": "halfway",
+        "title": "半程达成",
+        "description": "任意目标完成50%",
+        "category": "goal",
+        "unlocked": true,
+        "unlocked_date": "2025-02-15",
+        "progress": 100,
+        "related_goal": "goal_20250101"
+      },
+      {
+        "id": "achieve_006",
+        "name": "goal_complete",
+        "title": "目标达成",
+        "description": "完成一个健康目标",
+        "category": "goal",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 0
+      },
+      {
+        "id": "achieve_007",
+        "name": "early_complete",
+        "title": "提前完成",
+        "description": "提前完成目标",
+        "category": "goal",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 0
+      },
+      {
+        "id": "achieve_008",
+        "name": "overachieve",
+        "title": "超额完成",
+        "description": "超额完成目标",
+        "category": "goal",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 0
+      },
+      {
+        "id": "achieve_009",
+        "name": "streak_66",
+        "title": "连续66天",
+        "description": "任意习惯连续66天打卡(完全养成)",
+        "category": "habit",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 68,
+        "related_habit": "habit_20250102"
+      },
+      {
+        "id": "achieve_010",
+        "name": "perfect_month",
+        "title": "完美坚持",
+        "description": "30天习惯完成率100%",
+        "category": "habit",
+        "unlocked": false,
+        "unlocked_date": null,
+        "progress": 95,
+        "related_habit": "habit_20250102"
+      }
+    ],
+    "statistics": {
+      "total_goals_created": 5,
+      "total_goals_completed": 0,
+      "total_habits_created": 5,
+      "total_achievements_unlocked": 4,
+      "overall_completion_rate": 71.4,
+      "average_habit_completion_rate": 85.6,
+      "longest_habit_streak": 45,
+      "total_days_tracked": 79,
+      "average_motivation": 8.2
+    }
+  },
+  "goal_analytics": {
+    "progress_history": [
+      {
+        "date": "2025-01-01",
+        "goal_id": "goal_20250101",
+        "progress": 0,
+        "current_value": 0.0,
+        "motivation": 10
+      },
+      {
+        "date": "2025-01-15",
+        "goal_id": "goal_20250101",
+        "progress": 10,
+        "current_value": 0.5,
+        "motivation": 9
+      },
+      {
+        "date": "2025-02-01",
+        "goal_id": "goal_20250101",
+        "progress": 30,
+        "current_value": 1.5,
+        "motivation": 8
+      },
+      {
+        "date": "2025-02-15",
+        "goal_id": "goal_20250101",
+        "progress": 50,
+        "current_value": 2.5,
+        "motivation": 9
+      },
+      {
+        "date": "2025-03-01",
+        "goal_id": "goal_20250101",
+        "progress": 60,
+        "current_value": 3.0,
+        "motivation": 8
+      },
+      {
+        "date": "2025-03-20",
+        "goal_id": "goal_20250101",
+        "progress": 70,
+        "current_value": 3.5,
+        "motivation": 8
+      }
+    ],
+    "habit_streaks": {
+      "habit_20250101": {
+        "current": 21,
+        "longest": 21,
+        "history": [21, 18, 14, 7, 3, 1]
+      },
+      "habit_20250102": {
+        "current": 45,
+        "longest": 45,
+        "history": [45, 38, 30, 21, 14, 7]
+      },
+      "habit_20250103": {
+        "current": 15,
+        "longest": 28,
+        "history": [15, 28, 20, 12, 5]
+      },
+      "habit_20250104": {
+        "current": 8,
+        "longest": 18,
+        "history": [8, 18, 10, 5]
+      },
+      "habit_20250105": {
+        "current": 3,
+        "longest": 8,
+        "history": [3, 8, 5, 2]
+      }
+    },
+    "motivation_trends": [
+      {
+        "date": "2025-01-01",
+        "average_motivation": 10.0
+      },
+      {
+        "date": "2025-01-15",
+        "average_motivation": 9.2
+      },
+      {
+        "date": "2025-02-01",
+        "average_motivation": 8.5
+      },
+      {
+        "date": "2025-02-15",
+        "average_motivation": 8.8
+      },
+      {
+        "date": "2025-03-01",
+        "average_motivation": 8.3
+      },
+      {
+        "date": "2025-03-20",
+        "average_motivation": 8.2
+      }
+    ],
+    "obstacle_patterns": [
+      {
+        "obstacle": "social_events",
+        "frequency": 8,
+        "impact": "medium",
+        "affected_goals": ["goal_20250101", "goal_20250103"]
+      },
+      {
+        "obstacle": "work_stress",
+        "frequency": 5,
+        "impact": "high",
+        "affected_goals": ["goal_20250101", "goal_20250104"]
+      },
+      {
+        "obstacle": "busy_schedule",
+        "frequency": 6,
+        "impact": "low",
+        "affected_goals": ["goal_20250103"]
+      },
+      {
+        "obstacle": "screen_time",
+        "frequency": 4,
+        "impact": "medium",
+        "affected_goals": ["goal_20250104"]
+      },
+      {
+        "obstacle": "late_work",
+        "frequency": 3,
+        "impact": "high",
+        "affected_goals": ["goal_20250104"]
+      }
+    ],
+    "correlations": {
+      "goal_20250101": {
+        "daily_calories": -0.75,
+        "exercise_frequency": 0.68,
+        "sleep_duration": 0.45
+      },
+      "goal_20250102": {
+        "sleep_quality": 0.52,
+        "protein_intake": 0.38
+      },
+      "goal_20250104": {
+        "screen_time_before_bed": -0.62,
+        "evening_exercise": 0.35
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-03-21T10:30:00Z",
+    "total_records": 79
+  }
+}

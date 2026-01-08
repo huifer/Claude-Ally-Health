@@ -1,0 +1,560 @@
+{
+  "mental_health_tracking": {
+    "user_profile": {
+      "age": 35,
+      "gender": "female",
+      "risk_factors": [
+        "family_history_depression",
+        "chronic_illness"
+      ],
+      "protective_factors": [
+        "social_support",
+        "regular_exercise"
+      ],
+      "created_at": "2025-01-06",
+      "last_updated": "2025-06-20"
+    },
+    "mental_health_assessments": {
+      "phq9": [
+        {
+          "assessment_id": "phq9_20250620",
+          "date": "2025-06-20",
+          "score": 8,
+          "severity": "mild",
+          "responses": [0, 1, 1, 2, 1, 0, 1, 1, 1],
+          "item_scores": {
+            "interest": 0,
+            "depressed": 1,
+            "sleep": 1,
+            "energy": 2,
+            "appetite": 1,
+            "self_worth": 0,
+            "concentration": 1,
+            "psychomotor": 1,
+            "suicidal": 1
+          },
+          "trend": "improving",
+          "notes": "症状有所改善，睡眠仍需关注"
+        },
+        {
+          "assessment_id": "phq9_20250520",
+          "date": "2025-05-20",
+          "score": 12,
+          "severity": "moderate",
+          "responses": [1, 2, 2, 2, 1, 1, 2, 1, 0],
+          "item_scores": {
+            "interest": 1,
+            "depressed": 2,
+            "sleep": 2,
+            "energy": 2,
+            "appetite": 1,
+            "self_worth": 1,
+            "concentration": 2,
+            "psychomotor": 1,
+            "suicidal": 0
+          },
+          "trend": "stable",
+          "notes": "中度抑郁症状，建议继续治疗"
+        },
+        {
+          "assessment_id": "phq9_20250420",
+          "date": "2025-04-20",
+          "score": 14,
+          "severity": "moderate",
+          "responses": [2, 2, 2, 2, 1, 1, 2, 2, 0],
+          "item_scores": {
+            "interest": 2,
+            "depressed": 2,
+            "sleep": 2,
+            "energy": 2,
+            "appetite": 1,
+            "self_worth": 1,
+            "concentration": 2,
+            "psychomotor": 2,
+            "suicidal": 0
+          },
+          "trend": "worsening",
+          "notes": "中度抑郁，开始心理治疗"
+        }
+      ],
+      "gad7": [
+        {
+          "assessment_id": "gad7_20250620",
+          "date": "2025-06-20",
+          "score": 6,
+          "severity": "mild",
+          "responses": [1, 1, 1, 0, 0, 1, 2],
+          "item_scores": {
+            "nervous": 1,
+            "control_worry": 1,
+            "worry_too_much": 1,
+            "relaxation": 0,
+            "restlessness": 0,
+            "irritability": 1,
+            "fear_something_bad": 2
+          },
+          "trend": "stable",
+          "notes": "轻度焦虑，工作压力相关"
+        },
+        {
+          "assessment_id": "gad7_20250520",
+          "date": "2025-05-20",
+          "score": 8,
+          "severity": "mild",
+          "responses": [1, 2, 1, 1, 0, 1, 2],
+          "item_scores": {
+            "nervous": 1,
+            "control_worry": 2,
+            "worry_too_much": 1,
+            "relaxation": 1,
+            "restlessness": 0,
+            "irritability": 1,
+            "fear_something_bad": 2
+          },
+          "trend": "improving",
+          "notes": "轻度焦虑，有所改善"
+        }
+      ],
+      "psqi": {
+        "last_assessment": "2025-06-15",
+        "total_score": 5,
+        "interpretation": "fair",
+        "components": {
+          "subjective_quality": 1,
+          "sleep_latency": 0,
+          "sleep_duration": 1,
+          "sleep_efficiency": 0,
+          "sleep_disturbances": 2,
+          "medication_use": 0,
+          "daytime_dysfunction": 1
+        },
+        "notes": "睡眠质量一般，夜间易醒"
+      },
+      "assessment_schedule": {
+        "phq9_frequency": "monthly",
+        "gad7_frequency": "monthly",
+        "psqi_frequency": "quarterly",
+        "next_assessment": "2025-07-20",
+        "assessment_reminder": true
+      }
+    },
+    "mood_diary": {
+      "entries": [
+        {
+          "id": "mood_20250620_001",
+          "date": "2025-06-20",
+          "time": "08:00",
+          "day_of_week": 4,
+          "primary_mood": "calm",
+          "mood_intensity": 7,
+          "mood_duration": "2_hours",
+          "emotions": [
+            {"emotion": "calm", "intensity": 7},
+            {"emotion": "energetic", "intensity": 6}
+          ],
+          "triggers": [
+            {"factor": "morning_exercise", "impact": "positive"}
+          ],
+          "physical_symptoms": [],
+          "cognitive_symptoms": [],
+          "coping_strategies": [
+            {
+              "strategy": "exercise",
+              "duration_minutes": 30,
+              "effectiveness": "very_helpful"
+            }
+          ],
+          "social_context": {
+            "alone": false,
+            "with_whom": ["friend"],
+            "social_support": "high"
+          },
+          "notes": "晨跑后感觉平静，精神好"
+        },
+        {
+          "id": "mood_20250620_002",
+          "date": "2025-06-20",
+          "time": "14:00",
+          "day_of_week": 4,
+          "primary_mood": "anxious",
+          "mood_intensity": 7,
+          "mood_duration": "3_hours",
+          "emotions": [
+            {"emotion": "anxious", "intensity": 7},
+            {"emotion": "irritable", "intensity": 5},
+            {"emotion": "tired", "intensity": 6}
+          ],
+          "triggers": [
+            {"factor": "work_deadline", "impact": "high"},
+            {"factor": "lack_of_sleep", "impact": "medium"}
+          ],
+          "physical_symptoms": [
+            "headache",
+            "muscle_tension"
+          ],
+          "cognitive_symptoms": [
+            "racing_thoughts",
+            "difficulty_concentrating"
+          ],
+          "coping_strategies": [
+            {
+              "strategy": "deep_breathing",
+              "duration_minutes": 5,
+              "effectiveness": "somewhat_helpful"
+            }
+          ],
+          "social_context": {
+            "alone": true,
+            "with_whom": [],
+            "social_support": "low"
+          },
+          "notes": "项目明天到期，感觉压力很大"
+        },
+        {
+          "id": "mood_20250620_003",
+          "date": "2025-06-20",
+          "time": "20:00",
+          "day_of_week": 4,
+          "primary_mood": "tired",
+          "mood_intensity": 6,
+          "mood_duration": "4_hours",
+          "emotions": [
+            {"emotion": "tired", "intensity": 6},
+            {"emotion": "calm", "intensity": 5}
+          ],
+          "triggers": [],
+          "physical_symptoms": [
+            "fatigue"
+          ],
+          "cognitive_symptoms": [],
+          "coping_strategies": [
+            {
+              "strategy": "relaxation",
+              "duration_minutes": 15,
+              "effectiveness": "helpful"
+            }
+          ],
+          "social_context": {
+            "alone": false,
+            "with_whom": ["spouse"],
+            "social_support": "high"
+          },
+          "notes": "晚上疲劳，但情绪平静"
+        }
+      ],
+      "patterns": {
+        "common_moods": [
+          "anxious",
+          "tired",
+          "calm"
+        ],
+        "common_triggers": [
+          "work_pressure",
+          "lack_of_sleep",
+          "exercise"
+        ],
+        "effective_coping": [
+          "exercise",
+          "meditation",
+          "social_support"
+        ],
+        "time_patterns": {
+          "morning": "calm",
+          "afternoon": "stressed",
+          "evening": "tired"
+        },
+        "weekly_pattern": {
+          "monday": "anxious",
+          "tuesday": "anxious",
+          "wednesday": "stressed",
+          "thursday": "stressed",
+          "friday": "calm",
+          "saturday": "happy",
+          "sunday": "calm"
+        }
+      }
+    },
+    "therapy_tracking": {
+      "in_therapy": true,
+      "therapy_type": "CBT",
+      "frequency": "weekly",
+      "started_date": "2025-01-15",
+      "therapist_id": "therapist_001",
+      "sessions": [
+        {
+          "session_id": "session_20250620",
+          "date": "2025-06-20",
+          "duration_minutes": 50,
+          "session_number": 24,
+          "topics_discussed": [
+            "work_stress",
+            "anxiety_management",
+            "cognitive_distortions"
+          ],
+          "mood_before": "anxious",
+          "mood_after": "calmer",
+          "interventions": [
+            "cognitive_restructuring",
+            "problem_solving"
+          ],
+          "homework": {
+            "assigned": [
+              {
+                "task": "thought_record",
+                "description": "记录自动思维",
+                "due_date": "2025-06-27"
+              },
+              {
+                "task": "relaxation_exercise",
+                "description": "每日放松练习15分钟",
+                "due_date": "2025-06-27"
+              }
+            ],
+            "reviewed": [
+              {
+                "task": "behavioral_activation",
+                "description": "增加愉快活动",
+                "completion": "partial",
+                "notes": "增加了3次运动，感觉有帮助"
+              },
+              {
+                "task": "sleep_hygiene",
+                "description": "改善睡眠卫生",
+                "completion": "completed",
+                "notes": "睡眠有所改善"
+              }
+            ]
+          },
+          "progress_notes": "焦虑症状有所改善，认知扭曲识别能力提升。工作压力管理需要继续练习。",
+          "next_session": "2025-06-27"
+        },
+        {
+          "session_id": "session_20250613",
+          "date": "2025-06-13",
+          "duration_minutes": 50,
+          "session_number": 23,
+          "topics_discussed": [
+            "sleep_issues",
+            "negative_thoughts",
+            "self_care"
+          ],
+          "mood_before": "tired",
+          "mood_after": "calm",
+          "interventions": [
+            "sleep_hygiene_education",
+            "cognitive_challenging"
+          ],
+          "homework": {
+            "assigned": [
+              {
+                "task": "sleep_log",
+                "description": "记录睡眠日志",
+                "due_date": "2025-06-20"
+              }
+            ],
+            "reviewed": [
+              {
+                "task": "gratitude_journal",
+                "description": "感恩日记",
+                "completion": "completed",
+                "notes": "坚持记录，积极情绪增加"
+              }
+            ]
+          },
+          "progress_notes": "睡眠问题有所改善，感恩练习效果良好。继续保持。",
+          "next_session": "2025-06-20"
+        }
+      ],
+      "goals": [
+        {
+          "goal_id": "goal_001",
+          "goal": "reduce_anxiety",
+          "description": "降低焦虑水平",
+          "baseline_score": 14,
+          "current_score": 8,
+          "target_score": 5,
+          "scale": "gad7",
+          "progress": "significant_improvement",
+          "target_date": "2025-08-01",
+          "interventions": [
+            "cognitive_restructuring",
+            "relaxation_training",
+            "exposure_therapy"
+          ]
+        },
+        {
+          "goal_id": "goal_002",
+          "goal": "improve_sleep",
+          "description": "改善睡眠质量",
+          "baseline_score": 10,
+          "current_score": 6,
+          "target_score": 4,
+          "scale": "psqi",
+          "progress": "moderate_improvement",
+          "target_date": "2025-07-15",
+          "interventions": [
+            "sleep_hygiene",
+            "relaxation_exercise",
+            "stimulus_control"
+          ]
+        },
+        {
+          "goal_id": "goal_003",
+          "goal": "increase_activity",
+          "description": "增加愉快活动",
+          "baseline_score": 2,
+          "current_score": 5,
+          "target_score": 7,
+          "scale": "weekly_pleasant_activities",
+          "progress": "on_track",
+          "target_date": "2025-07-01",
+          "interventions": [
+            "behavioral_activation",
+            "activity_scheduling"
+          ]
+        }
+      ],
+      "overall_progress": "good",
+      "client_satisfaction": "high",
+      "therapy_alliance": "strong"
+    },
+    "crisis_plan": {
+      "created_date": "2025-01-15",
+      "last_updated": "2025-06-20",
+      "warning_signs": [
+        "hopelessness",
+        "social_withdrawal",
+        "extreme_mood_swings",
+        "talk_of_death",
+        "giving_away_possessions"
+      ],
+      "coping_strategies": [
+        {
+          "strategy": "deep_breathing",
+          "description": "深呼吸5分钟",
+          "effectiveness": "high"
+        },
+        {
+          "strategy": "grounding_technique",
+          "description": "5-4-3-2-1着地技术",
+          "effectiveness": "high"
+        },
+        {
+          "strategy": "progressive_muscle_relaxation",
+          "description": "渐进式肌肉放松",
+          "effectiveness": "high"
+        },
+        {
+          "strategy": "call_friend",
+          "description": "联系支持朋友",
+          "effectiveness": "medium"
+        },
+        {
+          "strategy": "safe_space",
+          "description": "前往安全空间",
+          "effectiveness": "medium"
+        }
+      ],
+      "social_supports": [
+        {
+          "name": "张三",
+          "relationship": "spouse",
+          "phone": "***-****-1234",
+          "availability": "24/7",
+          "notified": true,
+          "role": "primary_support"
+        },
+        {
+          "name": "李四",
+          "relationship": "friend",
+          "phone": "***-****-5678",
+          "availability": "evening",
+          "notified": true,
+          "role": "emotional_support"
+        },
+        {
+          "name": "王五",
+          "relationship": "parent",
+          "phone": "***-****-9012",
+          "availability": "24/7",
+          "notified": true,
+          "role": "emergency_contact"
+        }
+      ],
+      "professional_contacts": [
+        {
+          "name": "王医生",
+          "role": "therapist",
+          "phone": "***-****-3456",
+          "emergency": true,
+          "availability": "work_hours"
+        },
+        {
+          "name": "心理危机热线",
+          "role": "hotline",
+          "phone": "400-xxx-xxxx",
+          "available": "24/7",
+          "emergency": true
+        },
+        {
+          "name": "精神科急诊",
+          "role": "emergency_service",
+          "phone": "120",
+          "available": "24/7",
+          "emergency": true
+        }
+      ],
+      "emergency_services": [
+        {
+          "service": "急诊",
+          "phone": "120",
+          "location": "市第一人民医院精神科急诊",
+          "address": "XX路XX号"
+        },
+        {
+          "service": "心理危机干预中心",
+          "phone": "400-xxx-xxxx",
+          "location": null,
+          "address": "24小时热线"
+        }
+      ],
+      "safety_measures": {
+        "removed_dangerous_items": true,
+        "safe_environment": "home_with_family",
+        "emergency_kit": "prepared",
+        "written_plan_saved": true,
+        "crisis_card_carried": true
+      },
+      "risk_level": "low",
+      "last_assessment": "2025-06-20",
+      "next_review": "2025-07-20"
+    },
+    "statistics": {
+      "total_assessments": 12,
+      "total_mood_entries": 45,
+      "total_therapy_sessions": 24,
+      "avg_phq9_score": 8.5,
+      "avg_gad7_score": 6.2,
+      "avg_psqi_score": 5.5,
+      "avg_mood_intensity": 5.8,
+      "most_common_mood": "anxious",
+      "most_common_trigger": "work_pressure",
+      "most_effective_coping": "exercise",
+      "assessment_adherence": "100%",
+      "therapy_attendance_rate": "96%",
+      "mood_diary_frequency": "daily",
+      "homework_completion_rate": "85%",
+      "crisk_plan_review_frequency": "monthly",
+      "last_updated": "2025-06-20"
+    },
+    "metadata": {
+      "created_at": "2025-01-06T00:00:00.000Z",
+      "last_updated": "2025-06-20T20:00:00.000Z",
+      "version": "1.0",
+      "data_quality": "good",
+      "privacy_level": "high",
+      "encryption_enabled": true,
+      "backup_recommendation": "weekly"
+    }
+  }
+}

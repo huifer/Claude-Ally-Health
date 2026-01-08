@@ -1,0 +1,48 @@
+{
+  "log_type": "rehabilitation_daily_logs",
+  "description": "康复训练每日日志索引",
+  "version": "1.0",
+  "created_at": "2025-06-20T00:00:00.000Z",
+  "last_updated": "2025-06-20T20:00:00.000Z",
+  "months": [
+    {
+      "month": "2025-06",
+      "year": 2025,
+      "days_count": 20,
+      "days": [
+        "2025-06-01",
+        "2025-06-02",
+        "2025-06-03",
+        "2025-06-04",
+        "2025-06-05",
+        "2025-06-06",
+        "2025-06-07",
+        "2025-06-08",
+        "2025-06-09",
+        "2025-06-10",
+        "2025-06-11",
+        "2025-06-12",
+        "2025-06-13",
+        "2025-06-14",
+        "2025-06-15",
+        "2025-06-16",
+        "2025-06-17",
+        "2025-06-18",
+        "2025-06-19",
+        "2025-06-20"
+      ],
+      "total_sessions": 45,
+      "total_exercises": 225,
+      "average_daily_exercises": 5,
+      "adherence_rate": 0.92,
+      "last_updated": "2025-06-20T20:00:00.000Z"
+    }
+  ],
+  "statistics": {
+    "total_months": 1,
+    "total_days_logged": 20,
+    "total_sessions": 45,
+    "total_exercises": 225,
+    "overall_adherence_rate": 0.92
+  }
+}

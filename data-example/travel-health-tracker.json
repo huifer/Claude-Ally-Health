@@ -1,0 +1,325 @@
+{
+  "travel_health_management": {
+    "user_id": "user_20250108_001",
+    "user_profile": {
+      "name": "张三",
+      "date_of_birth": "1990-01-01",
+      "passport_number": "E12345678",
+      "nationality": "Chinese",
+      "blood_type": "A+",
+      "organ_donor": false,
+      "medical_conditions": [
+        {
+          "condition": "高血压",
+          "diagnosis_date": "2020-05-15",
+          "severity": "controlled",
+          "medications": ["氨氯地平 5mg 每日一次"]
+        }
+      ],
+      "allergies": [
+        {
+          "allergen": "青霉素",
+          "reaction": "皮疹、呼吸困难",
+          "severity": "严重"
+        }
+      ],
+      "chronic_medications": [
+        {
+          "medication": "氨氯地平",
+          "dosage": "5mg",
+          "frequency": "每日一次",
+          "purpose": "控制血压"
+        }
+      ],
+      "emergency_contacts": [
+        {
+          "relationship": "配偶",
+          "name": "李四",
+          "phone": "+86-138-1234-5678",
+          "email": "lisi@example.com"
+        },
+        {
+          "relationship": "个人医生",
+          "name": "王医生",
+          "phone": "+86-10-8765-4321",
+          "hospital": "北京协和医院"
+        }
+      ]
+    },
+    "travel_plans": [
+      {
+        "trip_id": "trip_20250801_seasia",
+        "destination": "Southeast Asia",
+        "countries": ["Thailand", "Vietnam", "Cambodia"],
+        "departure_date": "2025-08-01",
+        "return_date": "2025-08-15",
+        "duration_days": 14,
+        "purpose": "tourism",
+        "health_risks": {
+          "infectious_diseases": [
+            {
+              "disease": "登革热",
+              "risk_level": "high",
+              "season": "year-round",
+              "transmission": "蚊子叮咬",
+              "prevention_methods": [
+                "使用防蚊液(DEET 20-30%)",
+                "穿长袖衣物",
+                "住宿选择有空调或蚊帐的房间",
+                "避免积水区域"
+              ],
+              "symptoms": "高热、头痛、肌肉关节痛、皮疹",
+              "who_reference": "https://www.who.int/ith/diseases/dengue",
+              "cdc_reference": "https://www.cdc.gov/dengue"
+            },
+            {
+              "disease": "甲型肝炎",
+              "risk_level": "medium",
+              "season": "year-round",
+              "transmission": "受污染的食物和水",
+              "prevention_methods": [
+                "接种甲肝疫苗",
+                "饮用瓶装水或煮沸的水",
+                "避免生食",
+                "食用水果要自己剥皮"
+              ],
+              "symptoms": "发热、乏力、恶心、黄疸",
+              "who_reference": "https://www.who.int/ith/vaccines/hepatitis_a",
+              "cdc_reference": "https://www.cdc.gov/hepatitis"
+            },
+            {
+              "disease": "伤寒",
+              "risk_level": "medium",
+              "season": "year-round",
+              "transmission": "受污染的食物和水",
+              "prevention_methods": [
+                "接种伤寒疫苗",
+                "注意饮食卫生",
+                "避免街头摊贩食物",
+                "饮用安全水源"
+              ],
+              "symptoms": "持续发热、腹痛、腹泻",
+              "who_reference": "https://www.who.int/ith/diseases/typhoid",
+              "cdc_reference": "https://www.cdc.gov/typhoid"
+            },
+            {
+              "disease": "疟疾",
+              "risk_level": "low",
+              "season": "year-round",
+              "transmission": "蚊子叮咬",
+              "prevention_methods": [
+                "使用防蚊液",
+                "服用疟疾预防药物(如医生建议)",
+                "穿长袖衣物",
+                "使用蚊帐"
+              ],
+              "symptoms": "周期性发热、寒战、出汗",
+              "who_reference": "https://www.who.int/ith/diseases/malaria",
+              "cdc_reference": "https://www.cdc.gov/malaria"
+            }
+          ],
+          "food_water_safety": {
+            "risk_level": "medium",
+            "recommendations": [
+              "饮用瓶装水或煮沸的水",
+              "避免冰块",
+              "避免生食",
+              "选择热食",
+              "水果自己剥皮"
+            ]
+          },
+          "environmental_risks": [
+            {
+              "risk": "高温中暑",
+              "severity": "medium",
+              "prevention": "保持水分、避免中午阳光直射、穿透气衣物"
+            }
+          ],
+          "outbreak_alerts": []
+        },
+        "recommended_vaccinations": [
+          {
+            "vaccine": "甲肝疫苗",
+            "status": "completed",
+            "date": "2025-06-15",
+            "booster_required": false,
+            "notes": "已完成接种"
+          },
+          {
+            "vaccine": "伤寒疫苗",
+            "status": "completed",
+            "date": "2025-06-20",
+            "booster_required": false,
+            "notes": "已完成接种"
+          },
+          {
+            "vaccine": "日本脑炎疫苗",
+            "status": "planned",
+            "date": null,
+            "booster_required": false,
+            "notes": "建议接种,特别是 rural 地区"
+          },
+          {
+            "vaccine": "狂犬病疫苗",
+            "status": "not_required",
+            "date": null,
+            "booster_required": false,
+            "notes": "仅在接触动物风险高时建议"
+          }
+        ],
+        "malaria_prophylaxis": {
+          "required": false,
+          "medication": null,
+          "start_date": null,
+          "end_date": null,
+          "dosage": null,
+          "notes": "根据CDC评估,主要旅游城市疟疾风险较低"
+        },
+        "travel_kit": [
+          {
+            "category": "处方药",
+            "item": "氨氯地平",
+            "quantity": "16片",
+            "purpose": "控制血压",
+            "packed": false
+          },
+          {
+            "category": "非处方药",
+            "item": "止泻药(洛哌丁胺)",
+            "quantity": "10片",
+            "purpose": "治疗腹泻",
+            "packed": false
+          },
+          {
+            "category": "非处方药",
+            "item": "口服补液盐",
+            "quantity": "10包",
+            "purpose": "预防脱水",
+            "packed": false
+          },
+          {
+            "category": "非处方药",
+            "item": "退烧止痛药(对乙酰氨基酚)",
+            "quantity": "20片",
+            "purpose": "退烧止痛",
+            "packed": false
+          },
+          {
+            "category": "非处方药",
+            "item": "抗过敏药(氯雷他定)",
+            "quantity": "10片",
+            "purpose": "过敏反应",
+            "packed": false
+          },
+          {
+            "category": "防护用品",
+            "item": "防蚊液(DEET 30%)",
+            "quantity": "100ml",
+            "purpose": "预防蚊虫叮咬",
+            "packed": false
+          },
+          {
+            "category": "防护用品",
+            "item": "防晒霜(SPF 50+)",
+            "quantity": "100ml",
+            "purpose": "防晒",
+            "packed": false
+          },
+          {
+            "category": "急救用品",
+            "item": "创可贴",
+            "quantity": "20片",
+            "purpose": "小伤口处理",
+            "packed": false
+          },
+          {
+            "category": "急救用品",
+            "item": "消毒液",
+            "quantity": "50ml",
+            "purpose": "伤口消毒",
+            "packed": false
+          },
+          {
+            "category": "其他",
+            "item": "体温计",
+            "quantity": "1个",
+            "purpose": "监测体温",
+            "packed": false
+          }
+        ],
+        "insurance": {
+          "policy_number": "TRAVEL-2025-001234",
+          "provider": "安联保险",
+          "coverage_amount": "$100,000",
+          "medical_coverage": true,
+          "medical_evacuation": true,
+          "trip_cancellation": true,
+          "emergency_hotline": "+1-855-270-7270",
+          "notes": "覆盖医疗费用、医疗转运、行程取消"
+        },
+        "pre_trip_checklist": {
+          "consultation_completed": true,
+          "consultation_date": "2025-07-15",
+          "vaccinations_completed": true,
+          "travel_kit_ready": false,
+          "insurance_purchased": true,
+          "emergency_contacts_set": true,
+          "emergency_card_generated": false
+        }
+      }
+    ],
+    "vaccination_records": [
+      {
+        "vaccine_id": "vaccine_001",
+        "vaccine_name": "甲型肝炎疫苗",
+        "date": "2025-06-15",
+        "dose": "单剂",
+        "provider": "北京国际旅行卫生保健中心",
+        "lot_number": "AH20250615001",
+        "next_dose": null,
+        "adverse_events": []
+      },
+      {
+        "vaccine_id": "vaccine_002",
+        "vaccine_name": "伤寒疫苗",
+        "date": "2025-06-20",
+        "dose": "单剂",
+        "provider": "北京国际旅行卫生保健中心",
+        "lot_number": "TY20250620001",
+        "next_dose": null,
+        "adverse_events": []
+      }
+    ],
+    "emergency_cards": [
+      {
+        "card_id": "card_20250801",
+        "trip_id": "trip_20250801_seasia",
+        "languages": ["en", "zh", "th", "ja"],
+        "qrcode_url": "https://wellally.app/qr/abc123",
+        "generated_at": "2025-07-28T10:00:00.000Z",
+        "last_updated": "2025-07-28T10:00:00.000Z"
+      }
+    ],
+    "alerts_subscriptions": [
+      {
+        "subscription_id": "alert_001",
+        "destination": "Thailand",
+        "countries": ["Thailand", "Vietnam", "Cambodia"],
+        "alert_types": ["disease_outbreak", "natural_disaster", "travel_advisory"],
+        "active": true,
+        "subscribed_date": "2025-07-01"
+      }
+    ],
+    "post_trip_health_checks": [],
+    "metadata": {
+      "created_at": "2025-01-08T00:00:00.000Z",
+      "last_updated": "2025-07-28T10:00:00.000Z",
+      "data_sources": [
+        "WHO - World Health Organization International Travel Health",
+        "CDC - Centers for Disease Control and Prevention Travel Health",
+        "当地卫生部"
+      ],
+      "version": "1.0.0"
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "skin_health_management": {
+    "user_profile": {
+      "age": 28,
+      "gender": "female",
+      "skin_type": "combination",
+      "fitzpatrick_type": "III",
+      "primary_concerns": ["acne", "pigmentation"],
+      "last_dermatologist_visit": "2025-06-15",
+      "next_visit": "2025-12-15",
+      "risk_factors": [
+        "fair_skin",
+        "sun_exposure_history",
+        "family_history_of_skin_cancer"
+      ],
+      "known_allergies": [],
+      "current_medications_affecting_skin": []
+    },
+
+    "skin_conditions": [
+      {
+        "id": "cond_20250615001",
+        "type": "acne",
+        "subtype": "hormonal_acne",
+        "severity": "moderate",
+        "affected_areas": ["chin", "jawline", "cheeks"],
+        "symptoms": ["inflammatory_papules", "comedones"],
+        "ongoing": true,
+        "diagnosis_date": "2025-03-10",
+        "last_updated": "2025-06-15",
+        "triggers": ["hormonal_changes", "stress", "dairy"],
+        "treatments": ["topical_retinoids", "salicylic_acid"],
+        "notes": "经前期加重，与压力相关"
+      },
+      {
+        "id": "cond_20250615002",
+        "type": "pigmentation",
+        "subtype": "post_inflammatory_hyperpigmentation",
+        "severity": "mild",
+        "affected_areas": ["cheeks", "forehead"],
+        "symptoms": ["dark_spots"],
+        "ongoing": true,
+        "diagnosis_date": "2025-04-20",
+        "last_updated": "2025-06-15",
+        "triggers": ["sun_exposure", "acne_scars"],
+        "treatments": ["vitamin_c_serum", "sunscreen"],
+        "notes": "痤疮后遗留色斑"
+      }
+    ],
+
+    "moles_tracking": [
+      {
+        "id": "mole_20250615001",
+        "location": "back",
+        "specific_location": "upper_back_left",
+        "size": "4mm",
+        "appearance": "flat",
+        "color": "brown",
+        "shape": "round",
+        "abcde_assessment": {
+          "asymmetry": false,
+          "asymmetry_note": "对称",
+          "border": "regular",
+          "border_note": "边缘清晰规则",
+          "color": "uniform",
+          "color_note": "颜色均匀",
+          "diameter": "<6mm",
+          "diameter_mm": 4,
+          "evolution": "stable",
+          "evolution_note": "无明显变化"
+        },
+        "photos_available": false,
+        "date_added": "2025-01-15",
+        "last_checked": "2025-06-15",
+        "follow_up_needed": false,
+        "priority": "routine_monitoring"
+      },
+      {
+        "id": "mole_20250615002",
+        "location": "arm",
+        "specific_location": "left_forearm_inner",
+        "size": "3mm",
+        "appearance": "slightly_raised",
+        "color": "light_brown",
+        "shape": "oval",
+        "abcde_assessment": {
+          "asymmetry": false,
+          "asymmetry_note": "基本对称",
+          "border": "regular",
+          "border_note": "边缘规则",
+          "color": "uniform",
+          "color_note": "颜色均匀",
+          "diameter": "<6mm",
+          "diameter_mm": 3,
+          "evolution": "stable",
+          "evolution_note": "稳定"
+        },
+        "photos_available": false,
+        "date_added": "2025-02-20",
+        "last_checked": "2025-06-15",
+        "follow_up_needed": false,
+        "priority": "routine_monitoring"
+      },
+      {
+        "id": "mole_20250615003",
+        "location": "back",
+        "specific_location": "mid_back_right",
+        "size": "5mm",
+        "appearance": "flat",
+        "color": "brown",
+        "shape": "irregular",
+        "abcde_assessment": {
+          "asymmetry": true,
+          "asymmetry_note": "轻度不对称",
+          "border": "slightly_irregular",
+          "border_note": "边缘略不规则",
+          "color": "uniform",
+          "color_note": "颜色均匀",
+          "diameter": "<6mm",
+          "diameter_mm": 5,
+          "evolution": "stable",
+          "evolution_note": "近3个月无明显变化"
+        },
+        "photos_available": true,
+        "date_added": "2025-03-10",
+        "last_checked": "2025-06-15",
+        "follow_up_needed": true,
+        "priority": "monitor_closely",
+        "follow_up_date": "2025-09-15"
+      }
+    ],
+
+    "skincare_routine": {
+      "morning": {
+        "steps": ["cleanser", "toner", "vitamin_c_serum", "moisturizer", "spf30"],
+        "products": {
+          "cleanser": "gentle_foaming_cleanser",
+          "toner": "hydrating_toner",
+          "serum": "vitamin_c_15%",
+          "moisturizer": "lightweight_moisturizer",
+          "sunscreen": "broad_spectrum_spf30"
+        },
+        "compliance_rate": 0.9
+      },
+      "evening": {
+        "steps": ["double_cleanse", "treatment_serum", "moisturizer", "eye_cream"],
+        "products": {
+          "cleanser_1": "cleansing_oil",
+          "cleanser_2": "gentle_foaming_cleanser",
+          "treatment": "retinol_alternating_with_salicylic_acid",
+          "moisturizer": "nourishing_moisturizer",
+          "eye_cream": "hydrating_eye_cream"
+        },
+        "compliance_rate": 0.8
+      },
+      "weekly": {
+        "steps": ["exfoliation", "mask"],
+        "frequency": {
+          "exfoliation": "twice_weekly",
+          "mask": "once_weekly"
+        },
+        "products": {
+          "exfoliant": "aha_bha_exfoliant",
+          "mask": "hydrating_sheet_mask"
+        }
+      },
+      "last_updated": "2025-06-15",
+      "routine_effectiveness": "good",
+      "notes": "早晨坚持较好，晚间偶有遗漏"
+    },
+
+    "sun_protection": {
+      "daily_spf_use": true,
+      "spf_level": "30",
+      "spf_type": "broad_spectrum",
+      "reapplication_frequency": "every_2_hours",
+      "application_amount": "adequate",
+      "sun_exposure": {
+        "daily_exposure": "moderate",
+        "outdoor_activities": ["walking", "outdoor_exercise"],
+        "peak_sun_avoidance": "mostly_observant"
+      },
+      "protective_measures": ["hat", "sunglasses", "seek_shade"],
+      "sunburn_history": [
+        {
+          "date": "2024-07-20",
+          "severity": "mild",
+          "affected_areas": ["shoulders", "back"],
+          "cause": "beach_day_insufficient_reapplication",
+          "treatment": "aloe_vera_gel",
+          "healing_time": "5_days",
+          "notes": "记住每2小时补涂防晒"
+        }
+      ],
+      "last_updated": "2025-06-15",
+      "protection_score": 8
+    },
+
+    "skin_examinations": [
+      {
+        "id": "exam_20250615001",
+        "date": "2025-06-15",
+        "exam_type": "self_exam",
+        "duration_minutes": 15,
+        "body_areas_examined": ["head", "chest", "arms", "legs", "back"],
+        "findings": {
+          "new_moles": 0,
+          "changed_moles": 0,
+          "concerning_findings": [],
+          "other_changes": "痤疮有所改善，色斑减淡"
+        },
+        "photos_taken": false,
+        "recommendations": "继续当前护肤程序，3个月后复查",
+        "follow_up_needed": false,
+        "notes": "使用镜子自查背部"
+      },
+      {
+        "id": "exam_20250615002",
+        "date": "2025-06-15",
+        "exam_type": "dermatologist",
+        "dermatologist_name": "王医生",
+        "clinic_name": "皮肤专科诊所",
+        "duration_minutes": 30,
+        "examination_methods": ["visual_examination", "dermoscopy"],
+        "findings": {
+          "skin_cancer_signs": "none",
+          "suspicious_lesions": "none",
+          "mole_count": "approximately_25",
+          "concerning_moles": ["mole_20250615003"],
+          "diagnosis": "acne_with_pih",
+          "recommendations": [
+            "继续使用维A酸类",
+            "严格防晒",
+            "3个月后复查可疑痣"
+          ]
+        },
+        "prescriptions": [],
+        "follow_up_date": "2025-09-15",
+        "notes": "整体情况良好，继续当前治疗"
+      }
+    ],
+
+    "screenings": {
+      "skin_cancer": {
+        "last_screening": "2025-06-15",
+        "screening_type": "dermatologist_examination",
+        "result": "negative",
+        "risk_level": "medium",
+        "risk_factors": ["fair_skin", "sun_exposure", "family_history"],
+        "findings": "mole_20250615003需密切观察",
+        "next_screening": "2025-09-15",
+        "recommended_frequency": "every_6_months"
+      },
+      "allergies": {
+        "last_test": "2024-10-20",
+        "test_type": "patch_test",
+        "identified_allergens": [],
+        "result": "negative",
+        "next_test": "as_needed"
+      },
+      "photoaging": {
+        "last_assessment": "2025-06-15",
+        "signs": ["mild_fine_lines", "early_pigmentation"],
+        "severity": "mild",
+        "prevention_score": 8,
+        "notes": "防晒习惯良好，继续保持"
+      }
+    },
+
+    "goals": {
+      "improve_acne": {
+        "target": "clear_skin_minimal_breakouts",
+        "current": "moderate_acne_periodic_breakouts",
+        "baseline": "moderate_acne_frequent_breakouts",
+        "start_date": "2025-03-10",
+        "deadline": "2025-09-10",
+        "status": "in_progress",
+        "progress_percentage": 60,
+        "milestones": [
+          {
+            "date": "2025-04-10",
+            "achievement": "reduced_inflammation_by_50%",
+            "status": "achieved"
+          },
+          {
+            "date": "2025-06-10",
+            "achievement": "fewer_new_breakouts",
+            "status": "achieved"
+          },
+          {
+            "date": "2025-09-10",
+            "achievement": "clear_skin",
+            "status": "pending"
+          }
+        ],
+        "barriers": ["hormonal_fluctuations", "stress"],
+        "strategies": ["consistent_skincare", "stress_management", "diet_modifications"]
+      },
+      "reduce_pigmentation": {
+        "target": "even_skin_tone",
+        "current": "mild_pigmentation",
+        "baseline": "moderate_pigmentation",
+        "start_date": "2025-04-20",
+        "deadline": "2025-10-20",
+        "status": "in_progress",
+        "progress_percentage": 40,
+        "milestones": [
+          {
+            "date": "2025-07-20",
+            "achievement": "pigmentation_fades_by_30%",
+            "status": "in_progress"
+          },
+          {
+            "date": "2025-10-20",
+            "achievement": "even_skin_tone",
+            "status": "pending"
+          }
+        ],
+        "barriers": ["sun_exposure", "acne_scars"],
+        "strategies": ["strict_sun_protection", "vitamin_c_serum", "prevent_new_acne"]
+      },
+      "establish_skincare_habit": {
+        "target": "daily_consistent_routine",
+        "current": "90%_compliance_morning_80%_evening",
+        "baseline": "irregular_skincare",
+        "start_date": "2025-01-15",
+        "deadline": "2025-07-15",
+        "status": "in_progress",
+        "progress_percentage": 85,
+        "milestones": [
+          {
+            "date": "2025-04-15",
+            "achievement": "morning_routine_established",
+            "status": "achieved"
+          },
+          {
+            "date": "2025-07-15",
+            "achievement": "consistent_evening_routine",
+            "status": "in_progress"
+          }
+        ],
+        "barriers": ["tiredness", "forgetfulness"],
+        "strategies": ["bedtime_reminder", "simplified_evening_routine"]
+      }
+    },
+
+    "statistics": {
+      "total_moles": 25,
+      "concerning_moles": 1,
+      "routine_moles": 24,
+      "active_conditions": 2,
+      "skin_health_score": 78,
+      "score_breakdown": {
+        "condition_control": 72,
+        "skincare_habits": 85,
+        "sun_protection": 80,
+        "regular_checkups": 75,
+        "goal_achievement": 80
+      },
+      "improvement_since_baseline": "+15_points",
+      "skin_age": 27,
+      "chronological_age": 28,
+      "last_updated": "2025-06-15"
+    },
+
+    "metadata": {
+      "created_at": "2025-01-15T00:00:00Z",
+      "last_updated": "2025-06-15T10:30:00Z",
+      "version": "1.0.0",
+      "data_quality": "good",
+      "completeness": "high",
+      "supported_condition_types": [
+        "acne",
+        "eczema",
+        "psoriasis",
+        "pigmentation",
+        "rosacea",
+        "dermatitis",
+        "dryness",
+        "oiliness",
+        "sensitivity",
+        "scars"
+      ],
+      "record_count": {
+        "conditions": 2,
+        "moles": 3,
+        "examinations": 2,
+        "sunburns": 1
+      }
+    }
+  }
+}

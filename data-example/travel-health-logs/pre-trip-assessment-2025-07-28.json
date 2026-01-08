@@ -1,0 +1,164 @@
+{
+  "log_id": "log_20250728_pretrip",
+  "log_type": "pre_trip_assessment",
+  "trip_id": "trip_20250801_seasia",
+  "generated_at": "2025-07-28T10:00:00.000Z",
+  "assessment_results": {
+    "overall_status": "suitable_for_travel",
+    "health_assessment": {
+      "chronic_conditions": {
+        "status": "stable",
+        "conditions": [
+          {
+            "condition": "高血压",
+            "control_status": "良好",
+            "notes": "血压控制稳定,适合旅行"
+          }
+        ]
+      },
+      "medications": {
+        "adequate": true,
+        "medications": [
+          {
+            "name": "氨氯地平",
+            "days_available": 16,
+            "days_required": 14,
+            "status": "充足"
+          }
+        ]
+      }
+    },
+    "vaccination_status": {
+      "required": {
+        "total": 2,
+        "completed": 2,
+        "status": "✅ 已完成"
+      },
+      "vaccinations": [
+        {
+          "vaccine": "甲肝疫苗",
+          "status": "completed",
+          "date": "2025-06-15"
+        },
+        {
+          "vaccine": "伤寒疫苗",
+          "status": "completed",
+          "date": "2025-06-20"
+        }
+      ],
+      "recommended": [
+        {
+          "vaccine": "日本脑炎疫苗",
+          "status": "planned",
+          "priority": "建议",
+          "notes": "特别是前往农村地区"
+        }
+      ]
+    },
+    "risk_assessment": {
+      "destination": "Southeast Asia (Thailand, Vietnam, Cambodia)",
+      "overall_risk": "中等",
+      "major_risks": [
+        {
+          "disease": "登革热",
+          "risk_level": "high",
+          "prevention": "使用防蚊液、穿长袖衣物"
+        },
+        {
+          "disease": "甲肝",
+          "risk_level": "medium",
+          "prevention": "已完成疫苗接种,注意饮食卫生"
+        },
+        {
+          "disease": "伤寒",
+          "risk_level": "medium",
+          "prevention": "已完成疫苗接种,注意饮食卫生"
+        }
+      ],
+      "food_water_safety": "中等风险,需注意饮食饮水卫生"
+    },
+    "travel_kit_status": {
+      "status": "准备中",
+      "categories": {
+        "处方药": "✅ 已准备",
+        "非处方药": "✅ 已准备",
+        "防护用品": "⚠️ 部分准备",
+        "急救用品": "⚠️ 部分准备"
+      },
+      "missing_items": [
+        "防蚊液",
+        "防晒霜",
+        "体温计"
+      ]
+    },
+    "insurance_status": {
+      "purchased": true,
+      "policy_number": "TRAVEL-2025-001234",
+      "coverage": {
+        "medical": true,
+        "evacuation": true,
+        "cancellation": true
+      },
+      "emergency_hotline": "+1-855-270-7270"
+    },
+    "emergency_card_status": {
+      "generated": false,
+      "recommended_languages": ["en", "zh", "th", "ja"],
+      "urgency": "高"
+    },
+    "recommendations": [
+      "✅ 生成多语言紧急医疗卡片(英/中/泰/日)",
+      "✅ 完成旅行药箱准备,补充防蚊液、防晒霜和体温计",
+      "✅ 携带足量慢性病用药(旅行天数+3天额外量)",
+      "✅ 旅行期间注意血压监测",
+      "✅ 注意蚊虫叮咬防护,特别是早晚时段",
+      "✅ 饮用瓶装水,避免生食",
+      "✅ 保存保险紧急热线号码",
+      "✅ 了解目的地医疗机构位置"
+    ],
+    "pre_trip_checklist": {
+      "consultation_completed": true,
+      "vaccinations_completed": true,
+      "travel_kit_ready": false,
+      "insurance_purchased": true,
+      "emergency_contacts_set": true,
+      "emergency_card_generated": false
+    },
+    "ready_for_travel": false,
+    "critical_items_to_complete": [
+      "完成旅行药箱准备",
+      "生成多语言紧急卡片"
+    ]
+  },
+  "health_guidance": {
+    "during_travel": [
+      "按时服用慢性病用药",
+      "使用防蚊液预防蚊虫叮咬",
+      "饮用瓶装水或煮沸的水",
+      "避免生食和街头摊贩",
+      "穿透气衣物,注意防晒",
+      "监测血压,注意身体状况"
+    ],
+    "post_travel_monitoring": [
+      "持续监测健康状况2-4周",
+      "如出现发热,立即就医并告知旅行史",
+      "注意消化系统症状",
+      "完成疟疾预防药物疗程(如适用)"
+    ]
+  },
+  "emergency_contacts": {
+    "local": [
+      {
+        "relationship": "配偶",
+        "name": "李四",
+        "phone": "+86-138-1234-5678"
+      },
+      {
+        "relationship": "个人医生",
+        "name": "王医生",
+        "phone": "+86-10-8765-4321"
+      }
+    ],
+    "insurance_emergency": "+1-855-270-7270"
+  }
+}

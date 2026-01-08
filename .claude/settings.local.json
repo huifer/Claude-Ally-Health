@@ -26,7 +26,8 @@
       "Bash(./scripts/test-fitness.sh:*)",
       "Bash(bash:*)",
       "Bash(test:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(/Users/zhangsan/Claude-Ally-Health/scripts/test-rehabilitation.sh)"
     ]
   }
 }

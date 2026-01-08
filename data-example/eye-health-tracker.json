@@ -1,0 +1,241 @@
+{
+  "eye_health_management": {
+    "diagnosis_date": "2023-06-15",
+    "conditions": [
+      {
+        "name": "近视",
+        "diagnosis_date": "2015-06-15",
+        "status": "stable"
+      },
+      {
+        "name": "干眼症",
+        "diagnosis_date": "2024-03-10",
+        "status": "mild"
+      }
+    ],
+
+    "vision_readings": [
+      {
+        "id": "vision_20240615000001",
+        "date": "2024-06-15",
+        "left_eye": {
+          "uncorrected_va": 0.5,
+          "corrected_va": 1.0,
+          "sphere": -3.50,
+          "cylinder": -0.50,
+          "axis": 180
+        },
+        "right_eye": {
+          "uncorrected_va": 0.4,
+          "corrected_va": 1.0,
+          "sphere": -4.00,
+          "cylinder": -0.75,
+          "axis": 175
+        },
+        "exam_type": "routine",
+        "exam_method": "snellen_chart",
+        "notes": "视力稳定，无明显变化",
+        "created_at": "2024-06-15T10:00:00.000Z"
+      },
+      {
+        "id": "vision_20240320000001",
+        "date": "2024-03-20",
+        "left_eye": {
+          "uncorrected_va": 0.5,
+          "corrected_va": 1.0,
+          "sphere": -3.50,
+          "cylinder": -0.50,
+          "axis": 180
+        },
+        "right_eye": {
+          "uncorrected_va": 0.4,
+          "corrected_va": 1.0,
+          "sphere": -4.00,
+          "cylinder": -0.75,
+          "axis": 175
+        },
+        "exam_type": "routine",
+        "exam_method": "snellen_chart",
+        "notes": "定期检查",
+        "created_at": "2024-03-20T14:30:00.000Z"
+      },
+      {
+        "id": "vision_20231210000001",
+        "date": "2023-12-10",
+        "left_eye": {
+          "uncorrected_va": 0.5,
+          "corrected_va": 1.0,
+          "sphere": -3.50,
+          "cylinder": -0.50,
+          "axis": 180
+        },
+        "right_eye": {
+          "uncorrected_va": 0.4,
+          "corrected_va": 1.0,
+          "sphere": -4.00,
+          "cylinder": -0.75,
+          "axis": 175
+        },
+        "exam_type": "routine",
+        "exam_method": "snellen_chart",
+        "notes": "屈光度数稳定",
+        "created_at": "2023-12-10T09:15:00.000Z"
+      }
+    ],
+
+    "average_vision": {
+      "left_uncorrected": 0.5,
+      "right_uncorrected": 0.4,
+      "left_corrected": 1.0,
+      "right_corrected": 1.0,
+      "calculation_period": "2023-12-10 to 2024-06-15",
+      "readings_count": 3
+    },
+
+    "intraocular_pressure": {
+      "readings": [
+        {
+          "id": "iop_20240615000001",
+          "date": "2024-06-15",
+          "time": "10:30",
+          "left_iop": 15,
+          "right_iop": 16,
+          "measurement_method": "goldmann_applanation_tonometer",
+          "reference_range": "10-21",
+          "notes": "眼压正常",
+          "created_at": "2024-06-15T10:30:00.000Z"
+        },
+        {
+          "id": "iop_20240320000001",
+          "date": "2024-03-20",
+          "time": "14:45",
+          "left_iop": 16,
+          "right_iop": 15,
+          "measurement_method": "goldmann_applanation_tonometer",
+          "reference_range": "10-21",
+          "notes": "眼压正常",
+          "created_at": "2024-03-20T14:45:00.000Z"
+        },
+        {
+          "id": "iop_20231210000001",
+          "date": "2023-12-10",
+          "time": "09:30",
+          "left_iop": 14,
+          "right_iop": 15,
+          "measurement_method": "goldmann_applanation_tonometer",
+          "reference_range": "10-21",
+          "notes": "常规检查",
+          "created_at": "2023-12-10T09:30:00.000Z"
+        }
+      ],
+      "average_iop": {
+        "left": 15,
+        "right": 15.3,
+        "calculation_period": "2023-12-10 to 2024-06-15",
+        "readings_count": 3
+      }
+    },
+
+    "fundus_exams": [
+      {
+        "id": "fundus_20240615000001",
+        "date": "2024-06-15",
+        "exam_type": "dilated_fundus_exam",
+        "findings": {
+          "left_eye": "normal",
+          "right_eye": "normal",
+          "overall": "normal"
+        },
+        "specific_findings": {
+          "optic_disc": "normal",
+          "retina": "normal",
+          "vessels": "normal",
+          "macula": "normal"
+        },
+        "comments": "眼底检查未见异常",
+        "examined_by": "眼科医生",
+        "created_at": "2024-06-15T11:00:00.000Z"
+      },
+      {
+        "id": "fundus_20231210000001",
+        "date": "2023-12-10",
+        "exam_type": "dilated_fundus_exam",
+        "findings": {
+          "left_eye": "normal",
+          "right_eye": "normal",
+          "overall": "normal"
+        },
+        "specific_findings": {
+          "optic_disc": "normal",
+          "retina": "normal",
+          "vessels": "normal",
+          "macula": "normal"
+        },
+        "comments": "年度检查",
+        "examined_by": "眼科医生",
+        "created_at": "2023-12-10T10:00:00.000Z"
+      }
+    ],
+
+    "screenings": {
+      "glaucoma": {
+        "status": "screened_negative",
+        "last_screening": "2024-06-15",
+        "next_screening": "2025-06-15",
+        "risk_level": "low"
+      },
+      "cataract": {
+        "status": "screened_negative",
+        "last_screening": "2024-06-15",
+        "grade": "none"
+      },
+      "amd": {
+        "status": "screened_negative",
+        "last_screening": "2024-06-15",
+        "stage": "none"
+      },
+      "diabetic_retinopathy": {
+        "status": "not_applicable",
+        "last_screening": "2024-06-15",
+        "grade": "none"
+      },
+      "dry_eye": {
+        "status": "assessed",
+        "last_assessment": "2024-03-10",
+        "severity": "mild"
+      }
+    },
+
+    "eye_habits": {
+      "daily_screen_time": "6小时",
+      "daily_outdoor_time": "1小时",
+      "break_20_20_20_compliance": "partial",
+      "reading_distance": "50cm",
+      "lighting_conditions": "good",
+      "last_updated": "2024-06-15"
+    },
+
+    "medications": [
+      {
+        "medication_id": "med_eye_001",
+        "name": "人工泪液",
+        "added_from": "eye_health_management",
+        "added_date": "2024-03-10",
+        "indication": "干眼症",
+        "dosage": "每天3次",
+        "status": "active"
+      }
+    ],
+
+    "checkup_reminders": {
+      "routine_exam": "2025-06-15",
+      "glaucoma_screening": "2025-06-15",
+      "diabetic_retinopathy_exam": null
+    },
+
+    "metadata": {
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "last_updated": "2024-06-15T11:00:00.000Z"
+    }
+  }
+}

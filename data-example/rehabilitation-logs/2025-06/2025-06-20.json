@@ -1,0 +1,218 @@
+{
+  "date": "2025-06-20",
+  "rehabilitation_phase": 3,
+  "phase_name": "强化期",
+  "daily_summary": {
+    "exercises_completed": 5,
+    "total_duration_minutes": 41,
+    "total_sets": 15,
+    "total_reps": 63,
+    "average_pain_level": 1.2,
+    "average_rpe": 9.6,
+    "exercises_performed": [
+      "straight_leg_raise",
+      "quadriceps_sets",
+      "hamstring_curls",
+      "heel_raises",
+      "single_leg_stance"
+    ],
+    "adherence": "excellent",
+    "notes": "训练完成良好，所有训练项目均按计划完成"
+  },
+  "exercise_sessions": [
+    {
+      "session_id": "session_20250620_001",
+      "time": "08:00",
+      "duration_minutes": 10,
+      "exercises": [
+        {
+          "exercise_name": "straight_leg_raise",
+          "sets": 3,
+          "reps": 15,
+          "resistance": "bodyweight",
+          "pain_level": 2,
+          "rpe": 10,
+          "technique_notes": "保持膝伸直，控制缓慢下降"
+        }
+      ]
+    },
+    {
+      "session_id": "session_20250620_002",
+      "time": "08:15",
+      "duration_minutes": 8,
+      "exercises": [
+        {
+          "exercise_name": "quadriceps_sets",
+          "sets": 3,
+          "reps": 12,
+          "resistance": "bodyweight",
+          "pain_level": 1,
+          "rpe": 9,
+          "technique_notes": "股四头肌等长收缩，保持5秒"
+        }
+      ]
+    },
+    {
+      "session_id": "session_20250620_003",
+      "time": "08:30",
+      "duration_minutes": 10,
+      "exercises": [
+        {
+          "exercise_name": "hamstring_curls",
+          "sets": 3,
+          "reps": 15,
+          "resistance": "2kg_resistance_band",
+          "pain_level": 2,
+          "rpe": 11,
+          "technique_notes": "俯卧位，缓慢控制"
+        }
+      ]
+    },
+    {
+      "session_id": "session_20250620_004",
+      "time": "08:45",
+      "duration_minutes": 8,
+      "exercises": [
+        {
+          "exercise_name": "heel_raises",
+          "sets": 3,
+          "reps": 20,
+          "resistance": "bodyweight",
+          "pain_level": 1,
+          "rpe": 10,
+          "technique_notes": "双侧提踵，保持平衡"
+        }
+      ]
+    },
+    {
+      "session_id": "session_20250620_005",
+      "time": "09:00",
+      "duration_minutes": 5,
+      "exercises": [
+        {
+          "exercise_name": "single_leg_stance",
+          "sets": 3,
+          "reps": 1,
+          "resistance": "none",
+          "pain_level": 0,
+          "rpe": 8,
+          "technique_notes": "患侧单腿站立30秒x3"
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_time": "10:00",
+      "assessment_type": "rom_check",
+      "knee_flexion": 120,
+      "knee_extension": 0,
+      "notes": "ROM维持良好，较上次评估无变化"
+    }
+  ],
+  "pain_entries": [
+    {
+      "entry_id": "pain_001",
+      "time": "08:00",
+      "pain_level": 1,
+      "location": "anterior_knee",
+      "activity": "before_exercise",
+      "character": "mild_aching"
+    },
+    {
+      "entry_id": "pain_002",
+      "time": "09:05",
+      "pain_level": 2,
+      "location": "anterior_knee",
+      "activity": "after_exercise",
+      "character": "mild_aching",
+      "notes": "训练后短暂疼痛，休息后缓解"
+    },
+    {
+      "entry_id": "pain_003",
+      "pain_level": 2,
+      "location": "anterior_knee",
+      "activity": "evening",
+      "character": "mild_aching",
+      "notes": "傍晚轻度疼痛，不影响日常活动"
+    }
+  ],
+  "swelling_assessment": {
+    "time": "20:00",
+    "level": "minimal",
+    "circumference_cm": 38,
+    "baseline_cm": 36,
+    "change_from_baseline": "+2cm",
+    "notes": "轻度肿胀，控制良好"
+  },
+  "medication": {
+    "pain_medication": "none",
+    "anti_inflammatory": "none",
+    "notes": "未服用止痛药"
+  },
+  "functional_activities": {
+    "walking": {
+      "distance_m": 2000,
+      "assistance": "none",
+      "gait_pattern": "normal",
+      "notes": "独立步行，步态正常"
+    },
+    "stairs": {
+      "attempts": 5,
+      "up": "independent",
+      "down": "independent_with_rail",
+      "pain_level": 2,
+      "notes": "上下楼梯独立，下楼梯需扶手"
+    },
+    "squat": {
+      "max_depth": "45_degrees",
+      "reps": 5,
+      "pain_level": 2,
+      "notes": "部分下蹲，控制良好"
+    }
+  },
+  "notes": "康复进展良好，ROM维持，肌力逐渐改善，平衡能力提升。今日训练依从性优秀，疼痛控制良好。建议继续当前训练强度。",
+
+  "goals_progress": [
+    {
+      "goal": "knee_flexion_135",
+      "current": 120,
+      "target": 135,
+      "progress": "89%"
+    },
+    {
+      "goal": "quadriceps_strength_5",
+      "current": "4/5",
+      "target": "5/5",
+      "progress": "80%"
+    },
+    {
+      "goal": "pain_control",
+      "current": 2,
+      "target": 0,
+      "progress": "60%"
+    }
+  ],
+
+  "next_day_plan": {
+    "planned_exercises": [
+      "straight_leg_raise",
+      "quadriceps_sets",
+      "hamstring_curls",
+      "step_ups",
+      "balance_training"
+    ],
+    "expected_duration_minutes": 45,
+    "focus_areas": [
+      "股四头肌强化",
+      "平衡训练",
+      "功能性活动"
+    ],
+    "notes": "维持当前训练强度，关注疼痛反应"
+  },
+
+  "metadata": {
+    "created_at": "2025-06-20T08:00:00.000Z",
+    "last_updated": "2025-06-20T20:00:00.000Z"
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "occupational_health_management": {
+    "user_profile": {
+      "age": 35,
+      "gender": "male",
+      "occupation": "软件工程师",
+      "industry": "科技",
+      "work_years": 10,
+      "work_type": "office_work",
+      "work_schedule": "regular_day_shift",
+      "created_at": "2025-01-08",
+      "last_updated": "2025-01-08"
+    },
+    "work_pattern": {
+      "work_hours_daily": 8,
+      "screen_time_daily": 7,
+      "sedentary_time_daily": 6,
+      "break_frequency": "every_2_hours",
+      "overtime_hours_weekly": 5,
+      "work_days_per_week": 5,
+      "shift_work": false,
+      "night_shifts_per_month": 0,
+      "commute_type": "public_transport",
+      "commute_time_minutes": 45
+    },
+    "risk_assessment": {
+      "overall_risk_level": "medium",
+      "risk_factors": [
+        "prolonged_sitting",
+        "screen_use",
+        "repetitive_strain",
+        "high_stress"
+      ],
+      "risk_scores": {
+        "sedentary_risk": 28,
+        "vdt_risk": 22,
+        "shift_work_risk": 4,
+        "rsi_risk": 18,
+        "stress_risk": 20
+      },
+      "risk_levels": {
+        "sedentary": "high",
+        "vdt": "medium",
+        "shift_work": "low",
+        "rsi": "medium",
+        "stress": "medium"
+      },
+      "last_assessment": "2025-01-08",
+      "next_assessment": "2025-04-08"
+    },
+    "work_related_issues": [
+      {
+        "id": "issue_20250108_001",
+        "issue_type": "neck_pain",
+        "severity": "moderate",
+        "frequency": "often",
+        "duration_months": 6,
+        "work_related": true,
+        "aggravating_factors": [
+          "prolonged_sitting",
+          "poor_posture",
+          "high_stress"
+        ],
+        "relieving_factors": [
+          "stretching",
+          "breaks",
+          "massage"
+        ],
+        "impact_on_work": "moderate",
+        "date_first_noticed": "2024-07-01",
+        "last_updated": "2025-01-08",
+        "severity_history": [
+          {
+            "date": "2024-07-01",
+            "severity": "mild",
+            "notes": "首次注意到"
+          },
+          {
+            "date": "2024-09-01",
+            "severity": "moderate",
+            "notes": "症状加重"
+          },
+          {
+            "date": "2025-01-08",
+            "severity": "moderate",
+            "notes": "持续存在，但有所改善"
+          }
+        ]
+      },
+      {
+        "id": "issue_20250108_002",
+        "issue_type": "eye_strain",
+        "severity": "mild",
+        "frequency": "daily",
+        "duration_months": 12,
+        "work_related": true,
+        "aggravating_factors": [
+          "screen_time",
+          "poor_lighting",
+          "lack_of_breaks"
+        ],
+        "relieving_factors": [
+          "20-20-20_rule",
+          "eye_drops",
+          "lighting_improvement"
+        ],
+        "impact_on_work": "mild",
+        "date_first_noticed": "2024-01-01",
+        "last_updated": "2025-01-08",
+        "severity_history": [
+          {
+            "date": "2024-01-01",
+            "severity": "mild",
+            "notes": "首次注意到"
+          },
+          {
+            "date": "2025-01-08",
+            "severity": "mild",
+            "notes": "稳定"
+          }
+        ]
+      }
+    ],
+    "ergonomic_assessment": {
+      "last_assessment": "2025-01-08",
+      "workstation": {
+        "chair_adjustable": true,
+        "chair_lumbar_support": true,
+        "chair_depth": "appropriate",
+        "armrests": "adjustable",
+        "monitor_height": "eye_level",
+        "monitor_distance": "60cm",
+        "monitor_angle": "appropriate",
+        "keyboard_position": "appropriate",
+        "mouse_position": "appropriate",
+        "wrist_rest": false,
+        "desk_height": "adjustable",
+        "desk_space": "adequate",
+        "foot_rest": false,
+        "lighting": "moderate",
+        "glare_control": "partial",
+        "noise_level": "low",
+        "temperature": "comfortable",
+        "ventilation": "good"
+      },
+      "posture_assessment": {
+        "sitting_posture": "fair",
+        "monitor_viewing_angle": "good",
+        "arm_position": "good",
+        "wrist_position": "fair",
+        "foot_support": "poor"
+      },
+      "break_reminders": {
+        "enabled": false,
+        "frequency": "every_hour",
+        "duration_minutes": 5,
+        "compliance_rate": 0.3
+      },
+      "scores": {
+        "chair": 12,
+        "monitor": 8,
+        "keyboard_mouse": 15,
+        "desk": 12,
+        "environment": 10
+      },
+      "overall_ergonomic_score": 57,
+      "ergonomic_level": "fair",
+      "improvement_needed": [
+        "foot_rest",
+        "break_reminders",
+        "lighting",
+        "wrist_rest"
+      ],
+      "improvement_recommendations": [
+        {
+          "priority": "high",
+          "item": "添加脚踏",
+          "expected_benefit": "改善腿部支撑和坐姿",
+          "estimated_cost": "low"
+        },
+        {
+          "priority": "high",
+          "item": "设置休息提醒",
+          "expected_benefit": "定期休息，减少久坐风险",
+          "estimated_cost": "free"
+        },
+        {
+          "priority": "medium",
+          "item": "改善照明",
+          "expected_benefit": "减少眼疲劳",
+          "estimated_cost": "low"
+        },
+        {
+          "priority": "medium",
+          "item": "添加腕托",
+          "expected_benefit": "预防腕管综合征",
+          "estimated_cost": "low"
+        }
+      ]
+    },
+    "occupational_screening": {
+      "hearing_test": {
+        "last_test": "2024-06-01",
+        "result": "normal",
+        "next_test": "2025-06-01",
+        "notes": "听力正常，无需特殊关注"
+      },
+      "vision_test": {
+        "last_test": "2024-12-01",
+        "result": "mild_myopia",
+        "left_eye": "1.0",
+        "right_eye": "0.8",
+        "next_test": "2025-12-01",
+        "notes": "轻度近视，建议定期检查"
+      },
+      "lung_function": {
+        "last_test": null,
+        "result": null,
+        "next_test": "as_needed",
+        "notes": "办公室工作，暂不需要"
+      },
+      "msk_assessment": {
+        "last_assessment": "2024-12-15",
+        "findings": "neck_stiffness_mild",
+        "next_assessment": "2025-06-15",
+        "notes": "轻度颈部僵硬，建议加强拉伸"
+      },
+      "blood_pressure": {
+        "last_test": "2024-11-01",
+        "result": "normal",
+        "systolic": 120,
+        "diastolic": 80,
+        "next_test": "2025-05-01",
+        "notes": "血压正常"
+      }
+    },
+    "work_environment": {
+      "noise_level": "low",
+      "lighting_quality": "moderate",
+      "temperature": "comfortable",
+      "air_quality": "good",
+      "space_adequacy": "adequate",
+      "ventilation": "good",
+      "last_assessment": "2025-01-08"
+    },
+    "interventions": {
+      "current": [
+        {
+          "intervention": "stretching_breaks",
+          "frequency": "2x_daily",
+          "duration_minutes": 5,
+          "start_date": "2024-12-01",
+          "effectiveness": "moderate",
+          "adherence": 0.7,
+          "notes": "颈部和肩部拉伸，效果中等"
+        },
+        {
+          "intervention": "ergonomic_chair",
+          "since": "2024-06-01",
+          "effectiveness": "good",
+          "adherence": 1.0,
+          "notes": "可调节椅子显著减少了背痛"
+        }
+      ],
+      "recommended": [
+        {
+          "intervention": "standing_desk",
+          "priority": "high",
+          "expected_benefit": "reduce_sedentary_time",
+          "estimated_cost": "moderate",
+          "implementation_timeline": "1-3_months"
+        },
+        {
+          "intervention": "monitor_stand",
+          "priority": "medium",
+          "expected_benefit": "improve_posture",
+          "estimated_cost": "low",
+          "implementation_timeline": "1_month"
+        },
+        {
+          "intervention": "break_reminder_app",
+          "priority": "high",
+          "expected_benefit": "regular_breaks",
+          "estimated_cost": "free",
+          "implementation_timeline": "immediate"
+        },
+        {
+          "intervention": "wrist_rest",
+          "priority": "medium",
+          "expected_benefit": "prevent_carpal_tunnel",
+          "estimated_cost": "low",
+          "implementation_timeline": "1_month"
+        }
+      ]
+    },
+    "goals": {
+      "reduce_neck_pain": {
+        "target": "minimal_pain",
+        "current": "moderate_pain_daily",
+        "baseline": "moderate_pain_constant",
+        "start_date": "2024-12-01",
+        "deadline": "2025-06-01",
+        "status": "in_progress",
+        "progress_percentage": 30,
+        "strategies": [
+          "ergonomic_improvements",
+          "regular_stretching",
+          "posture_correction",
+          "stress_management"
+        ],
+        "milestones": [
+          {
+            "date": "2024-12-15",
+            "achievement": "pain_frequency_reduced",
+            "notes": "疼痛频率有所减少"
+          },
+          {
+            "date": "2025-01-08",
+            "achievement": "severity_maintained",
+            "notes": "严重程度稳定"
+          }
+        ]
+      },
+      "increase_movement": {
+        "target": "30_min_movement_daily",
+        "current": "10_min_daily",
+        "baseline": "minimal_movement",
+        "start_date": "2025-01-01",
+        "deadline": "2025-04-01",
+        "status": "in_progress",
+        "progress_percentage": 33,
+        "strategies": [
+          "walking_meetings",
+          "standing_breaks",
+          "desk_exercises",
+          "commute_walking"
+        ],
+        "milestones": [
+          {
+            "date": "2025-01-15",
+            "achievement": "started_walking_breaks",
+            "notes": "开始步行休息"
+          }
+        ]
+      },
+      "improve_eye_health": {
+        "target": "no_eye_strain",
+        "current": "mild_strain_daily",
+        "baseline": "moderate_strain",
+        "start_date": "2024-12-01",
+        "deadline": "2025-03-01",
+        "status": "in_progress",
+        "progress_percentage": 50,
+        "strategies": [
+          "20-20-20_rule",
+          "lighting_improvement",
+          "eye_drops",
+          "screen_brightness_adjustment"
+        ],
+        "milestones": [
+          {
+            "date": "2024-12-15",
+            "achievement": "started_20_20_20",
+            "notes": "开始遵守20-20-20法则"
+          },
+          {
+            "date": "2025-01-08",
+            "achievement": "severity_improved",
+            "notes": "严重程度改善"
+          }
+        ]
+      }
+    },
+    "statistics": {
+      "total_issues": 2,
+      "active_issues": 2,
+      "improving_issues": 0,
+      "stable_issues": 2,
+      "worsening_issues": 0,
+      "occupational_health_score": 62,
+      "score_breakdown": {
+        "ergonomic_setup": 57,
+        "work_pattern": 55,
+        "symptom_control": 65,
+        "intervention_adherence": 70,
+        "goal_progress": 60
+      },
+      "high_risk_factors": 1,
+      "medium_risk_factors": 3,
+      "low_risk_factors": 1,
+      "days_since_last_assessment": 0,
+      "last_updated": "2025-01-08"
+    },
+    "metadata": {
+      "created_at": "2025-01-08T00:00:00Z",
+      "last_updated": "2025-01-08T12:00:00Z",
+      "version": "1.0.0",
+      "data_quality": "good",
+      "completeness": "high",
+      "total_assessments": 3,
+      "total_issue_records": 5,
+      "total_ergonomic_assessments": 2
+    }
+  }
+}
