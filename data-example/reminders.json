@@ -1,14 +1,79 @@
 {
-  "created_at": null,
-  "last_updated": null,
-  "reminders": [],
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "reminders": [
+    {
+      "id": "rem_001",
+      "type": "medication",
+      "title": "维生素D补充剂",
+      "description": "每日补充维生素D 1000 IU",
+      "frequency": "daily",
+      "time": "08:00",
+      "start_date": "2025-01-01",
+      "end_date": null,
+      "active": true,
+      "next_reminder": "2025-12-21T08:00:00",
+      "notes": "早餐后服用"
+    },
+    {
+      "id": "rem_002",
+      "type": "appointment",
+      "title": "年度体检",
+      "description": "2026年度健康体检",
+      "frequency": "yearly",
+      "date": "2026-01-15",
+      "time": "08:30",
+      "hospital": "北京协和医院",
+      "active": true,
+      "next_reminder": "2026-01-15T08:30:00",
+      "notes": "提前预约"
+    },
+    {
+      "id": "rem_003",
+      "type": "screening",
+      "title": "宫颈涂片检查",
+      "description": "年度宫颈癌筛查",
+      "frequency": "yearly",
+      "date": "2026-06-15",
+      "time": "10:00",
+      "hospital": "北京协和医院",
+      "active": true,
+      "next_reminder": "2026-06-15T10:00:00",
+      "notes": "避开月经期"
+    },
+    {
+      "id": "rem_004",
+      "type": "screening",
+      "title": "乳腺钼靶检查",
+      "description": "年度乳腺癌筛查",
+      "frequency": "yearly",
+      "date": "2026-03-10",
+      "time": "09:30",
+      "hospital": "北京肿瘤医院",
+      "active": true,
+      "next_reminder": "2026-03-10T09:30:00",
+      "notes": "与上次检查时间间隔1年"
+    },
+    {
+      "id": "rem_005",
+      "type": "vaccination",
+      "title": "流感疫苗接种",
+      "description": "年度流感疫苗",
+      "frequency": "yearly",
+      "date": "2026-10-15",
+      "time": "14:00",
+      "hospital": "北京协和医院",
+      "active": true,
+      "next_reminder": "2026-10-15T14:00:00",
+      "notes": "秋季接种"
+    }
+  ],
   "statistics": {
-    "total_reminders": 0,
-    "active_reminders": 0,
+    "total_reminders": 5,
+    "active_reminders": 5,
+    "upcoming_7_days": 1,
     "overdue_count": 0,
-    "due_today_count": 0,
-    "due_this_week_count": 0,
-    "completion_rate": 0,
-    "last_updated": null
+    "completion_rate": 95,
+    "last_updated": "2025-12-20"
   }
 }

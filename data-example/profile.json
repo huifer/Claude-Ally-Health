@@ -1,20 +1,285 @@
 {
-  "created_at": null,
-  "last_updated": null,
+  "created_at": "2023-01-15T09:30:00Z",
+  "last_updated": "2025-12-20T14:22:00Z",
   "basic_info": {
-    "height": null,
+    "height": 165,
     "height_unit": "cm",
-    "weight": null,
+    "weight": 58.5,
     "weight_unit": "kg",
-    "birth_date": null
+    "birth_date": "1990-03-22"
   },
   "calculated": {
-    "age": null,
-    "age_years": null,
-    "bmi": null,
-    "bmi_status": null,
-    "body_surface_area": null,
+    "age": 35,
+    "age_years": 35,
+    "bmi": 21.5,
+    "bmi_status": "正常",
+    "body_surface_area": 1.62,
     "bsa_unit": "m²"
   },
-  "history": []
+  "history": [
+    {
+      "date": "2025-12-20",
+      "weight": 58.5,
+      "bmi": 21.5,
+      "notes": "体重稳定"
+    },
+    {
+      "date": "2025-11-15",
+      "weight": 58.8,
+      "bmi": 21.6,
+      "notes": "轻微波动"
+    },
+    {
+      "date": "2025-10-10",
+      "weight": 59.0,
+      "bmi": 21.7,
+      "notes": "换季体重"
+    },
+    {
+      "date": "2025-09-05",
+      "weight": 58.2,
+      "bmi": 21.4,
+      "notes": "运动后体重"
+    },
+    {
+      "date": "2025-08-01",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "夏季体重"
+    },
+    {
+      "date": "2025-07-10",
+      "weight": 58.3,
+      "bmi": 21.4,
+      "notes": "稳定"
+    },
+    {
+      "date": "2025-06-15",
+      "weight": 58.5,
+      "bmi": 21.5,
+      "notes": "体检前"
+    },
+    {
+      "date": "2025-05-20",
+      "weight": 58.7,
+      "bmi": 21.6,
+      "notes": "正常范围"
+    },
+    {
+      "date": "2025-04-10",
+      "weight": 59.0,
+      "bmi": 21.7,
+      "notes": "春季体重"
+    },
+    {
+      "date": "2025-03-15",
+      "weight": 58.5,
+      "bmi": 21.5,
+      "notes": "体重稳定"
+    },
+    {
+      "date": "2025-02-10",
+      "weight": 58.2,
+      "bmi": 21.4,
+      "notes": "冬季后"
+    },
+    {
+      "date": "2025-01-20",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "年初体重"
+    },
+    {
+      "date": "2024-12-15",
+      "weight": 57.8,
+      "bmi": 21.2,
+      "notes": "年末体重"
+    },
+    {
+      "date": "2024-11-10",
+      "weight": 58.1,
+      "bmi": 21.3,
+      "notes": "正常"
+    },
+    {
+      "date": "2024-10-05",
+      "weight": 58.3,
+      "bmi": 21.4,
+      "notes": "秋季"
+    },
+    {
+      "date": "2024-09-08",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "开学季"
+    },
+    {
+      "date": "2024-08-12",
+      "weight": 57.5,
+      "bmi": 21.1,
+      "notes": "夏季活动多"
+    },
+    {
+      "date": "2024-07-06",
+      "weight": 57.8,
+      "bmi": 21.2,
+      "notes": "暑期"
+    },
+    {
+      "date": "2024-06-10",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "体检后"
+    },
+    {
+      "date": "2024-05-15",
+      "weight": 58.2,
+      "bmi": 21.4,
+      "notes": "春季"
+    },
+    {
+      "date": "2024-04-08",
+      "weight": 58.5,
+      "bmi": 21.5,
+      "notes": "正常范围"
+    },
+    {
+      "date": "2024-03-12",
+      "weight": 58.3,
+      "bmi": 21.4,
+      "notes": "三月"
+    },
+    {
+      "date": "2024-02-14",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "春节后"
+    },
+    {
+      "date": "2024-01-18",
+      "weight": 57.5,
+      "bmi": 21.1,
+      "notes": "新年"
+    },
+    {
+      "date": "2023-12-20",
+      "weight": 57.8,
+      "bmi": 21.2,
+      "notes": "年末"
+    },
+    {
+      "date": "2023-09-15",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "秋季"
+    },
+    {
+      "date": "2023-06-10",
+      "weight": 58.5,
+      "bmi": 21.5,
+      "notes": "体检"
+    },
+    {
+      "date": "2023-03-20",
+      "weight": 59.0,
+      "bmi": 21.7,
+      "notes": "春季"
+    },
+    {
+      "date": "2022-12-15",
+      "weight": 59.5,
+      "bmi": 21.8,
+      "notes": "年末"
+    },
+    {
+      "date": "2022-06-20",
+      "weight": 60.0,
+      "bmi": 22.0,
+      "notes": "疫情期间体重增加"
+    },
+    {
+      "date": "2021-12-10",
+      "weight": 60.5,
+      "bmi": 22.2,
+      "notes": "产后恢复期"
+    },
+    {
+      "date": "2021-09-15",
+      "weight": 62.0,
+      "bmi": 22.8,
+      "notes": "哺乳期"
+    },
+    {
+      "date": "2021-06-20",
+      "weight": 65.0,
+      "bmi": 23.9,
+      "notes": "分娩前"
+    },
+    {
+      "date": "2021-03-25",
+      "weight": 63.5,
+      "bmi": 23.3,
+      "notes": "孕晚期"
+    },
+    {
+      "date": "2020-12-15",
+      "weight": 61.0,
+      "bmi": 22.4,
+      "notes": "孕中期"
+    },
+    {
+      "date": "2020-09-20",
+      "weight": 58.0,
+      "bmi": 21.3,
+      "notes": "孕早期"
+    },
+    {
+      "date": "2020-06-10",
+      "weight": 56.5,
+      "bmi": 20.7,
+      "notes": "孕前"
+    },
+    {
+      "date": "2020-03-15",
+      "weight": 56.0,
+      "bmi": 20.6,
+      "notes": "备孕"
+    },
+    {
+      "date": "2019-12-20",
+      "weight": 56.5,
+      "bmi": 20.7,
+      "notes": "稳定"
+    },
+    {
+      "date": "2019-06-15",
+      "weight": 57.0,
+      "bmi": 20.9,
+      "notes": "正常"
+    },
+    {
+      "date": "2018-12-10",
+      "weight": 56.0,
+      "bmi": 20.6,
+      "notes": "产后恢复"
+    },
+    {
+      "date": "2018-09-20",
+      "weight": 60.0,
+      "bmi": 22.0,
+      "notes": "孕晚期"
+    },
+    {
+      "date": "2018-06-15",
+      "weight": 57.0,
+      "bmi": 20.9,
+      "notes": "孕中期"
+    },
+    {
+      "date": "2018-03-20",
+      "weight": 56.0,
+      "bmi": 20.6,
+      "notes": "孕前体重"
+    }
+  ]
 }

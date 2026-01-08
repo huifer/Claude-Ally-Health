@@ -1,14 +1,48 @@
 {
-  "allergies": [],
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "allergies": [
+    {
+      "allergen": "青霉素",
+      "category": "drug",
+      "severity": "severe",
+      "reaction_type": "anaphylaxis",
+      "symptoms": ["呼吸困难", "皮疹", "面部肿胀", "血压下降"],
+      "onset_date": "2015-06-10",
+      "last_occurrence": "2015-06-10",
+      "notes": "严重过敏反应，需紧急就医，终身避免"
+    },
+    {
+      "allergen": "花粉",
+      "category": "environmental",
+      "severity": "moderate",
+      "reaction_type": "rhinitis",
+      "symptoms": ["打喷嚏", "流鼻涕", "眼睛痒", "鼻塞"],
+      "onset_date": "2018-03-15",
+      "last_occurrence": "2025-04-15",
+      "triggers": ["春季", "柳树", "杨树", "柏树"],
+      "notes": "季节性过敏，春季明显"
+    },
+    {
+      "allergen": "海鲜类",
+      "category": "food",
+      "severity": "mild",
+      "reaction_type": "gastrointestinal",
+      "symptoms": ["胃部不适", "轻微恶心"],
+      "onset_date": "2020-08-20",
+      "last_occurrence": "2024-09-10",
+      "notes": "少量食用无大碍，大量会有不适"
+    }
+  ],
   "statistics": {
-    "total_allergies": 0,
-    "active_allergies": 0,
-    "drug_allergies": 0,
-    "food_allergies": 0,
-    "environmental_allergies": 0,
+    "total_allergies": 3,
+    "active_allergies": 3,
+    "drug_allergies": 1,
+    "food_allergies": 1,
+    "environmental_allergies": 1,
     "other_allergies": 0,
-    "severe_count": 0,
-    "anaphylaxis_count": 0,
-    "last_updated": null
+    "severe_count": 1,
+    "anaphylaxis_count": 1,
+    "last_updated": "2025-12-20"
   }
 }

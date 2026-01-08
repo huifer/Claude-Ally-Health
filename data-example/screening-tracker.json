@@ -1,25 +1,250 @@
 {
-  "created_at": null,
-  "last_updated": null,
-
-  "cancer_screening": null,
-
-  "statistics": {
-    "total_cervical_screenings": 0,
-    "years_of_screening": 0,
-    "abnormal_results_count": 0,
-    "colposcopies": 0,
-    "tumor_marker_tests": 0,
-    "all_markers_normal": true,
-    "screening_uptodate": false,
-    "next_screening_due": null
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "cancer_screening": {
+    "cervical": [
+      {
+        "date": "2025-06-15",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "未见异常"
+      },
+      {
+        "date": "2024-06-20",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "正常"
+      },
+      {
+        "date": "2023-06-18",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear + HPV",
+        "hpv_genotyping": "阴性",
+        "notes": "联合筛查"
+      },
+      {
+        "date": "2022-06-15",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "正常"
+      },
+      {
+        "date": "2021-05-20",
+        "result": "normal",
+        "hpv_result": "not_tested",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "产后筛查"
+      },
+      {
+        "date": "2020-03-10",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear + HPV",
+        "hpv_genotyping": "阴性",
+        "notes": "孕前筛查"
+      },
+      {
+        "date": "2019-06-12",
+        "result": "normal",
+        "hpv_result": "negative",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "正常"
+      },
+      {
+        "date": "2018-04-15",
+        "result": "normal",
+        "hpv_result": "not_tested",
+        "methodology": "Pap smear",
+        "hpv_genotyping": null,
+        "notes": "首次筛查"
+      }
+    ],
+    "breast": [
+      {
+        "date": "2025-03-10",
+        "result": "normal",
+        "methodology": "Mammography",
+        "birads_score": "BI-RADS 1",
+        "findings": "未见异常",
+        "recommendation": "常规筛查",
+        "notes": "BI-RADS 1类，阴性"
+      },
+      {
+        "date": "2024-03-15",
+        "result": "normal",
+        "methodology": "Mammography",
+        "birads_score": "BI-RADS 1",
+        "findings": "乳腺组织正常",
+        "recommendation": "年度复查",
+        "notes": "正常"
+      },
+      {
+        "date": "2023-03-20",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "birads_score": "BI-RADS 1",
+        "findings": "乳腺腺体层次清晰，未见占位",
+        "recommendation": "年度复查",
+        "notes": "超声检查"
+      },
+      {
+        "date": "2022-03-18",
+        "result": "normal",
+        "methodology": "Mammography",
+        "birads_score": "BI-RADS 1",
+        "findings": "正常",
+        "recommendation": "年度复查",
+        "notes": "常规筛查"
+      },
+      {
+        "date": "2021-04-12",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "birads_score": "BI-RADS 1",
+        "findings": "哺乳期乳腺组织正常",
+        "recommendation": "断乳后复查",
+        "notes": "产后检查"
+      },
+      {
+        "date": "2020-02-20",
+        "result": "normal",
+        "methodology": "Mammography",
+        "birads_score": "BI-RADS 1",
+        "findings": "正常",
+        "recommendation": "年度复查",
+        "notes": "孕前检查"
+      },
+      {
+        "date": "2019-03-15",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "birads_score": "BI-RADS 1",
+        "findings": "未见异常",
+        "recommendation": "年度复查",
+        "notes": "首次筛查"
+      }
+    ],
+    "colon": [
+      {
+        "date": "2025-01-20",
+        "result": "normal",
+        "methodology": "Colonoscopy",
+        "findings": "结肠粘膜光滑，未见息肉、肿瘤",
+        "polyps_removed": 0,
+        "prep_quality": "good",
+        "recommendation": "10年后复查",
+        "notes": "首次结肠镜筛查"
+      },
+      {
+        "date": "2023-06-15",
+        "result": "normal",
+        "methodology": "FIT",
+        "findings": "阴性",
+        "recommendation": "年度筛查",
+        "notes": "粪便潜血试验"
+      },
+      {
+        "date": "2022-06-20",
+        "result": "normal",
+        "methodology": "FIT",
+        "findings": "阴性",
+        "recommendation": "年度筛查",
+        "notes": "年度筛查"
+      },
+      {
+        "date": "2021-05-18",
+        "result": "normal",
+        "methodology": "FIT",
+        "findings": "阴性",
+        "recommendation": "年度筛查",
+        "notes": "正常"
+      }
+    ],
+    "skin": [
+      {
+        "date": "2024-10-15",
+        "result": "normal",
+        "methodology": "Dermatology Exam",
+        "findings": "皮肤痣数量正常，形态规则，未见异常",
+        "suspicious_lesions": 0,
+        "recommendation": "年度自查",
+        "notes": "皮肤科检查"
+      }
+    ],
+    "thyroid": [
+      {
+        "date": "2024-08-20",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "findings": "甲状腺大小形态正常，回声均匀，未见结节",
+        "tirads": null,
+        "recommendation": "常规体检",
+        "notes": "甲状腺超声"
+      },
+      {
+        "date": "2023-09-10",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "findings": "甲状腺正常",
+        "tirads": null,
+        "recommendation": "年度复查",
+        "notes": "正常"
+      }
+    ],
+    "ovarian": [
+      {
+        "date": "2024-05-12",
+        "result": "normal",
+        "methodology": "Ultrasound",
+        "findings": "双侧卵巢大小正常，未见异常回声",
+        "ca125": null,
+        "recommendation": "年度体检",
+        "notes": "经阴道超声"
+      }
+    ],
+    "bone_density": [
+      {
+        "date": "2024-11-20",
+        "result": "normal",
+        "methodology": "DXA",
+        "sites": ["lumbar_spine", "left_hip"],
+        "t_score": -0.5,
+        "z_score": 0.2,
+        "diagnosis": "正常骨密度",
+        "fracture_risk": "低",
+        "recommendation": "补充钙剂和维生素D，适量运动",
+        "notes": "首次骨密度检查"
+      }
+    ]
   },
-
-  "settings": {
-    "screening_strategy": "co-testing",
-    "reminder_days_before": 30,
-    "age": null,
-    "screening_age_started": null,
-    "family_history_cancer": []
+  "statistics": {
+    "total_cervical_screenings": 8,
+    "years_of_cervical_screening": 7,
+    "cervical_abnormal_count": 0,
+    "total_breast_screenings": 7,
+    "years_of_breast_screening": 6,
+    "breast_abnormal_count": 0,
+    "total_colon_screenings": 4,
+    "colon_abnormal_count": 0,
+    "total_thyroid_screenings": 2,
+    "total_skin_screenings": 1,
+    "total_ovarian_screenings": 1,
+    "total_bone_density_tests": 1,
+    "screening_uptodate": true,
+    "next_cervical_screening": "2026-06-15",
+    "next_breast_screening": "2026-03-10",
+    "next_colon_screening": "2035-01-20",
+    "next_thyroid_screening": "2025-08-20",
+    "overall_adherence": "excellent",
+    "last_updated": "2025-12-20"
   }
 }

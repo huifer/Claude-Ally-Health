@@ -1,23 +1,146 @@
 {
-  "created_at": null,
-  "last_updated": null,
-
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "pregnancies": [
+    {
+      "id": "preg_001",
+      "start_date": "2018-03-15",
+      "end_date": "2018-12-20",
+      "outcome": "full_term_birth",
+      "delivery_date": "2018-12-20",
+      "gestational_age_at_delivery": "39周2天",
+      "delivery_method": "vaginal",
+      "baby_gender": "female",
+      "baby_weight": 3250,
+      "baby_weight_unit": "g",
+      "complications": [],
+      "pre_pregnancy_weight": 56.0,
+      "pre_pregnancy_bmi": 20.6,
+      "delivery_weight": 65.0,
+      "total_weight_gain": 9.0,
+      "weight_gain_unit": "kg",
+      "checkups": [
+        {
+          "week": 12,
+          "date": "2018-06-10",
+          "type": "常规产检",
+          "findings": "胎心正常，NT扫描正常",
+          "weight": 57.5,
+          "blood_pressure": "110/70",
+          "fundal_height": null,
+          "fetal_heart_rate": 160
+        },
+        {
+          "week": 20,
+          "date": "2018-08-05",
+          "type": "中期产检",
+          "findings": "大排畸超声正常，四维彩超显示胎儿发育正常",
+          "weight": 60.0,
+          "blood_pressure": "112/68",
+          "fundal_height": 20,
+          "fetal_heart_rate": 145
+        },
+        {
+          "week": 28,
+          "date": "2018-10-05",
+          "type": "常规产检",
+          "findings": "血糖正常，血常规正常",
+          "weight": 62.5,
+          "blood_pressure": "115/70",
+          "fundal_height": 27,
+          "fetal_heart_rate": 140
+        },
+        {
+          "week": 36,
+          "date": "2018-12-01",
+          "type": "晚期产检",
+          "findings": "胎位正常，头位，估计体重3200g",
+          "weight": 64.5,
+          "blood_pressure": "118/72",
+          "fundal_height": 35,
+          "fetal_heart_rate": 138
+        }
+      ],
+      "symptoms_log": [
+        {
+          "week": 8,
+          "symptoms": ["恶心", "呕吐", "疲劳", "乳房胀痛"],
+          "severity": "moderate"
+        },
+        {
+          "week": 16,
+          "symptoms": ["胎动", "食欲增加"],
+          "severity": "mild"
+        },
+        {
+          "week": 32,
+          "symptoms": ["水肿", "腰酸", "尿频"],
+          "severity": "moderate"
+        }
+      ],
+      "lab_tests": [
+        {
+          "week": 12,
+          "test_type": "NT扫描",
+          "result": "正常",
+          "risk": "低风险"
+        },
+        {
+          "week": 24,
+          "test_type": "糖耐量试验",
+          "result": "正常",
+          "fasting_glucose": 4.5,
+          "1hour_glucose": 7.8,
+          "2hour_glucose": 6.2
+        },
+        {
+          "week": 28,
+          "test_type": "血常规",
+          "result": "轻度贫血",
+          "hemoglobin": 105,
+          "notes": "补充铁剂"
+        }
+      ],
+      "medications": [
+        {
+          "medication": "叶酸",
+          "dosage": "0.4mg",
+          "frequency": "每日",
+          "start_week": 0,
+          "end_week": 12,
+          "notes": "预防神经管缺陷"
+        },
+        {
+          "medication": "铁剂",
+          "dosage": "100mg",
+          "frequency": "每日",
+          "start_week": 28,
+          "end_week": 40,
+          "notes": "纠正贫血"
+        }
+      ],
+      "notes": "孕期顺利，自然分娩，母婴健康"
+    }
+  ],
   "current_pregnancy": null,
-
-  "pregnancy_history": [],
-
-  "statistics": {
-    "total_pregnancies": 0,
-    "current_pregnancy_week": null,
-    "total_weight_gain": null,
-    "average_weekly_gain": null,
-    "checkups_completed": 0,
-    "checkups_scheduled": 0
+  "planning": {
+    "planning_pregnancy": false,
+    "preconception_checkup_date": null,
+    "folic_acid_supplementation": false,
+    "notes": "暂无再生育计划"
   },
-
-  "settings": {
-    "reminder_days_before": 7,
-    "weight_unit": "kg",
-    "preferred_checkup_time": "morning"
+  "statistics": {
+    "total_pregnancies": 1,
+    "current_pregnancy_week": null,
+    "total_weight_gain": 9.0,
+    "average_weekly_gain": 0.25,
+    "checkups_completed": 4,
+    "checkups_scheduled": 0,
+    "live_births": 1,
+    "miscarriages": 0,
+    "ectopic_pregnancies": 0,
+    "c_sections": 0,
+    "vaginal_births": 1,
+    "last_updated": "2025-12-20"
   }
 }

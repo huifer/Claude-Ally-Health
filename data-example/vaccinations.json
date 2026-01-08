@@ -1,19 +1,94 @@
 {
-  "created_at": null,
-  "last_updated": null,
-
-  "vaccination_records": [],
-
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "vaccination_records": [
+    {
+      "id": "vax_001",
+      "vaccine_name": "COVID-19 mRNA Vaccine",
+      "manufacturer": "Pfizer-BioNTech",
+      "dose_number": 1,
+      "total_doses": 2,
+      "administration_date": "2021-05-10",
+      "hospital": "北京市朝阳区疾控中心",
+      "batch_number": "EW0182",
+      "next_due_date": "2021-06-10",
+      "adverse_reactions": ["手臂酸痛", "疲劳"],
+      "notes": "首剂接种"
+    },
+    {
+      "id": "vax_002",
+      "vaccine_name": "COVID-19 mRNA Vaccine",
+      "manufacturer": "Pfizer-BioNTech",
+      "dose_number": 2,
+      "total_doses": 2,
+      "administration_date": "2021-06-10",
+      "hospital": "北京市朝阳区疾控中心",
+      "batch_number": "EW0182",
+      "adverse_reactions": ["轻微发热"],
+      "notes": "完成基础免疫"
+    },
+    {
+      "id": "vax_003",
+      "vaccine_name": "Influenza Vaccine",
+      "manufacturer": "Sanofi",
+      "dose_number": 1,
+      "total_doses": 1,
+      "administration_date": "2025-10-15",
+      "hospital": "北京协和医院",
+      "batch_number": "FL202510",
+      "next_due_date": "2026-10-15",
+      "adverse_reactions": [],
+      "notes": "年度流感疫苗"
+    },
+    {
+      "id": "vax_004",
+      "vaccine_name": "Hepatitis B Vaccine",
+      "manufacturer": "GSK",
+      "dose_number": 1,
+      "total_doses": 3,
+      "administration_date": "2024-01-15",
+      "hospital": "北京协和医院",
+      "batch_number": "HB202401",
+      "next_due_date": "2024-02-15",
+      "adverse_reactions": [],
+      "notes": "加强免疫"
+    },
+    {
+      "id": "vax_005",
+      "vaccine_name": "Hepatitis B Vaccine",
+      "manufacturer": "GSK",
+      "dose_number": 2,
+      "total_doses": 3,
+      "administration_date": "2024-02-15",
+      "hospital": "北京协和医院",
+      "batch_number": "HB202401",
+      "next_due_date": "2024-08-15",
+      "adverse_reactions": [],
+      "notes": "第2剂"
+    },
+    {
+      "id": "vax_006",
+      "vaccine_name": "Hepatitis B Vaccine",
+      "manufacturer": "GSK",
+      "dose_number": 3,
+      "total_doses": 3,
+      "administration_date": "2024-08-15",
+      "hospital": "北京协和医院",
+      "batch_number": "HB202408",
+      "adverse_reactions": [],
+      "notes": "完成免疫"
+    }
+  ],
   "statistics": {
-    "total_vaccination_records": 0,
-    "total_doses_administered": 0,
-    "series_completed": 0,
+    "total_vaccination_records": 6,
+    "total_doses_administered": 6,
+    "series_completed": 2,
     "series_in_progress": 0,
-    "single_doses": 0,
+    "single_doses": 1,
     "overdue_count": 0,
     "upcoming_30_days": 0,
-    "adverse_reactions_count": 0,
+    "adverse_reactions_count": 3,
     "severe_reactions_count": 0,
-    "last_updated": null
+    "last_updated": "2025-12-20"
   }
 }

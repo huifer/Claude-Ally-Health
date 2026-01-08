@@ -1,19 +1,119 @@
 {
-  "created_at": null,
-  "last_updated": null,
-
-  "menopause_tracking": null,
-
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
+  "menopause_tracking": true,
+  "stage": "early_perimenopausal",
+  "symptoms_log": [
+    {
+      "date": "2025-12-10",
+      "hot_flashes": {
+        "present": false,
+        "frequency": null,
+        "severity": null
+      },
+      "night_sweats": {
+        "present": false,
+        "frequency": null
+      },
+      "menstrual_changes": {
+        "cycle_length_variation": "minimal",
+        "flow_changes": "normal",
+        "notes": "周期规律，28天"
+      },
+      "mood_changes": ["轻度情绪波动"],
+      "sleep_disturbance": {
+        "present": false,
+        "description": null
+      },
+      "vaginal_dryness": {
+        "present": false
+      },
+      "libido_changes": "stable",
+      "cognitive_symptoms": [],
+      "notes": "开始关注更年期症状，目前基本正常"
+    },
+    {
+      "date": "2025-11-15",
+      "hot_flashes": {
+        "present": false,
+        "frequency": null,
+        "severity": null
+      },
+      "night_sweats": {
+        "present": false,
+        "frequency": null
+      },
+      "menstrual_changes": {
+        "cycle_length_variation": "minimal",
+        "flow_changes": "normal",
+        "notes": "周期27天，规律"
+      },
+      "mood_changes": [],
+      "sleep_disturbance": {
+        "present": false,
+        "description": null
+      },
+      "vaginal_dryness": {
+        "present": false
+      },
+      "libido_changes": "stable",
+      "cognitive_symptoms": [],
+      "notes": "无明显症状"
+    },
+    {
+      "date": "2025-10-12",
+      "hot_flashes": {
+        "present": true,
+        "frequency": "1-2 per day",
+        "severity": "mild"
+      },
+      "night_sweats": {
+        "present": false,
+        "frequency": null
+      },
+      "menstrual_changes": {
+        "cycle_length_variation": "minimal",
+        "flow_changes": "normal",
+        "notes": "周期27天"
+      },
+      "mood_changes": ["轻度焦虑", "易怒"],
+      "sleep_disturbance": {
+        "present": true,
+        "description": "偶尔入睡困难"
+      },
+      "vaginal_dryness": {
+        "present": false
+      },
+      "libido_changes": "stable",
+      "cognitive_symptoms": ["轻度记忆力下降"],
+      "notes": "工作压力大，可能与激素水平变化有关"
+    }
+  ],
+  "hrt_history": [],
+  "bone_density_tests": [],
+  "follicle_stimulating_hormone": [],
+  "anti_mullerian_hormone": null,
+  "family_history": {
+    "mother_menopause_age": 51,
+    "mother_hrt_use": false,
+    "sisters_menopause_age": null,
+    "notes": "母亲51岁自然绝经"
+  },
+  "risk_factors": {
+    "early_menopause_risk": "low",
+    "osteoporosis_risk_factors": ["低钙饮食"],
+    "cardiovascular_risk_factors": [],
+    "breast_cancer_risk_factors": []
+  },
   "statistics": {
-    "tracking_duration_months": 0,
-    "total_symptom_records": 0,
+    "tracking_duration_months": 3,
+    "total_symptom_records": 3,
     "symptom_trend": "stable",
     "hrt_use": false,
-    "bone_density_tests": 0
-  },
-
-  "settings": {
-    "reminder_frequency": "monthly",
-    "symptom_tracking_frequency": "weekly"
+    "bone_density_tests": 0,
+    "hot_flash_frequency": "occasional",
+    "average_cycle_length": 27.5,
+    "cycle_regular": true,
+    "last_updated": "2025-12-20"
   }
 }

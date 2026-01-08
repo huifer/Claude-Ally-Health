@@ -1,32 +1,210 @@
 {
-  "created_at": null,
-  "last_updated": null,
+  "created_at": "2023-01-15T00:00:00Z",
+  "last_updated": "2025-12-20T00:00:00Z",
   "user_settings": {
     "average_cycle_length": 28,
     "average_period_length": 5,
     "pregnancy_planning": false
   },
-  "cycles": [],
-  "current_cycle": null,
-  "statistics": {
-    "total_cycles_tracked": 0,
-    "average_cycle_length": null,
-    "cycle_length_range": [],
-    "average_period_length": null,
-    "most_common_symptoms": {
-      "luteal": [],
-      "follicular": [],
-      "ovulation": [],
-      "menstrual": []
+  "cycles": [
+    {
+      "id": "cycle_001",
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-05",
+      "cycle_start_date": "2025-12-01",
+      "cycle_end_date": "2025-12-28",
+      "cycle_length": 28,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-12-15",
+      "daily_logs": [
+        {"date": "2025-12-01", "cycle_day": 1, "phase": "menstrual", "symptoms": ["痛经", "疲劳"], "mood": "irritable", "energy_level": 3, "flow": "medium"},
+        {"date": "2025-12-02", "cycle_day": 2, "phase": "menstrual", "symptoms": ["腰酸"], "mood": "calm", "energy_level": 4, "flow": "medium"},
+        {"date": "2025-12-15", "cycle_day": 15, "phase": "ovulation", "symptoms": ["下腹痛", "白带增多"], "mood": "energetic", "energy_level": 8, "basal_temp": 36.7},
+        {"date": "2025-12-28", "cycle_day": 28, "phase": "luteal", "symptoms": ["乳房胀痛", "情绪波动"], "mood": "anxious", "energy_level": 5}
+      ]
     },
-    "regularity_score": null
-  },
+    {
+      "id": "cycle_002",
+      "period_start": "2025-11-03",
+      "period_end": "2025-11-07",
+      "cycle_start_date": "2025-11-03",
+      "cycle_end_date": "2025-11-30",
+      "cycle_length": 28,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-11-17",
+      "daily_logs": [
+        {"date": "2025-11-03", "cycle_day": 1, "phase": "menstrual", "symptoms": ["痛经", "疲劳"], "mood": "calm", "energy_level": 4, "flow": "medium"},
+        {"date": "2025-11-04", "cycle_day": 2, "phase": "menstrual", "symptoms": ["腰酸"], "mood": "calm", "energy_level": 4, "flow": "medium"},
+        {"date": "2025-11-05", "cycle_day": 3, "phase": "menstrual", "symptoms": ["轻微疲劳"], "mood": "neutral", "energy_level": 5, "flow": "medium"},
+        {"date": "2025-11-06", "cycle_day": 4, "phase": "menstrual", "symptoms": [], "mood": "neutral", "energy_level": 6, "flow": "light"},
+        {"date": "2025-11-07", "cycle_day": 5, "phase": "menstrual", "symptoms": [], "mood": "good", "energy_level": 6, "flow": "light"},
+        {"date": "2025-11-10", "cycle_day": 8, "phase": "follicular", "symptoms": [], "mood": "energetic", "energy_level": 7, "basal_temp": 36.4},
+        {"date": "2025-11-14", "cycle_day": 12, "phase": "follicular", "symptoms": ["白带增多"], "mood": "happy", "energy_level": 8, "basal_temp": 36.5},
+        {"date": "2025-11-17", "cycle_day": 15, "phase": "ovulation", "symptoms": ["下腹痛", "白带增多", "体温升高"], "mood": "happy", "energy_level": 8, "basal_temp": 36.8},
+        {"date": "2025-11-18", "cycle_day": 16, "phase": "luteal", "symptoms": ["轻微腹胀"], "mood": "good", "energy_level": 7, "basal_temp": 36.9},
+        {"date": "2025-11-25", "cycle_day": 23, "phase": "luteal", "symptoms": ["乳房胀痛", "情绪波动"], "mood": "irritable", "energy_level": 5, "basal_temp": 36.8},
+        {"date": "2025-11-28", "cycle_day": 26, "phase": "luteal", "symptoms": ["经前综合征", "疲劳", "食欲增加"], "mood": "anxious", "energy_level": 4, "basal_temp": 36.6}
+      ]
+    },
+    {
+      "id": "cycle_003",
+      "period_start": "2025-10-06",
+      "period_end": "2025-10-10",
+      "cycle_start_date": "2025-10-06",
+      "cycle_end_date": "2025-11-02",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-10-20",
+      "daily_logs": [
+        {"date": "2025-10-06", "cycle_day": 1, "phase": "menstrual", "symptoms": ["疲劳"], "mood": "calm", "energy_level": 5, "flow": "medium"}
+      ]
+    },
+    {
+      "id": "cycle_004",
+      "period_start": "2025-09-08",
+      "period_end": "2025-09-12",
+      "cycle_start_date": "2025-09-08",
+      "cycle_end_date": "2025-10-05",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "light",
+      "ovulation_date": "2025-09-22"
+    },
+    {
+      "id": "cycle_005",
+      "period_start": "2025-08-11",
+      "period_end": "2025-08-15",
+      "cycle_start_date": "2025-08-11",
+      "cycle_end_date": "2025-09-07",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-08-25"
+    },
+    {
+      "id": "cycle_006",
+      "period_start": "2025-07-14",
+      "period_end": "2025-07-18",
+      "cycle_start_date": "2025-07-14",
+      "cycle_end_date": "2025-08-10",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-07-28"
+    },
+    {
+      "id": "cycle_007",
+      "period_start": "2025-06-16",
+      "period_end": "2025-06-20",
+      "cycle_start_date": "2025-06-16",
+      "cycle_end_date": "2025-07-13",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-06-30"
+    },
+    {
+      "id": "cycle_008",
+      "period_start": "2025-05-19",
+      "period_end": "2025-05-23",
+      "cycle_start_date": "2025-05-19",
+      "cycle_end_date": "2025-06-15",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-06-02"
+    },
+    {
+      "id": "cycle_009",
+      "period_start": "2025-04-21",
+      "period_end": "2025-04-25",
+      "cycle_start_date": "2025-04-21",
+      "cycle_end_date": "2025-05-18",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-05-05"
+    },
+    {
+      "id": "cycle_010",
+      "period_start": "2025-03-24",
+      "period_end": "2025-03-28",
+      "cycle_start_date": "2025-03-24",
+      "cycle_end_date": "2025-04-20",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "heavy",
+      "ovulation_date": "2025-04-07"
+    },
+    {
+      "id": "cycle_011",
+      "period_start": "2025-02-24",
+      "period_end": "2025-02-28",
+      "cycle_start_date": "2025-02-24",
+      "cycle_end_date": "2025-03-23",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-03-10"
+    },
+    {
+      "id": "cycle_012",
+      "period_start": "2025-01-27",
+      "period_end": "2025-01-31",
+      "cycle_start_date": "2025-01-27",
+      "cycle_end_date": "2025-02-23",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-02-10"
+    },
+    {
+      "id": "cycle_013",
+      "period_start": "2024-12-30",
+      "period_end": "2025-01-03",
+      "cycle_start_date": "2024-12-30",
+      "cycle_end_date": "2025-01-26",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2025-01-13"
+    },
+    {
+      "id": "cycle_014",
+      "period_start": "2024-12-02",
+      "period_end": "2024-12-06",
+      "cycle_start_date": "2024-12-02",
+      "cycle_end_date": "2024-12-29",
+      "cycle_length": 27,
+      "period_length": 5,
+      "flow_pattern": "medium",
+      "ovulation_date": "2024-12-16"
+    }
+  ],
+  "current_cycle": "cycle_001",
   "predictions": {
-    "next_period": null,
-    "next_period_confidence": null,
-    "fertile_window_start": null,
-    "fertile_window_end": null,
-    "ovulation_date": null,
-    "prediction_confidence": null
+    "next_period": "2025-12-29",
+    "next_period_confidence": 0.85,
+    "fertile_window_start": "2025-12-13",
+    "fertile_window_end": "2025-12-17",
+    "ovulation_date": "2025-12-15",
+    "prediction_confidence": 0.82
+  },
+  "statistics": {
+    "total_cycles_tracked": 14,
+    "average_cycle_length": 27,
+    "cycle_length_range": [27, 28],
+    "average_period_length": 5,
+    "most_common_symptoms": {
+      "luteal": ["乳房胀痛", "情绪波动", "疲劳"],
+      "follicular": ["精力充沛", "心情稳定"],
+      "ovulation": ["下腹痛", "白带增多"],
+      "menstrual": ["痛经", "疲劳", "腰酸"]
+    },
+    "regularity_score": 9.5,
+    "last_updated": "2025-12-20"
   }
 }
