@@ -182,3 +182,60 @@ my-his/
 本项目采用 [MIT License](LICENSE) 开源许可证。
 
 **重要声明**: 本系统仅供个人健康管理使用，不作为医疗诊断依据。
+
+---
+
+## 🎨 Next.js 可视化应用（新功能）
+
+项目现已包含基于 Next.js 14 的交互式健康数据可视化应用！
+
+### 快速启动
+
+**Windows 用户:**
+```bash
+start-nextjs.bat
+```
+
+**Linux/macOS 用户:**
+```bash
+chmod +x start-nextjs.sh
+./start-nextjs.sh
+```
+
+**手动启动:**
+```bash
+cd nextjs-app
+npm install  # 首次运行需要
+npm run dev
+```
+
+应用将在 http://localhost:3000 启动
+
+### 功能特性
+
+- ✅ **综合仪表盘** - 一览所有健康数据概览
+- ✅ **本地数据读取** - 直接读取 `data-example/` JSON 文件
+- ✅ **医疗主题样式** - 复用现有报告的视觉风格
+- 🚧 **交互式图表** - ECharts 可视化（开发中）
+- 🚧 **AI 健康分析** - 基于 Claude 的智能对话（开发中）
+- 🚧 **报告生成** - 自动生成 HTML 报告（开发中）
+
+### 配置 AI 功能
+
+编辑 `nextjs-app/.env.local` 添加 Anthropic API Key：
+
+```env
+ANTHROPIC_API_KEY=sk-ant-xxxxx
+```
+
+获取 API Key: https://console.anthropic.com/
+
+### 技术栈
+
+- Next.js 14 (App Router) + TypeScript
+- Tailwind CSS 3.4
+- ECharts 5.5
+- @anthropic-ai/sdk
+
+详细文档: [nextjs-app/README.md](nextjs-app/README.md)
+

@@ -1,5 +1,6 @@
 # 医疗数据隐私保护 - 不要提交到版本控制
 data/
+data-example/
 
 # 临时文件
 *.tmp
@@ -8,3 +9,21 @@ data/
 emergency-cards/*
 .claude/settings.local.json
 thinking/*
+
+# Node.js / Next.js
+nextjs-app/node_modules/
+nextjs-app/.next/
+nextjs-app/npm-debug.log*
+nextjs-app/yarn-debug.log*
+nextjs-app/yarn-error.log*
+nextjs-app/.env.local
+nextjs-app/.env.development.local
+
+# Next.js output (保留目录结构但忽略生成的内容)
+history-chart/**/*.html
+history-chart/**/*.png
+history-chart/**/*.pdf
+history-chart/**/*.json
+!history-chart/.gitkeep
+!history-chart/generated-reports/.gitkeep
+!history-chart/charts/.gitkeep
