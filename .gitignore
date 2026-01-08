@@ -7,3 +7,4 @@ data/
 医疗报告/
 emergency-cards/*
 .claude/settings.local.json
+thinking/*

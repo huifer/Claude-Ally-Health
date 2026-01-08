@@ -1,0 +1,1108 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-01-05",
+  "description": "症状-疾病关联知识库，包含常见症状的鉴别诊断、支持/反对证据、危险信号等",
+
+  "symptoms": {
+    "头痛": {
+      "category": "神经系统",
+      "differential_diagnoses": [
+        {
+          "name": "紧张性头痛",
+          "likelihood_baseline": 0.60,
+          "risk": "low",
+          "supporting_features": ["双侧", "胀痛", "压迫感", "紧箍感", "与压力相关"],
+          "opposing_features": ["单侧搏动性", "恶心呕吐", "先兆", "活动加重"],
+          "typical_age_range": "20-50岁",
+          "gender_predilection": "女性略多"
+        },
+        {
+          "name": "偏头痛",
+          "likelihood_baseline": 0.20,
+          "risk": "low",
+          "supporting_features": ["单侧", "搏动性", "恶心", "畏光畏声", "活动加重", "先兆"],
+          "opposing_features": ["双侧", "无恶心", "无先兆"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性3:1"
+        },
+        {
+          "name": "高血压相关头痛",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["高血压病史", "晨起头痛", "枕部", "血压升高时出现"],
+          "opposing_features": ["血压正常", "年轻患者", "无高血压病史"],
+          "typical_age_range": "40岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "丛集性头痛",
+          "likelihood_baseline": 0.02,
+          "risk": "low",
+          "supporting_features": ["眼周", "剧烈", "流泪", "鼻塞", "男性", "夜间发作"],
+          "opposing_features": ["双侧", "女性", "不剧烈", "无自主神经症状"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "男性6:1"
+        },
+        {
+          "name": "颅内占位性病变",
+          "likelihood_baseline": 0.01,
+          "risk": "high",
+          "supporting_features": ["逐渐加重", "晨起明显", "呕吐", "神经系统体征", "视力改变"],
+          "opposing_features": ["反复发作", "持续多年", "无进展", "神经系统正常"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "蛛网膜下腔出血",
+          "likelihood_baseline": 0.001,
+          "risk": "very_high",
+          "supporting_features": ["突然剧烈", "thunderclap", "颈强", "意识改变", "脑膜刺激征"],
+          "opposing_features": ["逐渐加重", "反复发作", "轻度疼痛"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "略多女性"
+        }
+      ],
+      "red_flags": ["突然剧烈头痛（雷击样）", "伴发热颈强", "神经定位体征", "意识障碍", "视力突然下降", "头部外伤后", "年龄>50岁新发头痛", "头痛性质改变"],
+      "key_questions": ["头痛部位？", "性质（胀痛/搏动性/刺痛）？", "持续时间？", "发作频率？", "伴随症状（恶心/呕吐/畏光）？", "诱因/缓解因素？", "晨起是否加重？", "是否逐渐加重？"]
+    },
+
+    "胸痛": {
+      "category": "心血管/呼吸系统",
+      "differential_diagnoses": [
+        {
+          "name": "心绞痛",
+          "likelihood_baseline": 0.40,
+          "risk": "high",
+          "supporting_features": ["胸骨后", "压迫感", "活动诱发", "休息缓解", "硝酸甘油缓解", "年龄>40岁", "心血管危险因素"],
+          "opposing_features": ["尖锐刺痛", "体位改变影响", "呼吸影响", "年轻无危险因素"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "心肌梗死",
+          "likelihood_baseline": 0.15,
+          "risk": "very_high",
+          "supporting_features": ["持续>30分钟", "休息不缓解", "大汗", "恶心呕吐", "濒死感", "放射至左肩臂", "呼吸困难"],
+          "opposing_features": ["短暂发作", "可诱发/缓解", "年轻无危险因素", "持续时间短"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性（女性表现不典型）"
+        },
+        {
+          "name": "肺栓塞",
+          "likelihood_baseline": 0.10,
+          "risk": "high",
+          "supporting_features": ["突发呼吸困难", "胸膜炎性疼痛", "咯血", "深静脉血栓", "近期手术", "长期卧床", "癌症"],
+          "opposing_features": ["无呼吸困难", "无危险因素", "年轻健康"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "气胸",
+          "likelihood_baseline": 0.05,
+          "risk": "moderate",
+          "supporting_features": ["突发尖锐胸痛", "单侧", "呼吸困难", "年轻瘦高男性", "慢阻肺"],
+          "opposing_features": ["双侧", "逐渐发作", "无呼吸困难"],
+          "typical_age_range": "20-40岁（原发性）或60岁以上（继发性）",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "胸膜炎",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["胸膜炎性疼痛", "呼吸加重", "咳嗽", "发热", "近期感染"],
+          "opposing_features": ["与呼吸无关", "无感染征象"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "胃食管反流",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["烧灼感", "餐后加重", "平卧加重", "反酸", "抗酸药缓解"],
+          "opposing_features": ["活动诱发", "与体位无关", "无反酸"],
+          "typical_age_range": "30-60岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肋软骨炎",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["胸壁压痛", "局部压痛", "活动上肢加重", "年轻"],
+          "opposing_features": ["无压痛", "胸骨后压迫感", "老年"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["胸痛伴呼吸困难", "大汗", "血压下降", "心率>100或<50", "心电图改变", "持续>30分钟不缓解", "放射至肩臂下颌", "意识改变"],
+      "key_questions": ["疼痛部位？", "性质（压迫感/尖锐/烧灼）？", "持续时间？", "诱发因素（活动/情绪/饮食）？", "缓解因素？", "伴随症状（呼吸困难/大汗/恶心）？", "放射部位？", "心血管危险因素？"]
+    },
+
+    "腹痛": {
+      "category": "消化系统",
+      "differential_diagnoses": [
+        {
+          "name": "胃炎/消化不良",
+          "likelihood_baseline": 0.30,
+          "risk": "low",
+          "supporting_features": ["上腹部", "餐后加重", "胀满感", "恶心", "与饮食相关"],
+          "opposing_features": ["转移性右下腹痛", "发热", "体重下降"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "急性阑尾炎",
+          "likelihood_baseline": 0.15,
+          "risk": "moderate",
+          "supporting_features": ["转移性右下腹痛", " McBurney点压痛", "恶心呕吐", "发热", "白细胞升高"],
+          "opposing_features": ["上腹痛", "无转移", "长期反复", "无发热"],
+          "typical_age_range": "10-30岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "胆结石/胆囊炎",
+          "likelihood_baseline": 0.15,
+          "risk": "moderate",
+          "supporting_features": ["右上腹痛", "油腻餐后诱发", "Murphy征阳性", "发热", "放射至右肩", "女性", "肥胖"],
+          "opposing_features": ["下腹痛", "与饮食无关", "年轻瘦弱"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "肾结石",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["侧腹部", "剧烈绞痛", "放射至腹股沟", "血尿", "尿急尿痛"],
+          "opposing_features": ["上腹痛", "无放射", "无泌尿系症状"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "胰腺炎",
+          "likelihood_baseline": 0.05,
+          "risk": "moderate",
+          "supporting_features": ["上腹部持续性剧痛", "放射至背部", "饮酒或高脂餐后", "恶心呕吐", "淀粉酶升高"],
+          "opposing_features": ["轻微疼痛", "与饮食饮酒无关", "正常淀粉酶"],
+          "typical_age_range": "30-60岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肠易激综合征",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["反复发作", "与排便相关", "排便后缓解", "腹胀", "排便习惯改变", "年轻", "女性"],
+          "opposing_features": ["老年人", "体重下降", "便血", "夜间症状"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "消化性溃疡",
+          "likelihood_baseline": 0.08,
+          "risk": "low",
+          "supporting_features": ["上腹痛", "节律性（胃溃疡餐后/十二指肠空腹痛）", "季节性", "抗酸药缓解", "黑便"],
+          "opposing_features": ["无节律性", "不缓解", "年轻"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "缺血性肠病",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["老年人", "房颤", "动脉粥样硬化", "腹痛与体征不匹配", "血便", "突发"],
+          "opposing_features": ["年轻", "无血管危险因素", "慢性反复"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["老年人突发腹痛", "腹痛与体征不匹配", "便血", "持续性加重", "休克征象", "板状腹", "气腹征", "房颤伴腹痛", "体重下降", "吞咽困难"],
+      "key_questions": ["腹痛部位？", "性质（绞痛/胀痛/烧灼）？", "持续时间？", "诱发因素（饮食/体位）？", "放射部位？", "伴随症状（恶心呕吐/发热/便血）？", "排便习惯改变？", "体重变化？"]
+    },
+
+    "发热": {
+      "category": "全身症状",
+      "differential_diagnoses": [
+        {
+          "name": "上呼吸道感染",
+          "likelihood_baseline": 0.50,
+          "risk": "low",
+          "supporting_features": ["咽痛", "咳嗽", "流涕", "肌肉酸痛", "接触史", "季节性", "轻中度发热"],
+          "opposing_features": ["高热>39°C", "无呼吸道症状", "长期发热"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "流感",
+          "likelihood_baseline": 0.20,
+          "risk": "moderate",
+          "supporting_features": ["高热>38°C", "突发", "肌肉酸痛明显", "乏力", "头痛", "干咳", "流行季节"],
+          "opposing_features": ["低热", "逐渐发作", "无肌肉酸痛"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺炎",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["咳嗽", "咳痰", "呼吸困难", "胸痛", "肺部啰音", "影像学浸润", "老年人"],
+          "opposing_features": ["无咳嗽", "正常肺部", "年轻健康"],
+          "typical_age_range": "老年和儿童",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "尿路感染",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["尿频尿急", "尿痛", "腰痛", "发热伴寒战", "女性"],
+          "opposing_features": ["无泌尿系症状", "男性年轻"],
+          "typical_age_range": "女性性活跃期和老年",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "结核",
+          "likelihood_baseline": 0.03,
+          "risk": "moderate",
+          "supporting_features": ["长期午后发热", "盗汗", "体重下降", "咳嗽>2周", "接触史", "流行地区"],
+          "opposing_features": ["急性发热", "无接触史", "短期"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "恶性肿瘤",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["体重下降", "盗汗", "长期发热>2周", "老年", "消耗状态"],
+          "opposing_features": ["急性短期", "年轻", "无体重下降"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "结缔组织病",
+          "likelihood_baseline": 0.03,
+          "risk": "moderate",
+          "supporting_features": ["关节痛", "皮疹", "长期发热", "女性", "自身抗体阳性"],
+          "opposing_features": ["急性短期", "男性", "无关节症状"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "感染性心内膜炎",
+          "likelihood_baseline": 0.01,
+          "risk": "high",
+          "supporting_features": ["发热", "心脏杂音", "栓塞征象", "心脏病史", "静脉用药", "人工瓣膜"],
+          "opposing_features": ["无心脏病", "无杂音", "短期"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "男性>女性"
+        }
+      ],
+      "red_flags": ["发热>39°C持续>3天", "伴意识改变", "休克征象", "免疫抑制", "人工瓣膜", "静脉用药", "心脏杂音", "体重下降明显", "长期发热>2周未明原因"],
+      "key_questions": ["发热程度？", "持续时间？", "伴随症状（咳嗽/尿痛/腹痛）？", "接触史？", "旅行史？", "动物接触？", "体重变化？", "用药史？"]
+    },
+
+    "咳嗽": {
+      "category": "呼吸系统",
+      "differential_diagnoses": [
+        {
+          "name": "急性支气管炎",
+          "likelihood_baseline": 0.40,
+          "risk": "low",
+          "supporting_features": ["前驱感染", "咳嗽为主", "咳少量白痰", "轻微发热", "自限性"],
+          "opposing_features": ["高热", "咳大量脓痰", "呼吸困难", "长期咳嗽"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "上气道咳嗽综合征",
+          "likelihood_baseline": 0.25,
+          "risk": "low",
+          "supporting_features": ["鼻炎/鼻窦炎", "鼻后滴漏", "夜间/晨起咳嗽", "过敏史"],
+          "opposing_features": ["咳黄痰", "发热", "呼吸困难"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "咳嗽变异性哮喘",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["夜间/凌晨加重", "干咳", "运动/冷空气诱发", "过敏史", "家族史"],
+          "opposing_features": ["咳痰", "白天为主", "无过敏"],
+          "typical_age_range": "儿童和青年",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "胃食管反流性咳嗽",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["反酸", "烧心", "餐后/平卧咳嗽", "肥胖", "饮酒"],
+          "opposing_features": ["无反酸症状", "瘦弱"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺炎",
+          "likelihood_baseline": 0.05,
+          "risk": "moderate",
+          "supporting_features": ["发热", "咳脓痰", "呼吸困难", "胸痛", "肺部啰音", "浸润影"],
+          "opposing_features": ["无发热", "正常肺部", "年轻健康"],
+          "typical_age_range": "老年和儿童",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺结核",
+          "likelihood_baseline": 0.03,
+          "risk": "moderate",
+          "supporting_features": ["咳嗽>2-3周", "咳血", "盗汗", "体重下降", "接触史"],
+          "opposing_features": ["急性咳嗽", "短期", "无接触史"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺癌",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["吸烟史", "年龄>50岁", "咳血", "体重下降", "长期咳嗽性质改变"],
+          "opposing_features": ["年轻", "不吸烟", "短期", "无体重下降"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "ACEI相关性咳嗽",
+          "likelihood_baseline": 0.03,
+          "risk": "low",
+          "supporting_features": ["服用ACEI类药物", "干咳", "用药后出现", "停药缓解"],
+          "opposing_features": ["未服用ACEI", "咳痰"],
+          "typical_age_range": "高血压患者年龄",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["咳血", "体重下降", "夜间盗汗", "吸烟史+咳嗽性质改变", "呼吸困难", "胸痛", "高热", "咳嗽>3周"],
+      "key_questions": ["咳嗽持续时间？", "性质（干咳/有痰）？", "痰液性状？", "时间规律（夜间/白天）？", "诱发因素？", "伴随症状（发热/胸痛/呼吸困难）？", "吸烟史？", "用药史？"]
+    },
+
+    "呼吸困难": {
+      "category": "呼吸/心血管系统",
+      "differential_diagnoses": [
+        {
+          "name": "哮喘急性发作",
+          "likelihood_baseline": 0.30,
+          "risk": "moderate",
+          "supporting_features": ["哮鸣音", "呼气性呼吸困难", "既往史", "过敏史", "夜间/凌晨发作", "可逆"],
+          "opposing_features": ["吸气性呼吸困难", "无哮鸣音", "首次发作老年"],
+          "typical_age_range": "儿童和青年",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "慢性阻塞性肺疾病急性加重",
+          "likelihood_baseline": 0.25,
+          "risk": "moderate",
+          "supporting_features": ["吸烟史", "老年人", "慢性咳嗽咳痰", "进行性加重", "桶状胸"],
+          "opposing_features": ["年轻", "不吸烟", "急性发病"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "心力衰竭",
+          "likelihood_baseline": 0.20,
+          "risk": "high",
+          "supporting_features": ["夜间阵发性呼吸困难", "端坐呼吸", "下肢水肿", "心脏病史", "肺部湿啰音"],
+          "opposing_features": ["年轻无心脏病", "无水肿", "白天为主"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺栓塞",
+          "likelihood_baseline": 0.10,
+          "risk": "high",
+          "supporting_features": ["突发", "胸痛", "咯血", "深静脉血栓", "近期手术/长期卧床", "心率快"],
+          "opposing_features": ["逐渐发作", "无危险因素", "年轻健康"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肺炎",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["发热", "咳嗽", "咳脓痰", "肺部啰音", "浸润影"],
+          "opposing_features": ["无发热", "正常肺部"],
+          "typical_age_range": "老年和儿童",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "气胸",
+          "likelihood_baseline": 0.03,
+          "risk": "moderate",
+          "supporting_features": ["突发", "单侧胸痛", "呼吸困难", "年轻瘦高男性", "慢阻肺"],
+          "opposing_features": ["双侧", "逐渐发作"],
+          "typical_age_range": "20-40岁（原发性）或60岁以上（继发性）",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "焦虑/过度通气",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["年轻女性", "情绪应激", "手足麻木", "呼吸浅快", "间歇性"],
+          "opposing_features": ["老年人", "持续呼吸困难", "客观缺氧"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        }
+      ],
+      "red_flags": ["静息时呼吸困难", "说话不能成句", "发绀", "意识改变", "血压下降", "心率>120或<50", "呼吸频率>30", "血氧饱和度<90%"],
+      "key_questions": ["发作急缓？", "持续时间？", "诱发因素？", "体位影响？", "伴随症状（胸痛/咳嗽/水肿）？", "心肺疾病史？", "吸烟史？", "用药史？"]
+    },
+
+    "心悸": {
+      "category": "心血管系统",
+      "differential_diagnoses": [
+        {
+          "name": "期前收缩",
+          "likelihood_baseline": 0.40,
+          "risk": "low",
+          "supporting_features": ["心跳漏跳感", "间歇性", "安静时明显", "年轻", "无心脏病"],
+          "opposing_features": ["持续快速心率", "心脏病史", "晕厥"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "窦性心动过速",
+          "likelihood_baseline": 0.25,
+          "risk": "low",
+          "supporting_features": ["规律快速心率", "诱因明确（运动/情绪/贫血/甲亢）", "活动后加重", "休息缓解"],
+          "opposing_features": ["心律不齐", "无诱因"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "阵发性室上性心动过速",
+          "likelihood_baseline": 0.15,
+          "risk": "moderate",
+          "supporting_features": ["突发突止", "心率达150-250", "年轻", "无心脏病", "反复发作"],
+          "opposing_features": ["逐渐发作", "老年", "有心脏病"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性略多"
+        },
+        {
+          "name": "心房颤动",
+          "likelihood_baseline": 0.12,
+          "risk": "moderate",
+          "supporting_features": ["心律绝对不齐", "老年人", "心脏病史", "高血压", "脉搏短绌"],
+          "opposing_features": ["年轻", "心律整齐", "无心脏病"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "甲状腺功能亢进",
+          "likelihood_baseline": 0.05,
+          "risk": "moderate",
+          "supporting_features": ["年轻女性", "持续心悸", "体重下降", "多汗", "手抖", "甲状腺肿大"],
+          "opposing_features": ["老年", "体重增加", "无甲亢症状"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "焦虑症",
+          "likelihood_baseline": 0.08,
+          "risk": "low",
+          "supporting_features": ["年轻女性", "情绪相关", "焦虑", "失眠", "间歇性", "心电图正常"],
+          "opposing_features": ["老年人", "心电图异常", "持续不缓解"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        }
+      ],
+      "red_flags": ["伴胸痛", "晕厥", "先兆晕厥", "心力衰竭征象", "心脏病史+新发心悸", "极度快速或不齐心率"],
+      "key_questions": ["发作形式（突发/渐发）？", "持续时间？", "诱发因素？", "伴随症状（胸痛/晕厥）？", "心脏病史？", "甲状腺疾病？", "用药史？"]
+    },
+
+    "水肿": {
+      "category": "心血管/肾脏系统",
+      "differential_diagnoses": [
+        {
+          "name": "心力衰竭",
+          "likelihood_baseline": 0.40,
+          "risk": "moderate",
+          "supporting_features": ["下肢水肿", "夜间加重", "活动后气促", "心脏病史", "老年人", "肝大"],
+          "opposing_features": ["年轻无心脏病", "晨起水肿（面部）", "单侧"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肾脏疾病",
+          "likelihood_baseline": 0.20,
+          "risk": "moderate",
+          "supporting_features": ["晨起眼睑水肿", "蛋白尿", "血尿", "高血压", "年轻", "肾功能异常"],
+          "opposing_features": ["老年", "单纯下肢", "无蛋白尿"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肝脏疾病",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["腹水", "肝病征象", "低蛋白血症", "黄疸", "蜘蛛痣", "饮酒史"],
+          "opposing_features": ["无肝病", "肝功能正常"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "静脉功能不全",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["单侧或不对称", "站立久后加重", "静脉曲张", "女性", "下午加重"],
+          "opposing_features": ["双侧对称", "晨起水肿", "腹水"],
+          "typical_age_range": "40岁以上",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "药物性水肿",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["服用CCB", "服用NSAIDs", "激素", "用药后出现"],
+          "opposing_features": ["未服用相关药物"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "深静脉血栓",
+          "likelihood_baseline": 0.03,
+          "risk": "high",
+          "supporting_features": ["单侧", "疼痛", "红肿", "近期手术", "长期卧床", "癌症"],
+          "opposing_features": ["双侧", "无痛", "无危险因素"],
+          "typical_age_range": "40岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "特发性水肿",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["育龄女性", "周期性", "与月经相关", "体重波动", "情绪相关"],
+          "opposing_features": ["男性", "绝经后", "持续不波动"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性"
+        }
+      ],
+      "red_flags": ["突发单侧水肿", "伴疼痛红肿", "呼吸困难", "腹水", "黄疸", "大量蛋白尿", "肾功能异常"],
+      "key_questions": ["水肿部位？", "时间规律（晨起/傍晚）？", "对称性？", "伴随症状（气促/疼痛）？", "用药史？", "肝肾病病史？", "心脏病史？"]
+    },
+
+    "恶心呕吐": {
+      "category": "消化系统",
+      "differential_diagnoses": [
+        {
+          "name": "急性胃肠炎",
+          "likelihood_baseline": 0.40,
+          "risk": "low",
+          "supporting_features": ["腹泻", "腹痛", "不洁饮食", "呕吐后缓解", "集体发病", "自限性"],
+          "opposing_features": ["无腹泻", "喷射性呕吐", "持续不缓解", "神经体征"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "妊娠",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["育龄女性", "停经", "晨起恶心", "乳房胀痛", "尿妊娠试验阳性"],
+          "opposing_features": ["男性", "非育龄期", "无停经"],
+          "typical_age_range": "20-35岁",
+          "gender_predilection": "女性"
+        },
+        {
+          "name": "药物副作用",
+          "likelihood_baseline": 0.12,
+          "risk": "low",
+          "supporting_features": ["新近用药", "化疗药", "阿片类", "抗生素", "用药后出现"],
+          "opposing_features": ["未服药", "已长期服用"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "消化性溃疡",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["上腹痛", "节律性", "黑便", "与饮食相关", "中年男性"],
+          "opposing_features": ["无腹痛", "年轻女性"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "颅内压增高",
+          "likelihood_baseline": 0.05,
+          "risk": "high",
+          "supporting_features": ["喷射性呕吐", "头痛", "晨起明显", "视乳头水肿", "神经系统体征"],
+          "opposing_features": ["非喷射性", "无头痛", "无神经体征"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "前庭疾病",
+          "likelihood_baseline": 0.08,
+          "risk": "low",
+          "supporting_features": ["眩晕", "眼球震颤", "与头位相关", "恶心明显", "听力异常"],
+          "opposing_features": ["无眩晕", "无眼震"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "糖尿病酮症酸中毒",
+          "likelihood_baseline": 0.03,
+          "risk": "high",
+          "supporting_features": ["糖尿病史", "腹痛", "多尿", "口渴", "呼吸深快", "意识改变"],
+          "opposing_features": ["无糖尿病", "正常血糖"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "尿毒症",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["慢性肾病", "尿毒症面容", "贫血", "食欲不振", "乏力"],
+          "opposing_features": ["正常肾功能", "年轻健康"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["喷射性呕吐", "伴头痛", "血性呕吐物", "剧烈腹痛", "神经系统体征", "意识改变", "体重明显下降"],
+      "key_questions": ["呕吐性质（喷射性/非喷射）？", "伴随症状（腹泻/腹痛/头痛）？", "用药史？", "停经史？", "慢性病史？", "体重变化？"]
+    },
+
+    "腹泻": {
+      "category": "消化系统",
+      "differential_diagnoses": [
+        {
+          "name": "急性感染性腹泻",
+          "likelihood_baseline": 0.50,
+          "risk": "low",
+          "supporting_features": ["不洁饮食", "水样便", "腹痛", "发热", "自限性", "夏秋季", "集体发病"],
+          "opposing_features": ["长期", "脓血便", "体重下降"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "肠易激综合征",
+          "likelihood_baseline": 0.20,
+          "risk": "low",
+          "supporting_features": ["反复发作", "与情绪相关", "排便后缓解", "年轻女性", "无体重下降"],
+          "opposing_features": ["老年人", "体重下降", "便血", "夜间腹泻"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "炎症性肠病",
+          "likelihood_baseline": 0.08,
+          "risk": "moderate",
+          "supporting_features": ["脓血便", "腹痛", "体重下降", "发热", "年轻", "慢性反复"],
+          "opposing_features": ["老年人首次", "水样便", "无体重下降"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "抗生素相关性腹泻",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["近期用抗生素", "发热", "白细胞升高", "严重病例可伴伪膜性肠炎"],
+          "opposing_features": ["未用抗生素", "轻微症状"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "吸收不良综合征",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["脂肪泻", "泡沫状", "恶臭", "体重下降", "营养不良"],
+          "opposing_features": ["水样便", "无体重下降"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "结肠癌",
+          "likelihood_baseline": 0.03,
+          "risk": "high",
+          "supporting_features": ["老年人", "便血", "排便习惯改变", "体重下降", "贫血", "大便变细"],
+          "opposing_features": ["年轻", "长期腹泻无变化", "无便血"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "甲状腺功能亢进",
+          "likelihood_baseline": 0.02,
+          "risk": "low",
+          "supporting_features": ["年轻女性", "排便次数增加", "体重下降", "多汗", "手抖"],
+          "opposing_features": ["老年", "体重增加", "无甲亢症状"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        }
+      ],
+      "red_flags": ["脓血便", "大量便血", "高热", "严重脱水", "体重明显下降", "老年人排便习惯改变", "夜间腹泻", "腹泻>4周"],
+      "key_questions": ["腹泻持续时间？", "大便性状（水样/脓血）？", "伴随症状（腹痛/发热/体重下降）？", "用药史（特别是抗生素）？", "饮食史？", "排便习惯改变？"]
+    },
+
+    "便秘": {
+      "category": "消化系统",
+      "differential_diagnoses": [
+        {
+          "name": "功能性便秘",
+          "likelihood_baseline": 0.60,
+          "risk": "low",
+          "supporting_features": ["排便次数<3次/周", "粪便干硬", "排便困难", "无报警症状", "年轻"],
+          "opposing_features": ["老年人", "体重下降", "便血"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "肠易激综合征便秘型",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["反复发作", "与情绪相关", "腹痛腹胀", "排便后缓解", "年轻女性"],
+          "opposing_features": ["老年人", "无痛性便秘"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "结肠直肠癌",
+          "likelihood_baseline": 0.05,
+          "risk": "high",
+          "supporting_features": ["老年人", "排便习惯改变", "大便变细", "便血", "体重下降", "贫血"],
+          "opposing_features": ["年轻", "长期便秘无变化", "无报警症状"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "药物性便秘",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["服用阿片类", "钙拮抗剂", "抗胆碱药", "利尿剂", "用药后出现"],
+          "opposing_features": ["未服用相关药物"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "甲状腺功能减退",
+          "likelihood_baseline": 0.03,
+          "risk": "low",
+          "supporting_features": ["女性", "乏力", "怕冷", "体重增加", "皮肤干燥", "便秘"],
+          "opposing_features": ["怕热", "体重下降", "多汗"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "肠梗阻",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["腹痛腹胀", "呕吐", "停止排气排便", "腹部手术史", "肠鸣音亢进"],
+          "opposing_features": ["正常排气排便", "无腹痛"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["便血", "排便习惯突然改变", "体重明显下降", "贫血", "腹痛", "腹部包块", "老年人新发便秘"],
+      "key_questions": ["排便频率？", "粪便性状？", "持续时间？", "伴随症状（腹痛/腹胀/便血）？", "用药史？", "体重变化？", "排便习惯改变？"]
+    },
+
+    "头晕": {
+      "category": "神经系统/前庭系统",
+      "differential_diagnoses": [
+        {
+          "name": "良性阵发性位置性眩晕",
+          "likelihood_baseline": 0.25,
+          "risk": "low",
+          "supporting_features": ["头位变化诱发", "短暂发作", " Dix-Hallpike阳性", "无听力障碍", "老年人"],
+          "opposing_features": ["持续头晕", "与头位无关", "听力下降"],
+          "typical_age_range": "50-70岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "前庭神经炎",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["持续眩晕", "恶心呕吐", "无听力障碍", "前次感染后", "自限性"],
+          "opposing_features": ["反复发作", "听力下降", "老年人"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "梅尼埃病",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["反复发作", "耳鸣", "听力下降", "耳胀满感", "中年"],
+          "opposing_features": ["无听力异常", "首次发作老年"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "后循环缺血",
+          "likelihood_baseline": 0.15,
+          "risk": "high",
+          "supporting_features": ["老年人", "血管危险因素", "头晕伴神经症状", "步态不稳", "视物成双"],
+          "opposing_features": ["年轻无危险因素", "单纯眩晕"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "直立性低血压",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["站立时出现", "卧位缓解", "老年人", "服用降压药/利尿剂"],
+          "opposing_features": ["与体位无关", "年轻无用药"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "贫血",
+          "likelihood_baseline": 0.08,
+          "risk": "low",
+          "supporting_features": ["乏力", "面色苍白", "心悸", "血红蛋白低", "女性月经期"],
+          "opposing_features": ["血红蛋白正常", "男性无出血"],
+          "typical_age_range": "育龄女性和老年",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "焦虑症",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["年轻女性", "头重脚轻感", "焦虑", "失眠", "间歇性", "客观检查正常"],
+          "opposing_features": ["老年人", "旋转性眩晕", "客观异常"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "药物副作用",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["服用降压药", "镇静药", "抗抑郁药", "用药后出现"],
+          "opposing_features": ["未服药"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["伴神经系统局灶体征", "严重头痛", "视物成双", "吞咽困难", "肢体无力", "说话障碍", "意识改变"],
+      "key_questions": ["性质（旋转性/头重脚轻）？", "持续时间？", "诱发因素（头位改变/站立）？", "伴随症状（耳鸣/听力下降）？", "用药史？", "血管危险因素？"]
+    },
+
+    "乏力": {
+      "category": "全身症状",
+      "differential_diagnoses": [
+        {
+          "name": "慢性疲劳综合征",
+          "likelihood_baseline": 0.20,
+          "risk": "low",
+          "supporting_features": ["持续>6个月", "活动后加重", "休息不缓解", "无明确原因", "年轻女性"],
+          "opposing_features": ["<6个月", "有明确器质性原因"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "贫血",
+          "likelihood_baseline": 0.20,
+          "risk": "low",
+          "supporting_features": ["面色苍白", "心悸", "气促", "血红蛋白低", "女性月经期"],
+          "opposing_features": ["血红蛋白正常"],
+          "typical_age_range": "育龄女性和老年",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "甲状腺功能减退",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["怕冷", "体重增加", "皮肤干燥", "便秘", "女性", "中年"],
+          "opposing_features": ["怕热", "体重下降", "多汗"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "抑郁症",
+          "likelihood_baseline": 0.15,
+          "risk": "moderate",
+          "supporting_features": ["情绪低落", "兴趣减退", "睡眠障碍", "食欲改变", "自我评价低"],
+          "opposing_features": ["情绪正常", "无兴趣减退"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "糖尿病",
+          "likelihood_baseline": 0.10,
+          "risk": "moderate",
+          "supporting_features": ["多饮多尿", "体重下降", "家族史", "肥胖", "血糖升高"],
+          "opposing_features": ["血糖正常", "体重增加", "无家族史"],
+          "typical_age_range": "40岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "慢性心力衰竭",
+          "likelihood_baseline": 0.08,
+          "risk": "moderate",
+          "supporting_features": ["活动后气促", "下肢水肿", "心脏病史", "老年人", "夜间阵发性呼吸困难"],
+          "opposing_features": ["年轻无心脏病", "无水肿"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "睡眠障碍",
+          "likelihood_baseline": 0.10,
+          "risk": "low",
+          "supporting_features": ["失眠", "睡眠质量差", "日间困倦", "打鼾", "工作压力"],
+          "opposing_features": ["睡眠充足", "无困倦"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "恶性肿瘤",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["体重明显下降", "老年人", "乏力伴消耗", "肿瘤征象"],
+          "opposing_features": ["年轻", "体重正常", "短期"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["体重明显下降", "乏力伴发热", "淋巴结肿大", "出血倾向", "老年人新发乏力", "进行性加重"],
+      "key_questions": ["乏力持续时间？", "是否与活动相关？", "伴随症状（体重下降/发热）？", "睡眠情况？", "情绪状态？", "慢性病史？"]
+    },
+
+    "尿频尿急": {
+      "category": "泌尿系统",
+      "differential_diagnoses": [
+        {
+          "name": "尿路感染",
+          "likelihood_baseline": 0.40,
+          "risk": "low",
+          "supporting_features": ["尿痛", "尿急", "尿频", "发热", "女性", "性活跃期"],
+          "opposing_features": ["男性", "无尿痛", "无发热"],
+          "typical_age_range": "女性性活跃期和老年",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "膀胱过度活动症",
+          "likelihood_baseline": 0.20,
+          "risk": "low",
+          "supporting_features": ["尿急尿频", "无尿痛", "无感染证据", "中年女性", "白天为主"],
+          "opposing_features": ["男性", "有感染", "夜尿为主"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "良性前列腺增生",
+          "likelihood_baseline": 0.25,
+          "risk": "low",
+          "supporting_features": ["男性", "老年人", "夜尿增多", "排尿困难", "尿线细"],
+          "opposing_features": ["女性", "年轻男性"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "男性"
+        },
+        {
+          "name": "糖尿病",
+          "likelihood_baseline": 0.08,
+          "risk": "moderate",
+          "supporting_features": ["多饮", "多尿", "体重下降", "血糖升高", "家族史"],
+          "opposing_features": ["血糖正常", "无多饮多尿"],
+          "typical_age_range": "40岁以上",
+          "gender_predilection": "无差异"
+        },
+        {
+          "name": "妊娠",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["育龄女性", "停经", "子宫增大", "尿妊娠试验阳性"],
+          "opposing_features": ["男性", "非育龄期", "无停经"],
+          "typical_age_range": "20-35岁",
+          "gender_predilection": "女性"
+        },
+        {
+          "name": "间质性膀胱炎",
+          "likelihood_baseline": 0.03,
+          "risk": "low",
+          "supporting_features": ["膀胱区疼痛", "尿频尿急", "女性", "反复发作", "无感染证据"],
+          "opposing_features": ["有感染证据", "男性"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "前列腺炎",
+          "likelihood_baseline": 0.05,
+          "risk": "low",
+          "supporting_features": ["男性", "会阴部不适", "发热", "尿频尿急", "尿痛"],
+          "opposing_features": ["女性"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "男性"
+        },
+        {
+          "name": "膀胱癌",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["老年人", "血尿", "吸烟史", "尿频尿急", "体重下降"],
+          "opposing_features": ["年轻", "无血尿", "不吸烟"],
+          "typical_age_range": "60岁以上",
+          "gender_predilection": "男性>女性"
+        }
+      ],
+      "red_flags": ["血尿", "发热伴腰痛", "尿潴留", "体重下降", "老年人无痛性血尿", "吸烟史+血尿"],
+      "key_questions": ["性别？", "年龄？", "是否伴尿痛？", "是否伴发热？", "夜尿次数？", "排尿困难？", "血尿？", "停经史？"]
+    },
+
+    "关节痛": {
+      "category": "肌肉骨骼系统",
+      "differential_diagnoses": [
+        {
+          "name": "骨关节炎",
+          "likelihood_baseline": 0.40,
+          "risk": "low",
+          "supporting_features": ["老年人", "负重关节（膝髋）", "活动后加重", "休息缓解", "晨僵<30分钟"],
+          "opposing_features": ["年轻", "对称性小关节", "晨僵>1小时"],
+          "typical_age_range": "50岁以上",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "类风湿关节炎",
+          "likelihood_baseline": 0.15,
+          "risk": "moderate",
+          "supporting_features": ["对称性小关节", "晨僵>1小时", "类风湿因子阳性", "女性", "手部关节"],
+          "opposing_features": ["单关节", "晨僵短", "大关节", "男性"],
+          "typical_age_range": "30-50岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "痛风",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["急性发作", "第一跖趾关节", "夜间发作", "红肿热痛", "高尿酸", "男性"],
+          "opposing_features": ["慢性对称性", "女性", "无痛风发作特点"],
+          "typical_age_range": "40-60岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "外伤/扭伤",
+          "likelihood_baseline": 0.15,
+          "risk": "low",
+          "supporting_features": ["外伤史", "单关节", "急性发作", "年轻活动者"],
+          "opposing_features": ["多关节", "无外伤", "慢性"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "强直性脊柱炎",
+          "likelihood_baseline": 0.05,
+          "risk": "moderate",
+          "supporting_features": ["年轻男性", "下腰痛", "晨僵", "HLA-B27阳性", "骶髂关节"],
+          "opposing_features": ["女性", "老年", "非下腰痛"],
+          "typical_age_range": "20-40岁",
+          "gender_predilection": "男性>女性"
+        },
+        {
+          "name": "系统性红斑狼疮",
+          "likelihood_baseline": 0.03,
+          "risk": "moderate",
+          "supporting_features": ["年轻女性", "多关节痛", "皮疹", "光过敏", "口腔溃疡", "自身抗体阳性"],
+          "opposing_features": ["男性", "老年", "单关节"],
+          "typical_age_range": "15-40岁",
+          "gender_predilection": "女性>男性"
+        },
+        {
+          "name": "化脓性关节炎",
+          "likelihood_baseline": 0.02,
+          "risk": "high",
+          "supporting_features": ["单关节", "红肿热痛明显", "发热", "活动受限", "剧烈疼痛"],
+          "opposing_features": ["多关节", "无痛热"],
+          "typical_age_range": "任何年龄",
+          "gender_predilection": "无差异"
+        }
+      ],
+      "red_flags": ["单关节急性红肿热痛", "发热", "外伤后关节变形", "关节畸形", "全身症状", "儿童关节痛"],
+      "key_questions": ["受累关节数目？", "是否对称？", "晨僵持续时间？", "诱发因素（外伤/活动）？", "伴随症状（发热/皮疹）？", "年龄性别？"]
+    }
+  }
+}

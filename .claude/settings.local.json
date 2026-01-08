@@ -4,7 +4,8 @@
       "Bash(xcopy:*)",
       "Bash(robocopy:*)",
       "Bash(powershell:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(node:*)"
     ]
   }
 }

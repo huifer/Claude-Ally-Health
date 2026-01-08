@@ -507,3 +507,536 @@
   ]
 }
 ```
+
+## 年龄特异性预防保健数据结构
+
+### 预防保健配置文件结构
+
+**文件位置**: `data/preventive-care-protocols.json`
+
+```json
+{
+  "metadata": {
+    "version": "1.0",
+    "created_at": "2025-01-05T00:00:00.000Z",
+    "last_updated": "2025-01-05T00:00:00.000Z",
+    "description": "年龄特异性预防保健方案配置文件"
+  },
+
+  "age_groups": {
+    "young_adult": {
+      "name": "青年成人（18-39岁）",
+      "age_range": [18, 39],
+      "description": "青年成人预防保健方案"
+    },
+    "middle_age": {
+      "name": "中年（40-49岁）",
+      "age_range": [40, 49],
+      "description": "中年预防保健方案"
+    },
+    "pre_senior": {
+      "name": "老年前期（50-64岁）",
+      "age_range": [50, 64],
+      "description": "老年前期预防保健方案"
+    },
+    "senior": {
+      "name": "老年人（65岁以上）",
+      "age_range": [65, 120],
+      "description": "老年人预防保健方案"
+    }
+  },
+
+  "screening_protocols": {
+    "cardiovascular": {
+      "name": "心血管筛查",
+      "screenings": {
+        "blood_pressure": {
+          "name": "血压检查",
+          "age_specific_recommendations": {
+            "young_adult": {
+              "recommendation": "annual",
+              "frequency": "每年",
+              "base_interval_years": 1
+            }
+          },
+          "risk_adjustments": {
+            "family_history_cad": {
+              "multiplier": 0.5,
+              "description": "冠心病家族史：筛查频率加倍"
+            },
+            "hypertension": {
+              "multiplier": 0.25,
+              "description": "已确诊高血压：每季度检查"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### 字段说明
+
+**metadata**: 元数据对象
+- `version`: 配置版本号
+- `created_at`: 创建时间
+- `last_updated`: 最后更新时间
+- `description`: 描述
+
+**age_groups**: 年龄组定义
+- `young_adult`: 青年成人（18-39岁）
+- `middle_age`: 中年（40-49岁）
+- `pre_senior`: 老年前期（50-64岁）
+- `senior`: 老年人（65岁以上）
+
+每个年龄组包含：
+- `name`: 显示名称
+- `age_range`: 年龄范围数组 [最小值, 最大值]
+- `description`: 描述
+
+**screening_protocols**: 筛查方案配置
+- `cardiovascular`: 心血管筛查
+- `cancer_screening`: 癌症筛查
+- `immunizations`: 免疫接种
+- `other_screenings`: 其他筛查
+
+每个筛查项目包含：
+- `name`: 筛查项目名称
+- `description`: 描述
+- `age_specific_recommendations`: 年龄特异性建议
+  - `recommendation`: 推荐方案代码
+  - `frequency`: 频率描述
+  - `base_interval_years`: 基础间隔（年）
+  - `start_age`: 开始年龄（如适用）
+  - `stop_age`: 停止年龄（如适用）
+  - `description`: 详细说明
+- `risk_adjustments`: 风险调整（可选）
+  - 风险因素名称作为键
+  - `multiplier`: 间隔调整乘数（<1表示更频繁）
+  - `description`: 调整说明
+- `gender_specific`: 性别特异性（可选）
+- `preparation`: 检查准备（可选）
+
+### 预防保健记录数据结构
+
+**文件位置**: `data/preventive-care.json`
+
+```json
+{
+  "metadata": {
+    "version": "1.0",
+    "created_at": "2025-01-05T00:00:00.000Z",
+    "last_updated": "2025-01-05T00:00:00.000Z"
+  },
+
+  "patient_profile": {
+    "age": 45,
+    "gender": "male",
+    "age_group": "middle_age",
+    "risk_factors": [
+      "hypertension",
+      "smoking",
+      "family_history_cad",
+      "overweight"
+    ],
+    "risk_factors_details": {
+      "hypertension": {
+        "diagnosed_date": "2023-01-15",
+        "duration_years": 2,
+        "controlled": true,
+        "medication": "ace_inhibitor"
+      },
+      "smoking": {
+        "status": "current",
+        "cigarettes_per_day": 20,
+        "smoking_years": 25,
+        "pack_years": 25
+      },
+      "family_history_cad": {
+        "relative": "father",
+        "age_at_onset": 55,
+        "relationship": "first_degree"
+      }
+    }
+  },
+
+  "screening_records": {
+    "cardiovascular": {
+      "blood_pressure": {
+        "screening_id": "bp_001",
+        "last_screened": "2025-03-15",
+        "result": {
+          "systolic": 125,
+          "diastolic": 82,
+          "pulse": 72,
+          "classification": "normal",
+          "at_goal": true,
+          "goal": "<130/80"
+        },
+        "trend": "improving",
+        "next_due": "2025-06-15",
+        "overdue": false,
+        "history": [
+          {"date": "2024-12-15", "systolic": 138, "diastolic": 88},
+          {"date": "2025-03-15", "systolic": 125, "diastolic": 82}
+        ]
+      }
+    },
+
+    "cancer_screening": {
+      "colorectal_cancer": {
+        "screening_id": "crc_001",
+        "last_screened": null,
+        "never_done": true,
+        "recommended_start_age": 45,
+        "current_age": 45,
+        "overdue": true,
+        "urgency": "overdue",
+        "recommended_method": "colonoscopy",
+        "alternative_methods": ["fit", "ct_colonography"]
+      }
+    },
+
+    "immunizations": {
+      "influenza": {
+        "last_vaccinated": "2024-10-15",
+        "next_due": "2025-10-01",
+        "vaccine_type": "standard_dose"
+      },
+      "tetanus": {
+        "last_vaccinated": "2018-05-10",
+        "vaccine_type": "tdap",
+        "next_due": "2028-05-10"
+      }
+    }
+  },
+
+  "compliance_tracking": {
+    "total_screenings": 9,
+    "up_to_date_count": 6,
+    "due_soon_count": 2,
+    "overdue_count": 1,
+    "never_done_count": 1,
+    "compliance_rate": 0.67,
+
+    "category_breakdown": {
+      "cardiovascular": {
+        "total": 3,
+        "up_to_date": 3,
+        "overdue": 0,
+        "compliance": 1.0
+      },
+      "cancer_screening": {
+        "total": 3,
+        "up_to_date": 1,
+        "overdue": 1,
+        "never_done": 1,
+        "compliance": 0.33
+      }
+    }
+  },
+
+  "risk_assessment": {
+    "ascvd_10yr_risk": 0.12,
+    "risk_category": "moderate_high",
+    "risk_factors_count": 4,
+    "modifiable_risk_factors": 3,
+    "intervention_potential": "high"
+  }
+}
+```
+
+### 字段说明
+
+**metadata**: 元数据对象
+- `version`: 版本号
+- `created_at`: 创建时间
+- `last_updated`: 最后更新时间
+
+**patient_profile**: 患者档案
+- `age`: 年龄（周岁）
+- `gender`: 性别（male/female）
+- `age_group`: 年龄组分类
+- `risk_factors`: 危险因素列表
+- `risk_factors_details`: 危险因素详细信息
+  - 各危险因素的具体信息（诊断日期、严重程度等）
+
+**screening_records**: 筛查记录
+- `cardiovascular`: 心血管筛查记录
+- `cancer_screening`: 癌症筛查记录
+- `immunizations`: 疫苗接种记录
+- `other_screenings`: 其他筛查记录
+
+每个筛查项目包含：
+- `screening_id`: 筛查记录唯一标识
+- `last_screened`: 最近检查日期（YYYY-MM-DD格式，如未检查则为null）
+- `never_done`: 是否从未检查（布尔值）
+- `result`: 检查结果对象（如已检查）
+  - 具体结果值根据检查类型而定
+  - `classification`: 结果分类（normal/abnormal等）
+  - `at_goal`: 是否达标（如适用）
+- `trend`: 趋势（improving/stable/worsening，如适用）
+- `next_due`: 下次检查应到期日期（YYYY-MM-DD格式）
+- `overdue`: 是否过期（布尔值）
+- `urgency`: 紧急程度（overdue/due_soon/routine）
+- `history`: 历史记录数组（可选）
+
+**compliance_tracking**: 依从性追踪
+- `total_screenings`: 总筛查项目数
+- `up_to_date_count`: 按时完成的数量
+- `due_soon_count`: 即将到期的数量
+- `overdue_count`: 过期的数量
+- `never_done_count`: 从未做的数量
+- `compliance_rate`: 依从率（0-1）
+- `category_breakdown`: 按类别分解的依从性统计
+
+**risk_assessment**: 风险评估
+- `ascvd_10yr_risk`: ASCVD 10年风险（0-1）
+- `risk_category`: 风险分类（low/moderate/high/very_high）
+- `risk_factors_count`: 危险因素总数
+- `modifiable_risk_factors`: 可改变的危险因素数
+- `intervention_potential`: 干预潜力（high/moderate/low）
+
+### 筛查间隔计算规则
+
+**基础间隔**: 根据年龄组从预防保健方案配置中获取
+
+**风险调整**:
+```javascript
+adjusted_interval = base_interval × risk_multiplier
+```
+
+风险乘数示例：
+- `0.25`: 间隔缩短为1/4（如每年→每季度）
+- `0.5`: 间隔缩短为1/2（如每5年→每2.5年）
+- `1.0`: 无调整
+- `2.0`: 间隔延长为2倍
+
+多个风险因素时取最小间隔：
+```javascript
+final_interval = min(all_adjusted_intervals)
+```
+
+**最小间隔限制**: 最短间隔不低于0.25年（3个月）
+
+### 参考值范围
+
+**血压分类**:
+- `normal`: <120/80 mmHg
+- `elevated`: 120-129/<80 mmHg
+- `hypertension_stage_1`: 130-139/80-89 mmHg
+- `hypertension_stage_2`: ≥140/≥90 mmHg
+- `target_general`: <130/80 mmHg
+- `target_diabetes_ckd`: <130/80 mmHg
+- `target_over_65`: <140/90 mmHg
+
+**血脂分类**:
+- `total_cholesterol`: 正常<200，边缘升高200-239，升高≥240 mg/dL
+- `ldl`: 最优<100，近乎正常100-129，边缘升高130-159，升高160-189，很高≥190 mg/dL
+- `hdl`: 低（男）<40，低（女）<50 mg/dL
+- `triglycerides`: 正常<150，边缘升高150-199，升高200-499，很高≥500 mg/dL
+
+**血糖分类**:
+- `fasting_glucose`: 正常<100，糖尿病前期100-125，糖尿病≥126 mg/dL
+- `hba1c`: 正常<5.7%，糖尿病前期5.7-6.4%，糖尿病≥6.5%
+
+**PSA分类**:
+- `normal`: <4.0 ng/mL
+- `borderline`: 4.0-10.0 ng/mL
+- `high`: >10.0 ng/mL
+
+### 使用示例
+
+**查看预防保健状态**:
+```
+/preventive status
+```
+
+**更新筛查结果**:
+```
+/preventive update 血压 2025-03-15 125/82
+/preventive update 血脂 2025-06-20 总胆固醇220 LDL155
+```
+
+**查看即将到期的筛查**:
+```
+/preventive due 90
+```
+
+**获取个性化建议**:
+```
+/preventive recommendations
+```
+
+**风险分层分析**:
+```
+/preventive risk
+```
+
+
+
+## 慢性病质量指标数据结构
+
+### 慢性病档案数据结构
+
+**文件位置**: `data/chronic-diseases.json`
+
+慢性病质量指标管理系统存储高血压、糖尿病等慢性病的诊断信息、治疗方案、质量指标和并发症筛查记录。
+
+主要包含：
+- **patient_profile**: 患者慢性病诊断和合并症信息
+- **hypertension_management**: 高血压管理数据（如确诊）
+- **diabetes_management**: 糖尿病管理数据（如确诊）
+- **complication_screening**: 并发症筛查记录
+- **quality_assessment_history**: 质量评估历史
+- **lifestyle_factors**: 生活方式因素
+
+### 字段说明
+
+**patient_profile**:
+- `chronic_conditions`: 慢性病列表数组
+  - `condition_id`: 疾病唯一标识符
+  - `condition_type`: 疾病类型（hypertension/diabetes等）
+  - `diagnosis_date`: 诊断日期
+  - `severity_at_diagnosis`: 诊断时严重程度
+  - `current_status`: 当前状态
+  
+- `comorbidities`: 合并症列表
+  - 支持糖尿病、慢性肾病、冠心病、心衰、房颤、血脂异常
+
+**hypertension_management**:
+- `target_bp`: 个性化血压目标
+  - `systolic_max/diastolic_max`: 目标值上限
+  - `target_type`: 目标类型（standard/elderly/diabetes_ckd/pregnancy）
+  
+- `quality_metrics`: 质量指标
+  - `goal_attainment_rate`: 达标率（0-1）
+  - `grade`: 质量等级（A-F）
+  - `current_classification`: 当前血压分类
+  - `trend_analysis`: 趋势分析（improving/stable/worsening）
+  - `variability`: 血压变异性评估
+  - `home_monitoring_adherence`: 家庭监测依从性
+
+**diabetes_management**:
+- `target_hba1c`: 糖化血红蛋白目标
+  - `target_value`: 目标值
+  - `target_type`: 目标类型（strict/standard/lenient）
+  
+- `quality_metrics`: 糖尿病质量指标
+  - `average_hba1c`: 平均HbA1c
+  - `glucose_control`: 血糖控制情况
+  - `hypoglycemia_episodes`: 低血糖发作记录
+
+## 生命体征日志数据结构
+
+### 血压日志
+
+**文件位置**: `data/vital-signs-logs/YYYY-MM/YYYY-MM-DD.json`
+
+```json
+{
+  "date": "2025-01-05",
+  "readings": [
+    {
+      "id": "bp_2025010508000001",
+      "type": "blood_pressure",
+      "timestamp": "2025-01-05T08:15:00",
+      "systolic": 128,
+      "diastolic": 82,
+      "pulse": 72,
+      "measurement_context": "home",
+      "position": "seated",
+      "arm": "left",
+      "notes": ""
+    }
+  ]
+}
+```
+
+**字段说明**:
+- `systolic/diastolic`: 收缩压/舒张压（mmHg）
+- `pulse`: 脉率（次/分钟，可选）
+- `measurement_context`: 测量环境（home/clinic）
+- `position`: 体位（seated/standing/supine）
+- `arm`: 测量手臂（left/right）
+
+### 血糖日志
+
+```json
+{
+  "date": "2025-01-05",
+  "readings": [
+    {
+      "id": "glucose_2025010507000001",
+      "type": "blood_glucose",
+      "timestamp": "2025-01-05T07:30:00",
+      "glucose_value": 5.8,
+      "unit": "mmol/L",
+      "timing": "fasting",
+      "meal_related": true
+    }
+  ]
+}
+```
+
+**字段说明**:
+- `glucose_value`: 血糖值
+- `unit`: 单位（mmol/L 或 mg/dL）
+- `timing`: 测量时机（fasting/preprandial/postprandial/bedtime）
+- `time_after_meal`: 餐后时间（分钟，postprandial时）
+
+## 质量等级标准
+
+### 血压控制质量
+- **A（优秀）**: ≥90% 读数达标
+- **B（良好）**: ≥80% 读数达标
+- **C（中等）**: ≥70% 读数达标
+- **D（较差）**: ≥60% 读数达标
+- **F（差）**: <60% 读数达标
+
+### 血糖控制质量
+- **A（优秀）**: ≥90% 读数在目标范围内
+- **B（良好）**: ≥80% 读数在目标范围内
+- **C（中等）**: ≥70% 读数在目标范围内
+- **D（较差）**: ≥60% 读数在目标范围内
+- **F（差）**: <60% 读数在目标范围内
+
+## 个性化目标
+
+### 血压目标
+| 目标类型 | 收缩压 | 舒张压 | 适用人群 |
+|---------|--------|--------|---------|
+| standard | <130 | <80 | 一般成人（<65岁）|
+| elderly | <140 | <90 | ≥65岁老年人 |
+| diabetes_ckd | <130 | <80 | 糖尿病或CKD |
+| pregnancy | <140 | <90 | 孕期妇女 |
+
+### HbA1c目标
+| 目标类型 | 目标值 | 适用人群 |
+|---------|--------|---------|
+| strict | <6.5% | 年轻、无并发症 |
+| standard | <7.0% | 一般成人 |
+| lenient | <8.0% | 老年、有严重低血糖史 |
+
+## 使用示例
+
+**查看血压质量指标**:
+```
+/quality hypertension status
+```
+
+**记录家庭血压测量**:
+```
+/vitals bp 128/82 早上
+```
+
+**查看并发症筛查状态**:
+```
+/quality complications hypertension
+```
+
+**获取个性化建议**:
+```
+/quality recommendations
+```
