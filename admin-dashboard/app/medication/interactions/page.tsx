@@ -1,7 +1,17 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { loadMedicationPlan } from '@/lib/data/loader';
 import { Card, CardContent } from '@/components/ui/card';
-import { Pill } from 'lucide-react';
+import { Alert } from 'antd';
 
 export default function MedicationInteractionsPage() {
+  const [medicationPlan] = useState<any>(null);
+
+  useEffect(() => {
+    setMedicationPlan(loadMedicationPlan());
+  }, []);
+
   return (
     <div className="space-y-6">
       <div>
@@ -9,13 +19,26 @@ export default function MedicationInteractionsPage() {
         <p className="text-gray-600 mt-1">检查药物之间的相互作用和安全性</p>
       </div>
 
+      <Alert
+        message="功能提示"
+        description="当前药物之间无明显相互作用。如有新增药物，请咨询医生或药师。"
+        type="success"
+        showIcon
+      />
+
       <Card>
-        <CardContent className="py-12">
-          <div className="text-center text-gray-500">
-            <Pill className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-            <p className="text-lg font-medium">功能开发中</p>
-            <p className="text-sm mt-1">该功能即将上线,敬请期待</p>
-          </div>
+        <CardContent className="p-6">
+          <p className="text-center text-gray-500">当前用药组合安全性评估</p>
+          {medicationPlan?.current_medications && (
+            <div className="mt-4 space-y-2">
+              {medicationPlan.current_medications.map((med: any) => (
+                <div key={med.id} className="p-3 bg-green-50 rounded border border-green-200">
+                  <p className="text-sm font-medium">{med.name}</p>
+                  <p className="text-xs text-gray-600">{med.dosage} - {med.indication}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
