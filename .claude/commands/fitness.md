@@ -353,6 +353,46 @@ arguments:
 
 ---
 
+## 减肥管理命令
+
+**减肥安全声明**
+本系统提供的减肥建议基于科学原理，不构成医疗处方。
+极端减重、进食障碍请咨询医生。
+
+### 身体成分记录
+
+```bash
+/fitness:weightloss-record weight 75.5
+/fitness:weightloss-record body-fat 28.5%
+/fitness:weightloss-record waist 92
+```
+
+### 身体成分分析
+
+```bash
+/fitness:weightloss-body              # 完整身体成分分析
+/fitness:weightloss-trend weight      # 体重趋势
+/fitness:weightloss-progress          # 减肥进度
+```
+
+### 代谢率计算
+
+```bash
+/fitness:weightloss-bmr               # 计算BMR
+/fitness:weightloss-tdee              # 计算TDEE
+/fitness:weightloss-activity moderate  # 设置活动水平
+```
+
+### 阶段管理
+
+```bash
+/fitness:weightloss-phase weight-loss     # 设置为减重期
+/fitness:weightloss-phase plateau         # 标记平台期
+/fitness:weightloss-maintenance start     # 进入维持期
+```
+
+---
+
 **版本**: v1.0
 **最后更新**: 2026-01-02
 **维护者**: WellAlly Tech

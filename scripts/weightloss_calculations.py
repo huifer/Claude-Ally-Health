@@ -554,6 +554,427 @@ def suggest_plateau_breakthrough(plateau_duration_weeks: int) -> List[str]:
 
 
 # ============================================================================
+# 额外分析函数
+# ============================================================================
+
+def calculate_tdee(bmr: int, activity_level: str = "moderate") -> int:
+    """
+    计算每日总能量消耗(TDEE)
+
+    Args:
+        bmr: 基础代谢率(大卡/天)
+        activity_level: 活动水平
+            - "sedentary": 久坐不动，几乎不运动
+            - "light": 轻度活动，每周1-3天轻度运动
+            - "moderate": 中度活动，每周3-5天中等运动
+            - "active": 高度活动，每周6-7天高强度运动
+            - "extra_active": 极高活动，体力工作或每天高强度训练
+
+    Returns:
+        每日总能量消耗(大卡/天)
+    """
+    activity_level = activity_level.lower()
+    # 标准化别名
+    activity_map = {
+        "sedentary": "sedentary",
+        "light": "light",
+        "moderate": "moderate",
+        "active": "active",
+        "extra_active": "extra_active",
+        "extra-active": "extra_active",
+        "very_active": "active",
+        "very-active": "active",
+    }
+    normalized_level = activity_map.get(activity_level, "moderate")
+    factor = ACTIVITY_FACTORS.get(normalized_level, 1.55)
+    return int(bmr * factor)
+
+
+def calculate_all_bmr(
+    gender: str,
+    weight_kg: float,
+    height_cm: int,
+    age: int,
+    body_fat_percentage: Optional[float] = None
+) -> Dict[str, any]:
+    """
+    计算所有三种BMR公式
+
+    Args:
+        gender: 性别 "male" 或 "female"
+        weight_kg: 体重(公斤)
+        height_cm: 身高(厘米)
+        age: 年龄(岁)
+        body_fat_percentage: 体脂率(可选，用于Katch-McArdle公式)
+
+    Returns:
+        包含所有BMR结果的字典:
+        {
+            "harris_benedict": Harris-Benedict公式结果,
+            "mifflin_st_jeor": Mifflin-St Jeor公式结果,
+            "katch_mcardle": Katch-McArdle公式结果(如果有体脂率),
+            "recommended": 推荐使用的BMR值,
+            "note": 说明文字
+        }
+    """
+    harris_benedict = calculate_bmr_harris_benedict(gender, weight_kg, height_cm, age)
+    mifflin_st_jeor = calculate_bmr_mifflin_st_jeor(gender, weight_kg, height_cm, age)
+
+    result = {
+        "harris_benedict": harris_benedict,
+        "mifflin_st_jeor": mifflin_st_jeor,
+        "katch_mcardle": None,
+        "recommended": mifflin_st_jeor,
+        "note": "推荐使用Mifflin-St Jeor公式(最准确)"
+    }
+
+    # 如果有体脂率，计算Katch-McArdle
+    if body_fat_percentage is not None:
+        katch_mcardle = calculate_bmr_katch_mcardle(weight_kg, body_fat_percentage)
+        result["katch_mcardle"] = katch_mcardle
+        result["note"] = "有体脂率数据时，推荐使用Katch-McArdle公式"
+        result["recommended"] = katch_mcardle
+
+    return result
+
+
+def validate_calorie_target(target_calories: int, bmr: int, gender: str) -> Dict[str, any]:
+    """
+    验证热量目标是否安全
+
+    Args:
+        target_calories: 目标每日热量(大卡)
+        bmr: 基础代谢率(大卡/天)
+        gender: 性别 "male" 或 "female"
+
+    Returns:
+        验证结果字典:
+        {
+            "is_safe": 是否安全,
+            "target": 目标热量,
+            "minimum_safe": 最低安全热量,
+            "bmr": 基础代谢率,
+            "difference": 与最低安全热量的差值,
+            "warning": 警告信息(如有),
+            "recommendation": 建议
+        }
+    """
+    # 最低安全热量为BMR的1.2倍(久坐活动水平)
+    minimum_safe = int(bmr * 1.2)
+    difference = target_calories - minimum_safe
+    is_safe = target_calories >= minimum_safe
+
+    warning = None
+    recommendation = "热量目标在安全范围内"
+
+    if not is_safe:
+        warning = f"目标热量({target_calories})低于最低安全值({minimum_safe}大卡)"
+        recommendation = f"建议将每日热量至少提高到{minimum_safe}大卡以保证基础代谢和营养需求"
+    elif difference < 200:
+        warning = f"目标热量接近最低安全值，建议谨慎"
+        recommendation = "建议密切监测身体状况，如出现疲劳、脱发等症状请增加热量"
+
+    return {
+        "is_safe": is_safe,
+        "target": target_calories,
+        "minimum_safe": minimum_safe,
+        "bmr": bmr,
+        "difference": difference,
+        "warning": warning,
+        "recommendation": recommendation
+    }
+
+
+def validate_weight_loss_rate(weight_loss_kg: float, weeks: int) -> Dict[str, any]:
+    """
+    验证减重速度是否安全
+
+    Args:
+        weight_loss_kg: 减重重量(公斤)
+        weeks: 减重所用周数
+
+    Returns:
+        验证结果字典:
+        {
+            "is_safe": 是否安全,
+            "rate_kg_per_week": 每周减重速度,
+            "total_kg": 总减重量,
+            "weeks": 周数,
+            "category": 安全分类,
+            "warning": 警告信息(如有),
+            "recommendation": 建议
+        }
+    """
+    if weeks <= 0:
+        return {
+            "is_safe": False,
+            "rate_kg_per_week": 0,
+            "total_kg": weight_loss_kg,
+            "weeks": weeks,
+            "category": "invalid",
+            "warning": "周数必须大于0",
+            "recommendation": "请输入有效的周数"
+        }
+
+    rate_per_week = weight_loss_kg / weeks
+
+    # 安全标准
+    if rate_per_week <= 0.5:
+        category = "safe"
+        is_safe = True
+        recommendation = "减重速度在安全范围内，继续保持"
+    elif rate_per_week <= 1.0:
+        category = "moderate"
+        is_safe = True
+        recommendation = "减重速度较快但仍在可接受范围，建议确保营养充足"
+    elif rate_per_week <= 1.5:
+        category = "aggressive"
+        is_safe = True
+        recommendation = "减重速度较快，建议密切监测身体状况并确保蛋白质摄入充足"
+    else:
+        category = "unsafe"
+        is_safe = False
+        recommendation = "减重速度过快，存在健康风险，建议降低减重速度至每周0.5-1公斤"
+
+    warning = None
+    if category == "aggressive":
+        warning = f"减重速度({rate_per_week:.2f}kg/周)接近安全上限"
+    elif category == "unsafe":
+        warning = f"减重速度({rate_per_week:.2f}kg/周)超过安全上限(1.5kg/周)"
+
+    return {
+        "is_safe": is_safe,
+        "rate_kg_per_week": round(rate_per_week, 2),
+        "total_kg": weight_loss_kg,
+        "weeks": weeks,
+        "category": category,
+        "warning": warning,
+        "recommendation": recommendation
+    }
+
+
+def analyze_body_composition(
+    gender: str,
+    age: int,
+    height_cm: int,
+    weight_kg: float,
+    body_fat_percentage: Optional[float] = None,
+    waist_cm: Optional[float] = None,
+    hip_cm: Optional[float] = None
+) -> Dict[str, any]:
+    """
+    综合身体成分分析
+
+    Args:
+        gender: 性别 "male" 或 "female"
+        age: 年龄(岁)
+        height_cm: 身高(厘米)
+        weight_kg: 体重(公斤)
+        body_fat_percentage: 体脂率(可选)
+        waist_cm: 腰围(可选)
+        hip_cm: 臀围(可选)
+
+    Returns:
+        身体成分分析结果字典
+    """
+    # BMI分析
+    bmi = calculate_bmi(weight_kg, height_cm)
+    bmi_category = get_bmi_category(bmi)
+    bmi_category_cn = get_bmi_category_chinese(bmi)
+    ideal_weight = calculate_ideal_weight(height_cm)
+    weight_difference = weight_kg - ideal_weight
+
+    result = {
+        "bmi": {
+            "value": bmi,
+            "category": bmi_category,
+            "category_chinese": bmi_category_cn,
+            "ideal_weight": ideal_weight,
+            "difference_from_ideal": round(weight_difference, 1),
+            "weight_status": "正常" if abs(weight_difference) < 5 else ("偏重" if weight_difference > 0 else "偏轻")
+        },
+        "body_fat": None,
+        "waist_hip": None,
+        "overall_assessment": None,
+        "recommendations": []
+    }
+
+    # 体脂分析
+    if body_fat_percentage is not None:
+        bf_category = get_body_fat_category(gender, body_fat_percentage)
+        bf_category_cn = get_body_fat_category_chinese(gender, body_fat_percentage)
+
+        # 计算瘦体重
+        lean_mass_kg = weight_kg * (1 - body_fat_percentage / 100)
+
+        result["body_fat"] = {
+            "percentage": body_fat_percentage,
+            "category": bf_category,
+            "category_chinese": bf_category_cn,
+            "lean_mass_kg": round(lean_mass_kg, 1),
+            "fat_mass_kg": round(weight_kg - lean_mass_kg, 1)
+        }
+
+    # 腰臀比分析
+    if waist_cm is not None:
+        has_abdominal = has_abdominal_obesity(gender, waist_cm)
+
+        waist_data = {
+            "waist_cm": waist_cm,
+            "has_abdominal_obesity": has_abdominal,
+            "threshold_cm": WAIST_OBESITY_THRESHOLD.get(gender, 90)
+        }
+
+        if hip_cm is not None and hip_cm > 0:
+            whr = calculate_waist_hip_ratio(waist_cm, hip_cm)
+            waist_data["hip_cm"] = hip_cm
+            waist_data["ratio"] = whr
+
+            # 腰臀比健康标准
+            if gender == "male":
+                whr_ok = whr < 0.9
+            else:
+                whr_ok = whr < 0.85
+            waist_data["ratio_healthy"] = whr_ok
+
+        result["waist_hip"] = waist_data
+
+    # 综合评估
+    concerns = []
+    if bmi_category in ["overweight", "obese"]:
+        concerns.append(f"BMI偏高({bmi})")
+
+    if body_fat_percentage is not None:
+        bf_cat = get_body_fat_category(gender, body_fat_percentage)
+        if bf_cat in ["average", "obese"]:
+            concerns.append(f"体脂率偏高({body_fat_percentage}%)")
+
+    if waist_cm is not None and has_abdominal_obesity(gender, waist_cm):
+        concerns.append(f"存在腹部肥胖(腰围{waist_cm}cm)")
+
+    if not concerns:
+        overall_assessment = "身体成分指标良好"
+    else:
+        overall_assessment = f"需要注意: {', '.join(concerns)}"
+
+    result["overall_assessment"] = overall_assessment
+
+    # 生成建议
+    recommendations = []
+    if bmi_category == "underweight":
+        recommendations.append("建议适当增加热量摄入，进行适量力量训练增加肌肉量")
+    elif bmi_category in ["overweight", "obese"]:
+        recommendations.append("建议通过合理饮食和运动减重")
+        recommendations.append(f"目标体重可参考理想体重: {ideal_weight}kg")
+
+    if body_fat_percentage is not None:
+        bf_cat = get_body_fat_category(gender, body_fat_percentage)
+        if bf_cat == "obese":
+            recommendations.append("体脂率较高，建议增加有氧运动，控制饮食")
+        elif bf_cat == "athletic" or bf_cat == "fitness":
+            recommendations.append("体脂率状况良好，继续保持")
+
+    if waist_cm is not None and has_abdominal_obesity(gender, waist_cm):
+        recommendations.append("腹部肥胖是心血管疾病风险因素，建议重点减腹")
+        recommendations.append("建议增加核心训练和有氧运动")
+
+    result["recommendations"] = recommendations
+
+    return result
+
+
+def analyze_metabolic_profile(
+    gender: str,
+    age: int,
+    height_cm: int,
+    weight_kg: float,
+    activity_level: str = "moderate",
+    body_fat_percentage: Optional[float] = None
+) -> Dict[str, any]:
+    """
+    代谢分析
+
+    Args:
+        gender: 性别 "male" 或 "female"
+        age: 年龄(岁)
+        height_cm: 身高(厘米)
+        weight_kg: 体重(公斤)
+        activity_level: 活动水平
+        body_fat_percentage: 体脂率(可选)
+
+    Returns:
+        代谢分析结果字典
+    """
+    # 计算BMR
+    bmr_result = calculate_all_bmr(gender, weight_kg, height_cm, age, body_fat_percentage)
+    bmr = bmr_result["recommended"]
+
+    # 计算TDEE
+    tdee = calculate_tdee(bmr, activity_level)
+
+    # 计算每日热量范围
+    maintenance = tdee
+    mild_deficit = int(tdee * 0.85)  # 15%缺口
+    moderate_deficit = int(tdee * 0.75)  # 25%缺口
+    aggressive_deficit = int(tdee * 0.65)  # 35%缺口
+
+    # 预计减重速度
+    mild_loss_weekly = round((tdee - mild_deficit) * 7 / CALORIES_PER_KG_FAT, 2)
+    moderate_loss_weekly = round((tdee - moderate_deficit) * 7 / CALORIES_PER_KG_FAT, 2)
+    aggressive_loss_weekly = round((tdee - aggressive_deficit) * 7 / CALORIES_PER_KG_FAT, 2)
+
+    # 代谢率评估
+    bmi = calculate_bmi(weight_kg, height_cm)
+
+    # 年龄代谢调整说明
+    metabolic_note = ""
+    if age < 30:
+        metabolic_note = "年轻时代谢较活跃，是建立良好代谢习惯的最佳时期"
+    elif age < 50:
+        metabolic_note = "30岁后代谢每十年下降约2-5%，需通过运动维持"
+    else:
+        metabolic_note = "50岁后代谢下降明显，建议通过力量训练维持肌肉量"
+
+    return {
+        "basal_metabolic_rate": {
+            "harris_benedict": bmr_result["harris_benedict"],
+            "mifflin_st_jeor": bmr_result["mifflin_st_jeor"],
+            "katch_mcardle": bmr_result.get("katch_mcardle"),
+            "recommended": bmr,
+            "note": bmr_result["note"]
+        },
+        "total_daily_energy_expenditure": {
+            "value": tdee,
+            "activity_level": activity_level,
+            "activity_factor": ACTIVITY_FACTORS.get(activity_level, 1.55)
+        },
+        "calorie_targets": {
+            "maintenance": maintenance,
+            "mild_weight_loss": mild_deficit,
+            "moderate_weight_loss": moderate_deficit,
+            "aggressive_weight_loss": aggressive_deficit
+        },
+        "projected_weight_loss": {
+            "mild_deficit_kg_per_week": mild_loss_weekly,
+            "moderate_deficit_kg_per_week": moderate_loss_weekly,
+            "aggressive_deficit_kg_per_week": aggressive_loss_weekly
+        },
+        "macro_distribution": calculate_macros(moderate_deficit),
+        "metabolic_assessment": {
+            "bmi": bmi,
+            "age_factor_note": metabolic_note,
+            "activity_impact": f"当前活动水平({activity_level})下，每日消耗约{tdee}大卡"
+        },
+        "recommendations": [
+            f"维持体重: 每日约{maintenance}大卡",
+            f"温和减重: 每日约{mild_deficit}大卡(预计周减重{mild_loss_weekly}kg)",
+            f"适度减重: 每日约{moderate_deficit}大卡(预计周减重{moderate_loss_weekly}kg)",
+            "不建议超过35%热量缺口，以免影响代谢和健康"
+        ]
+    }
+
+
+# ============================================================================
 # 主函数 - 测试
 # ============================================================================
 

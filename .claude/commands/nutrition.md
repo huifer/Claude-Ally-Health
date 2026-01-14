@@ -1142,6 +1142,34 @@ arguments:
 
 ---
 
+## 减肥饮食管理
+
+### 能量缺口追踪
+
+```bash
+/nutrition:weightloss-deficit          # 查看今日能量缺口
+/nutrition:weightloss-target           # 查看热量目标
+/nutrition:weightloss-balance          # 能量平衡报告
+```
+
+### 饮食记录
+
+```bash
+/nutrition:weightloss-meal breakfast 450   # 记录早餐
+/nutrition:weightloss-intake 1980          # 记录全天摄入
+/nutrition:weightloss-protein              # 蛋白质分析
+```
+
+### 间歇性禁食
+
+```bash
+/nutrition:weightloss-if 16-8                   # 启用16:8禁食
+/nutrition:weightloss-if window 12:00-20:00     # 设置进食窗口
+/nutrition:weightloss-if disable                # 禁用
+```
+
+---
+
 **命令版本**: v1.0
 **创建日期**: 2026-01-06
 **维护者**: WellAlly Tech
