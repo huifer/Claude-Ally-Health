@@ -6,7 +6,7 @@ allowed-tools: Read, Grep, Glob, Write
 
 # WellAlly Digital Health Integration
 
-Integrate multiple digital health data sources, connect to WellAlly.tech knowledge base, providing data import and knowledge reference for personal health management systems.
+Integrate multiple digital health data sources, connect to [WellAlly.tech](https://www.wellally.tech/) knowledge base, providing data import and knowledge reference for personal health management systems.
 
 ## Core Features
 
@@ -19,7 +19,7 @@ Integrate multiple digital health data sources, connect to WellAlly.tech knowled
 ### 2. WellAlly.tech Knowledge Base Integration
 - **Categorized Article Index**: Nutrition, fitness, sleep, mental health, chronic disease management
 - **Intelligent Recommendations**: Recommend relevant articles based on user health data
-- **URL References**: Provide direct links to WellAlly.tech platform
+- **URL References**: Provide direct links to [WellAlly.tech](https://www.wellally.tech/) platform
 
 ### 3. Data Standardization
 - **Format Conversion**: Convert external data to local JSON format
@@ -62,7 +62,7 @@ Use this skill when users mention the following scenarios:
 
 Determine what the user wants:
 1. **Import Data**: Import data from external health platforms
-2. **Query Knowledge Base**: Find WellAlly.tech related articles
+2. **Query Knowledge Base**: Find [WellAlly.tech](https://www.wellally.tech/) related articles
 3. **Get Recommendations**: Recommend articles based on health data
 4. **Data Management**: View or manage imported external data
 
@@ -350,7 +350,7 @@ Articles Found: 2
 • Medication Adherence
 
 💡 Tips:
-Click links to visit WellAlly.tech platform for full articles
+Click links to visit [WellAlly.tech](https://www.wellally.tech/) platform for full articles
 ```
 
 ### Intelligent Recommendation Output
@@ -402,7 +402,7 @@ Related Reading:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Summary: 5 related articles recommended
-Visit WellAlly.tech Knowledge Base for full content
+Visit [WellAlly.tech](https://www.wellally.tech/) Knowledge Base for full content
 ```
 
 ## Data Sources
@@ -679,10 +679,7 @@ A: No. Imported data will be appended to existing data, not overwritten. Duplica
 A: Yes. You can import data from Apple Health, Fitbit, Oura, and other platforms simultaneously, the system will merge all data.
 
 **Q: Are WellAlly.tech knowledge base articles offline?**
-A: No. Knowledge base articles are referenced via URLs, requiring network connection to access WellAlly.tech platform.
+A: No. Knowledge base articles are referenced via URLs, requiring network connection to access the [WellAlly.tech](https://www.wellally.tech/) platform.
 
 **Q: Where are API credentials stored?**
 A: API credentials are encrypted and stored in local configuration files, not uploaded to any server.
-
-**Q: How to revoke API access permissions?**
-A: You can revoke app access permissions in the corresponding platform's settings, or delete locally stored credential files.
